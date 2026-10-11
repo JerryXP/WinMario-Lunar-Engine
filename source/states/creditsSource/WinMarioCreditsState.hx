@@ -42,6 +42,7 @@ class WinMarioCreditsState extends MusicBeatState
 			[""],
 			["Support Friends"],
 			["TintGox",		 "tintgox",	   "Helped me with Kade Engine Color Timebar",	 "https://www.youtube.com/@tintgox10",		"008080"],
+			["yoshifan66",		        "yoshifan66",		        "Helped with MultiKey Note Support",		"https://www.youtube.com/@yoshifan66-h",	"00FF00"],
 			[""],
 			["Scripts"],
 			["Uhard999",		        "missing_icon",		        "Watermark and Health",					  "https://gamebanana.com/members/1872659",	"808080"],
@@ -51,7 +52,7 @@ class WinMarioCreditsState extends MusicBeatState
 			["Blu Day Studios",		        "missing_icon",		 "Note Offset Pop-up (edit by me)",		"https://gamebanana.com/members/1787581",		"808080"],
 			["vCherry.kAI.16",		 "missing_icon",	   "Combo break = gf cry",	 "https://gamebanana.com/members/1921624",							"808080"],
 			["SadSami",		 "missing_icon",	   "Break Time/Note Timer Script",	 			"https://gamebanana.com/members/3418239",				"808080"],
-			["MC07",		 "missing_icon",	   "Psych Engine 1.0 Skin Selector\nBeta BF Winning Icon",	 			"https://www.youtube.com/@MC0777",					"808080"],
+			["MCO7",		 "missing_icon",	   "Psych Engine 1.0 Skin Selector\n, Beta BF Winning Icon, and MultiKey",	 		"https://www.youtube.com/@MC0777",		"808080"],
 			["Super_Hugo",	 "missing_icon",		 "Blammed Lights & Philly Glow Recreation",		"https://gamebanana.com/members/2151945",			"808080"],
 			["BlixerTheGamebananer",	"missing_icon",	 "Combo Break Sound Script",			"https://gamebanana.com/members/2179280",			"FF0000"],
 			["RamenDominoes",		        "missing_icon",		        "Cinematics",					  "https://gamebanana.com/members/2135195",		"808080"],
@@ -106,7 +107,7 @@ class WinMarioCreditsState extends MusicBeatState
 			["MrpoloOfficial",		        "missing_icon",		        "Intro & Outro Video States (edit by me)",			"https://gamebanana.com/members/2307558",	"808080"],
 			["Lenin Anonimo",		        "missing_icon",		        "For Using Several of their Code",			"https://gamebanana.com/members/3509758",	"6000C0"],
 			#if desktop
-			["Lucas-Sanches",		        "missing_icon",		        "Converters State (but it is inaccrate.)",			"https://gamebanana.com/members/2088040",	"6000C0"],
+			["Lucas-Sanches",		        "missing_icon",		        "For using the code for Converters State\n(& Legacy Converters State)",			"https://gamebanana.com/members/2088040",	"6000C0"],
 			["SquidBowl",		        "tinkatonk",		        "GalleryState (edit by me)",			"https://gamebanana.com/members/2041479",	"804000"],
 			#end
 		];

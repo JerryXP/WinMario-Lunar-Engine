@@ -180,7 +180,10 @@
 	<assets path="assets/shared" if="web" embed="true" />
 
 	<assets path="assets/prohibitHTML5" rename="assets/shared/images" if="html5 || web" embed="true" unless="windows || mac || android || ios || linux" />
+	
+	<assets path="assets/os-exclusives/windows" rename="assets/shared" if="windows" />
 	<assets path="assets/os-exclusives/desktop" rename="assets/shared" if="desktop" unless="mobile" />
+	<assets path="assets/os-exclusives/unix" rename="assets/shared" if="linux || mac" unless="windows || mobile" />
 
 	<assets path="assets/songs"         exclude="*.ogg" if="web"/>
 	<assets path="assets/songs"         exclude="*.mp3" unless="web"/>

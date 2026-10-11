@@ -1,0 +1,8 @@
+{
+	"name": "MultiKey",
+	"description": "Adds softcoded multikey!",
+	"restart":false,
+	"runsGlobally": true,
+	"color": [232, 106, 203],
+	"discordRPC": "863222024192262205"
+}

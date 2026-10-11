@@ -19,7 +19,7 @@ class MasterEditorMenu extends MusicBeatState
 		'Character Editor', 
 		'Stage Editor', 
 		#if desktop
-		// 'Converters', - It will be on hold until V1.2's release.
+		// 'Converters',
 		#end
 		'Week Editor', 
 		'Test stickers', 
@@ -137,7 +137,7 @@ class MasterEditorMenu extends MusicBeatState
 					MusicBeatState.switchState(new CharSelectEditor());
 				#if desktop
 				case 'Converters': 
-					MusicBeatState.switchState(new ConvertersState());
+					MusicBeatState.switchState(new ConvertersState_New());
 				#end
 				#if PROFILE_BUILD
 				case 'Crash the game':{

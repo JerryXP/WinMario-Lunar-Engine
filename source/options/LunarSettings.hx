@@ -62,6 +62,12 @@ class LunarSettings extends BaseOptionsMenu
 			STRING,
 			['Custom', 'RvB', 'Vanilla']);
 		addOption(option);
+
+		var option:Option = new Option('Opponent Note Glows',
+			"If unchecked, opponent's note won't glow on hit.\n(just like Pre-FNF 2.8.0)",
+			'opponentNote',
+			BOOL);
+		addOption(option);
 		
 		var option:Option = new Option('Miss on Oks (Bads) / Awfuls (Shits)',
 			'Enabled it if you want to live the V-Slice Times.',
@@ -100,6 +106,36 @@ class LunarSettings extends BaseOptionsMenu
             'judgementCounter',
             BOOL);
         addOption(option);
+
+		var option:Option = new Option('Song Watermarks',
+			"If unchecked, The Song Watermark that is placed in the corner left will be deactivate.",
+			'watermarkSong',
+			BOOL);
+		addOption(option);
+
+		var option:Option = new Option('Break Timer',
+			"If unchecked, The break timer will be fully disabled.",
+			'timerBreak',
+			BOOL);
+		addOption(option);
+
+		var option:Option = new Option('MS Offset Popup',
+			"If unchecked, MS Offset Popup from bottom left corner will be fully off.",
+			'popupMS',
+			BOOL);
+		addOption(option);
+
+		var option:Option = new Option('Health Display',
+			"If unchecked, The health display on right bottom corner will be disabled.",
+			'healTxt',
+			BOOL);
+		addOption(option);
+
+		var option:Option = new Option('Note Combo Pop-Up',
+			"If unchecked, The Note Pop-Up will not appear occasionaly.",
+			'comboNotehx',
+			BOOL);
+		addOption(option);
 
 		var option:Option = new Option('Video Intro:',
 			"What Style do you like for the Video\n(NOTE: It was named after the WNR Startups made by other people)",

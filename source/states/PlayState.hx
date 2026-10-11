@@ -2858,6 +2858,12 @@ override public function update(elapsed:Float)
 	setOnScripts('noMiss', instakillOnMiss);
 	setOnScripts('hideHud', ClientPrefs.data.hideHud);
 
+	setOnScripts('watermarkSong', ClientPrefs.data.watermarkSong);
+	setOnScripts('timerBreak', ClientPrefs.data.timerBreak);
+	setOnScripts('popupMS', ClientPrefs.data.popupMS);
+	setOnScripts('healTxt', ClientPrefs.data.healTxt);
+	setOnScripts('comboNotehx', ClientPrefs.data.comboNotehx);
+
 	setOnScripts('colorDadTime', ClientPrefs.data.shadedTimeBar == 'Dad Health Color');
 	setOnScripts('colorBFTime', ClientPrefs.data.shadedTimeBar == 'BF Health Color');
 	setOnScripts('colorGFTime', ClientPrefs.data.shadedTimeBar == 'GF Health Color');
@@ -5330,6 +5336,14 @@ function strumPlayAnim(isDad:Bool, id:Int, time:Float)
 	if (isDad)
 	{
 		spr = opponentStrums.members[id];
+		
+		if(!ClientPrefs.data.opponentNote) {
+			if(spr != null)
+			{
+				spr.playAnim('static');
+				spr.resetAnim = 0;
+			}
+		}
 	}
 	else
 	{

@@ -96,6 +96,14 @@ import states.InitState;
 	public var pauseMusic:String = 'Buoy Base Galaxy';
 	public var shadedTimeBar:String = 'Gradient';
 	public var introvideoCutscene:String = 'WinZinc';
+	public var opponentNote:Bool = true;
+
+	public var watermarkSong:Bool = true;
+	public var timerBreak:Bool = true;
+	public var popupMS:Bool = true;
+	public var healTxt:Bool = true;
+	public var comboNotehx:Bool = true;
+
 	#if desktop
 	public var playSongOST:Bool = false;
 	#end
