@@ -209,19 +209,19 @@ class FunkinDebugDisplay extends Sprite
 		final info:Array<String> = [];
 		info.push('FPS: $currentFPS');
 		#if windows
-		info.push('OS: Windows');
+		info.push('OS: Windows | LE');
 		#elseif mac
-		info.push('OS: macOS');
+		info.push('OS: macOS | LE');
 		#elseif linux
-		info.push('OS: Linux');
+		info.push('OS: Linux | LE');
 		#elseif android
-		info.push('OS: Android');
+		info.push('OS: Android | LE');
 		#elseif ios
-		info.push('OS: iOS (iPhone)');
+		info.push('OS: iOS | LE');
 		#elseif html5
-		info.push('OS: HTML5');
+		info.push('OS: HTML5 | LE');
 		#else
-		info.push('OS: Unknown');
+		info.push('OS: Unknown | LE');
 		#end
 		info.push('AVG FPS: ${Math.floor(fpsGraph.average())}');
 		info.push('1% LOW FPS: ${Math.floor(fpsGraph.lowest())}');
@@ -246,19 +246,19 @@ class FunkinDebugDisplay extends Sprite
 			info.push('FPS: $currentFPS');
 
 			#if windows
-			info.push('OS: Windows');
+			info.push('OS: Windows | LE');
 			#elseif mac
-			info.push('OS: macOS');
+			info.push('OS: macOS | LE');
 			#elseif linux
-			info.push('OS: Linux');
+			info.push('OS: Linux | LE');
 			#elseif android
-			info.push('OS: Android');
+			info.push('OS: Android | LE');
 			#elseif ios
-			info.push('OS: iOS (iPhone)');
+			info.push('OS: iOS | LE');
 			#elseif html5
-			info.push('OS: HTML5');
+			info.push('OS: HTML5 | LE');
 			#else
-			info.push('OS: Unknown');
+			info.push('OS: Unknown | LE');
 			#end
 
 			#if !html5
