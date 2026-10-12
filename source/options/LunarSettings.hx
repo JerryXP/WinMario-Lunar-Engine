@@ -108,9 +108,10 @@ class LunarSettings extends BaseOptionsMenu
         addOption(option);
 
 		var option:Option = new Option('Song Watermarks',
-			"If unchecked, The Song Watermark that is placed in the corner left will be deactivate.",
+			"The Song Watermark that appears in the Top Corner of the screen.",
 			'watermarkSong',
-			BOOL);
+			STRING,
+			['WinMario', 'WinMario (Alpha)', 'Usaul', 'Kade', 'SongName Only', 'Difficulty Name', 'Disabled']);
 		addOption(option);
 
 		var option:Option = new Option('Break Timer',

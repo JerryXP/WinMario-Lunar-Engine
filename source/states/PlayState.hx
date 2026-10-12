@@ -2858,7 +2858,14 @@ override public function update(elapsed:Float)
 	setOnScripts('noMiss', instakillOnMiss);
 	setOnScripts('hideHud', ClientPrefs.data.hideHud);
 
-	setOnScripts('watermarkSong', ClientPrefs.data.watermarkSong);
+	setOnScripts('watermarkSong1', ClientPrefs.data.watermarkSong == 'WinMario');
+	setOnScripts('watermarkSong2', ClientPrefs.data.watermarkSong == 'WinMario (Alpha)');
+	setOnScripts('watermarkSong3', ClientPrefs.data.watermarkSong == 'Usaul');
+	setOnScripts('watermarkSong4', ClientPrefs.data.watermarkSong == 'Kade');
+	setOnScripts('watermarkSong5', ClientPrefs.data.watermarkSong == 'SongName Only');
+	setOnScripts('watermarkSong6', ClientPrefs.data.watermarkSong == 'Difficulty Name');
+	setOnScripts('watermarkSong0', ClientPrefs.data.watermarkSong == 'Disabled');
+
 	setOnScripts('timerBreak', ClientPrefs.data.timerBreak);
 	setOnScripts('popupMS', ClientPrefs.data.popupMS);
 	setOnScripts('healTxt', ClientPrefs.data.healTxt);

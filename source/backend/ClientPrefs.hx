@@ -98,7 +98,7 @@ import states.InitState;
 	public var introvideoCutscene:String = 'WinZinc';
 	public var opponentNote:Bool = true;
 
-	public var watermarkSong:Bool = true;
+	public var watermarkSong:String = 'WinMario';
 	public var timerBreak:Bool = true;
 	public var popupMS:Bool = true;
 	public var healTxt:Bool = true;

@@ -832,9 +832,16 @@ class ModsMenuState extends MusicBeatState
 
 	function checkToggleButtons()
 	{
-		var anyDisabledMods = modsList.disabled.length > 0;
-		buttonEnableAll.visible = buttonEnableAll.enabled = buttonEnableAll.active = anyDisabledMods;
-		buttonDisableAll.visible = buttonDisableAll.enabled = buttonDisableAll.active = !anyDisabledMods;
+		var hadDisabled = modsList.disabled.length > 0;
+        buttonEnableAll.visible = buttonEnableAll.enabled = hadDisabled;
+        buttonDisableAll.visible = buttonDisableAll.enabled = !hadDisabled;
+    
+        buttonEnableAll.ignoreCheck = true;
+        buttonDisableAll.ignoreCheck = true;
+		new FlxTimer().start(0.05, function(_) {
+            buttonEnableAll.ignoreCheck = false;
+            buttonDisableAll.ignoreCheck = false;
+        });
 	}
 
 	function reload()
