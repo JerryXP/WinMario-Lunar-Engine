@@ -16,7 +16,6 @@ jobs:
       CACHE_NAME: P-Slice.1.0.desktop-cache
   BuildMacos:
     name: macos
-    needs: BuildMobileCache
     permissions: write-all
     uses: ./.github/workflows/mac-universal.yml
     with:
