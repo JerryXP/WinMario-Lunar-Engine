@@ -245,7 +245,7 @@ class PlayState extends MusicBeatState
 		['AAAAA', 1]
 	];
 
-		public static function getRatingStuff():Array<Dynamic> {
+	public static function getRatingStuff():Array<Dynamic> {
 		return [
 			// Normal Ratings (0% - 100%) - Wife3 standard does not allow negative ratings
 			[Language.getPhrase('rating_terrible', 'Game Over'), 0], // 0% a 20%
@@ -2865,6 +2865,11 @@ override public function update(elapsed:Float)
 	setOnScripts('watermarkSong5', ClientPrefs.data.watermarkSong == 'SongName Only');
 	setOnScripts('watermarkSong6', ClientPrefs.data.watermarkSong == 'Difficulty Name');
 	setOnScripts('watermarkSong0', ClientPrefs.data.watermarkSong == 'Disabled');
+	
+	setOnScripts('notedColored', ClientPrefs.data.shadedNote == 'ON');
+	setOnScripts('notedColoredLEGACY', ClientPrefs.data.shadedNote == 'ON (legacy)');
+
+	setOnScripts('iconColoredstrum', ClientPrefs.data.iconColoredstrum);
 
 	setOnScripts('timerBreak', ClientPrefs.data.timerBreak);
 	setOnScripts('popupMS', ClientPrefs.data.popupMS);

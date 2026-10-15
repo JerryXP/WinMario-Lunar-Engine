@@ -194,6 +194,7 @@ class DesktopMenuState extends FlxBasic
 					FlxTransitionableState.skipNextTransOut = false;
 					MusicBeatState.switchState(new options.OptionsStateCheat());
 				}
+				#if (!mac && !mobile)
 				if (host.controls.justPressed('debug_2'))
 				{
 					selectedSomethin = true;
@@ -203,6 +204,7 @@ class DesktopMenuState extends FlxBasic
 					MusicBeatState.switchState(new ConverterState());
 					FlxG.sound.playMusic(Paths.music('converter_menu'));
 				}
+				#end
 			}
 		}
 

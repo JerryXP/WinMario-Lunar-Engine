@@ -96,4 +96,9 @@ function onUpdatePost()
         setProperty('offsetText.y', 10)
     end
 
+    -- if Colored Note Strum is disabled
+    if not iconColoredstrum then
+        removeLuaScript('luaScript/coloredStrums')
+    end
+
 end

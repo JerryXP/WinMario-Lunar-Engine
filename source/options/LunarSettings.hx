@@ -28,6 +28,13 @@ class LunarSettings extends BaseOptionsMenu
 			BOOL);
 		addOption(option);
 
+		var option:Option = new Option('Color Icon Note:',
+		    "What Type?\n(NOTE: THIS IS ONLY FOR RGB NOTES. NOT RECOMMENDED FOR NON-RGB NOTES)",
+		    'shadedNote',
+		    STRING,
+			['OFF', 'ON', 'ON (legacy)']);
+		addOption(option);
+
 		var option:Option = new Option('Debug Keys',
 			'If Disabled, you won\'t be able to go to the Chart or Character Editor in PlayState, & it disables pressing 7 
 			in the Main Menu',
@@ -107,6 +114,12 @@ class LunarSettings extends BaseOptionsMenu
             BOOL);
         addOption(option);
 
+		var option:Option = new Option('Icon Colored Strums',
+			"If checked, The strums will changed its colors based off Opponents & Players.",
+			'iconColoredstrum',
+			BOOL);
+		addOption(option);
+
 		var option:Option = new Option('Song Watermarks',
 			"The Song Watermark that appears in the Top Corner of the screen.",
 			'watermarkSong',
@@ -166,12 +179,6 @@ class LunarSettings extends BaseOptionsMenu
 			BOOL);
 		addOption(option);
 		option.onChange = onChangeWatermark;
-
-		var option:Option = new Option('Use results screen',
-			'It\'s Not Functional Right Now.',
-			'vsliceResults',
-			BOOL);
-		addOption(option);
 
 		super();
 	}
