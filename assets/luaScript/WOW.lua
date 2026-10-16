@@ -1,4 +1,6 @@
 function onUpdatePost()
+    --local upscrollTime = -30
+    local downscrollTime = 683
     -- Bool Options
     if hideHud then
         setProperty('watermark.visible', false)
@@ -26,6 +28,10 @@ function onUpdatePost()
 
     if not healTxt then
         setProperty('healthText.visible', false)
+
+        if downscroll then
+            setProperty('timeText.y', downscrollTime)
+        end
     end
 
     if not comboNotehx then
@@ -94,6 +100,11 @@ function onUpdatePost()
         setProperty('difficult.y', 690)
         setProperty('healthText.y', 10)
         setProperty('offsetText.y', 10)
+        if healTxt then
+            setProperty('timeText.y', 30)
+        else
+            setProperty('timeText.y', 10)
+        end
     end
 
     -- if Colored Note Strum is disabled

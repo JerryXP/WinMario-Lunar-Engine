@@ -2,6 +2,7 @@ package mikolka.vslice.components;
 
 import flixel.util.FlxStringUtil;
 import mikolka.funkin.stats.FunkinStatsGraph;
+import mikolka.vslice.ui.MainMenuState;
 import openfl.display.Shape;
 import openfl.display.Sprite;
 import openfl.text.TextField;
@@ -80,7 +81,7 @@ class FunkinDebugDisplay extends Sprite
 		#if html5
 		final BG_HEIGHT_MULTIPLIER:Float = advanced ? 0.45 : 0.15;
 		#else
-		final BG_HEIGHT_MULTIPLIER:Float = advanced ? 1 : (MemoryUtil.supportsTaskMem()) ? 0.3 : 0.2;
+		final BG_HEIGHT_MULTIPLIER:Float = advanced ? 1 : (MemoryUtil.supportsTaskMem()) ? 0.5 : 0.4;
 		#end
 
 		background = new Shape();
@@ -137,7 +138,7 @@ class FunkinDebugDisplay extends Sprite
 		infoDisplay = new TextField();
 		infoDisplay.x = OTHERS_OFFSET;
 		infoDisplay.y = OTHERS_OFFSET;
-		infoDisplay.width = 500;
+		infoDisplay.width = 800;
 		infoDisplay.selectable = false;
 		infoDisplay.mouseEnabled = false;
 		infoDisplay.defaultTextFormat = new TextFormat('ModernDOS8x16.ttf', 14, color, JUSTIFY);
@@ -208,21 +209,6 @@ class FunkinDebugDisplay extends Sprite
 
 		final info:Array<String> = [];
 		info.push('FPS: $currentFPS');
-		#if windows
-		info.push('OS: Windows | LE');
-		#elseif mac
-		info.push('OS: macOS | LE');
-		#elseif linux
-		info.push('OS: Linux | LE');
-		#elseif android
-		info.push('OS: Android | LE');
-		#elseif ios
-		info.push('OS: iOS | LE');
-		#elseif html5
-		info.push('OS: HTML5 | LE');
-		#else
-		info.push('OS: Unknown | LE');
-		#end
 		info.push('AVG FPS: ${Math.floor(fpsGraph.average())}');
 		info.push('1% LOW FPS: ${Math.floor(fpsGraph.lowest())}');
 		fpsGraph.textDisplay.text = info.join('\n');
@@ -246,20 +232,22 @@ class FunkinDebugDisplay extends Sprite
 			info.push('FPS: $currentFPS');
 
 			#if windows
-			info.push('OS: Windows | LE');
+			info.push('OS: Windows | LE ${MainMenuState.lunarVersion}');
 			#elseif mac
-			info.push('OS: macOS | LE');
+			info.push('OS: macOS | LE ${MainMenuState.lunarVersion}');
 			#elseif linux
-			info.push('OS: Linux | LE');
+			info.push('OS: Linux | LE ${MainMenuState.lunarVersion}');
 			#elseif android
-			info.push('OS: Android | LE');
+			info.push('OS: Android | LE ${MainMenuState.lunarVersion}');
 			#elseif ios
-			info.push('OS: iOS | LE');
+			info.push('OS: iOS | LE ${MainMenuState.lunarVersion}');
 			#elseif html5
-			info.push('OS: HTML5 | LE');
+			info.push('OS: HTML5 | LE ${MainMenuState.lunarVersion}');
 			#else
-			info.push('OS: Unknown | LE');
+			info.push('OS: Unknown | LE ${MainMenuState.lunarVersion}');
 			#end
+			info.push('${DateTools.format(Date.now(), "%b %d, %Y")}');
+			info.push(ClientPrefs.data.clock == '12 Hour' ? '${DateTools.format(Date.now(), "%r")}' : '${DateTools.format(Date.now(), "%T")}');
 
 			#if !html5
 			info.push('GC MEM: ${FlxStringUtil.formatBytes(gcMem).toLowerCase()} / ${FlxStringUtil.formatBytes(gcMemPeak).toLowerCase()}');

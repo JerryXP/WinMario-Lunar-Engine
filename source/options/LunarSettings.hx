@@ -167,7 +167,7 @@ class LunarSettings extends BaseOptionsMenu
 		#end
 
 		var option:Option = new Option('Time Format:',
-			"12 Hour is default.\n(only use for results screen)",
+			"12 Hour is default.",
 			'clock',
 			STRING,
 			['12 Hour', '24 Hour']);
