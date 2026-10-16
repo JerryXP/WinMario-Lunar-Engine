@@ -17,6 +17,7 @@ import editors.MasterEditorMenu;
 #end
 import mikolka.compatibility.VsliceOptions;
 import flixel.FlxObject;
+import converters.ConverterState;
 
 @:access(mikolka.vslice.ui.MainMenuState)
 class DesktopMenuState extends FlxBasic
@@ -193,6 +194,17 @@ class DesktopMenuState extends FlxBasic
 					FlxTransitionableState.skipNextTransOut = false;
 					MusicBeatState.switchState(new options.OptionsStateCheat());
 				}
+				#if (!mac && !mobile)
+				if (host.controls.justPressed('debug_2'))
+				{
+					selectedSomethin = true;
+					FlxTransitionableState.skipNextTransIn = false;
+					FlxTransitionableState.skipNextTransOut = false;
+					FlxG.sound.music.fadeOut();
+					MusicBeatState.switchState(new ConverterState());
+					FlxG.sound.playMusic(Paths.music('converter_menu'));
+				}
+				#end
 			}
 		}
 

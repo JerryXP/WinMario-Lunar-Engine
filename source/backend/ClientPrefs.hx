@@ -8,6 +8,37 @@ import states.InitState;
 
 // Add a variable here and it will get automatically saved
 @:structInit class SaveVariables {
+	// LUNAR ENGINE SETTINGS
+	public var showComboSprite:Bool = false; // Show the Combo Sprite
+	public var showComboNumLune:Bool = true; // Show the Combo Num Sprites
+	public var showRatingLune:Bool = true; // Show the Combo Rating Sprites
+	public var shadedNote:String = 'OFF'; // Color Note
+	public var debugkeysLunar:Bool = true; // Allow users to press "debug_1" & "debug_2" in MainMenuState & PlayState
+	public var showKeyViewer:Bool = false;
+	public var keyViewerOffset:Array<Int> = [0, 0]; // X, Y offset for key viewer
+	public var keyViewerColor:String = 'Gray'; // Color name for key viewer
+	public var shadedTimeBar:String = 'Gradient'; // Changes the Color Timebar
+	public var vsliceLegacyBar2:String = "Custom"; // Changes the Healthbar Color
+	public var opponentNote:Bool = true; // Think about like... Kade Engine. ; Opponent Note Glow
+	public var missonOksorCraps:Bool = false; // Like V-Slice, Okays (bads) & Awfuls (s###s) will count as Miss.
+	public var swagPlayAnimation:Bool = false; // Plays Alternate Animations if they get Cools (sicks) & Crazys (perfects) & Plays Miss Animations if they got awfuls (s***s)
+	public var heyIntro:Bool = true; // Boyfriend and Girlfriend do Hey! animation on countdown Go!
+	public var iconBounceType:String = 'Default'; // Icon Bounce Type
+	public var winmarioCustomscore:String = 'WinMario'; // Score Text Customization
+	public var judgementCounter:Bool = true; // Judgemental Counter
+	public var iconColoredstrum:Bool = false; // Icon Colored Strum
+	public var watermarkSong:String = 'WinMario'; // The Song Watermark that is in the Left Corner of the screen.
+	public var timerBreak:Bool = true; // Break Timer
+	public var popupMS:Bool = true; // MS Time Hit
+	public var healTxt:Bool = true; // Health Counter
+	public var comboNotehx:Bool = true; // Note Combo
+	public var introvideoCutscene:String = 'WinZinc'; // Intro Video
+	#if desktop
+	public var playSongOST:Bool = false; // Access Songs through Soundtrack State
+	#end
+	public var clock:String = '12 Hour'; // Clock type
+	public var showWatermark:Bool = false; // Show a Watermark throught the Game
+
 	// Mobile and Mobile Controls Releated
 	public var extraHints:String = "NONE"; // hitbox extra hint option
 	public var hitbox2:Bool = true; // hitbox extra button position option
@@ -27,25 +58,15 @@ import states.InitState;
 	public var favSongIds:Array<String> = [];
 	public var lastFreeplayMod:String = '||bf';
 
-	public var showKeyViewer:Bool = false;
-	public var keyViewerOffset:Array<Int> = [0, 0]; // X, Y offset for key viewer
-	public var keyViewerColor:String = 'Gray'; // Color name for key viewer
 	public var downScroll:Bool = false;
 	public var middleScroll:Bool = false;
 	public var opponentStrums:Bool = true;
 	public var showFPS:Bool = true;
 	public var showFPSOpacity:Float = 0.6;
 	public var fpsRework:Bool = false;
-	public var showWatermark:Bool = false;
 	public var flashing:Bool = true;
 	public var autoPause:Bool = true;
 	public var antialiasing:Bool = true;
-	public var iconBounceType:String = 'Default';
-	public var winmarioCustomscore:String = 'WinMario';
-	public var judgementCounter:Bool = true;
-	public var missonOksorCraps:Bool = false;
-	public var swagPlayAnimation:Bool = false;
-	public var showComboSprite:Bool = false;
 	public var noteSkin:String = 'Default';
 	public var splashSkin:String = 'Psych';
 	public var holdSkin:String = 'Vanilla';
@@ -59,7 +80,6 @@ import states.InitState;
 	public var framerate:Int = 120;
 	public var camZooms:Bool = true;
 	public var hideHud:Bool = false;
-	public var clock:String = '12 Hour';
 
 	public var vsliceMobileControls:Bool = false;
 	public var vsliceFreeplayColors:Bool = true;
@@ -69,7 +89,6 @@ import states.InitState;
 	public var vsliceSpecialCards:Bool = true;
 	public var vsliceSmoothBar:Bool = true;
 	public var loggingType:String = "None";
-	public var vsliceLegacyBar2:String = "Custom";
 	public var vsliceLegacyBar:Bool = false;
 	public var vsliceNaughtyness:Bool = #if mobile false #else true #end;
 	public var vsliceForceNewTag:Bool = false;
@@ -89,21 +108,11 @@ import states.InitState;
 	public var ghostTapping:Bool = true;
 	public var timeBarType:String = 'WinMario (simple)';
 	public var scoreZoom:Bool = true;
-	public var heyIntro:Bool = true; // Boyfriend and Girlfriend do Hey! animation on countdown Go!
 	public var noReset:Bool = false;
 	public var healthBarAlpha:Float = 1;
 	public var hitsoundVolume:Float = 0;
 	public var pauseMusic:String = 'Buoy Base Galaxy';
-	public var shadedTimeBar:String = 'Gradient';
-	public var introvideoCutscene:String = 'WinZinc';
-	#if desktop
-	public var playSongOST:Bool = false;
-	#end
 	public var checkForUpdates:Bool = true;
-	public var debugkeysLunar:Bool = true;
-	
-	public var showComboNumLune:Bool = true;
-	public var showRatingLune:Bool = true;
 
 	public var comboStacking:Bool = true;
 	public var gameplaySettings:Map<String, Dynamic> = [

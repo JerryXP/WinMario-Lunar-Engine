@@ -18,8 +18,9 @@ class MasterEditorMenu extends MusicBeatState
 		'Chart Editor', 
 		'Character Editor', 
 		'Stage Editor', 
-		#if desktop
-		// 'Converters', - It will be on hold until V1.2's release.
+		#if (debug && !mac && !mobile)
+		'Converters',
+		'Converters (OLD)',
 		#end
 		'Week Editor', 
 		'Test stickers', 
@@ -135,8 +136,10 @@ class MasterEditorMenu extends MusicBeatState
 					MusicBeatState.switchState(new StickerTest());
 				case 'Player editor':
 					MusicBeatState.switchState(new CharSelectEditor());
-				#if desktop
+				#if (debug && !mac && !mobile)
 				case 'Converters': 
+					MusicBeatState.switchState(new ConvertersState_New());
+				case 'Converters (OLD)': 
 					MusicBeatState.switchState(new ConvertersState());
 				#end
 				#if PROFILE_BUILD

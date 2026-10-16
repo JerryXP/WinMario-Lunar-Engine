@@ -84,8 +84,6 @@ class MobileMenuState extends FlxBasic {
 		{
 			FlxG.mouse.visible = false;
 			MusicBeatState.switchState(new options.CreditsChoice());
-			if (Date.now().getMonth() == 7 && Date.now().getDate() == 28)
-			MusicBeatState.switchState(new birthday.CreditsChoice());
 		}).selectedOffset.set(150,10);
 
 		var optionsBtn = new OptionsButton(grid,() ->

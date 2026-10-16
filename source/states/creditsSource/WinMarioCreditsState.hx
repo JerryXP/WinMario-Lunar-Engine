@@ -42,24 +42,32 @@ class WinMarioCreditsState extends MusicBeatState
 			[""],
 			["Support Friends"],
 			["TintGox",		 "tintgox",	   "Helped me with Kade Engine Color Timebar",	 "https://www.youtube.com/@tintgox10",		"008080"],
+			["yoshifan66",		        "yoshifan66",		        "Helped with MultiKey Note Support\n(I know that MCO7's Multi Key support had failed, but hey, I tried.)",		"https://www.youtube.com/@yoshifan66-h",	"00FF00"],
 			[""],
+			#if (LUA_ALLOWED || HSCRIPT_ALLOWED)
 			["Scripts"],
 			["Uhard999",		        "missing_icon",		        "Watermark and Health",					  "https://gamebanana.com/members/1872659",	"808080"],
+			#if HSCRIPT_ALLOWED
 			["DaPootisBirdYT",		        "missing_icon",		        "Winning Icon",					  "https://gamebanana.com/members/2031145",		"808080"],
+			#end
 			["Stilic",		        "missing_icon",		        "Note Combo",					  "https://gamebanana.com/members/1893262",				"808080"],
 			["Rodney~ An Imaginative Furball",		    "missing_icon",		  "Stage Changer",	"https://gamebanana.com/members/1729833",				"808080"],
-			["Blu Day Studios",		        "missing_icon",		 "Note Offset Pop-up (edit by me)",		"https://gamebanana.com/members/1787581",		"808080"],
 			["vCherry.kAI.16",		 "missing_icon",	   "Combo break = gf cry",	 "https://gamebanana.com/members/1921624",							"808080"],
 			["SadSami",		 "missing_icon",	   "Break Time/Note Timer Script",	 			"https://gamebanana.com/members/3418239",				"808080"],
-			["MC07",		 "missing_icon",	   "Psych Engine 1.0 Skin Selector\nBeta BF Winning Icon",	 			"https://www.youtube.com/@MC0777",					"808080"],
+			["MCO7",		 "missing_icon",	   "Psych Engine 1.0 Skin Selector\n, Beta BF Winning Icon",	 		"https://www.youtube.com/@MC0777",		"808080"],
 			["Super_Hugo",	 "missing_icon",		 "Blammed Lights & Philly Glow Recreation",		"https://gamebanana.com/members/2151945",			"808080"],
 			["BlixerTheGamebananer",	"missing_icon",	 "Combo Break Sound Script",			"https://gamebanana.com/members/2179280",			"FF0000"],
 			["RamenDominoes",		        "missing_icon",		        "Cinematics",					  "https://gamebanana.com/members/2135195",		"808080"],
 			["Ghost1787581",		        "missing_icon",		        "Note Offset Pop-up",					  "https://gamebanana.com/members/1787581",		"808080"],
+			["BloonyFox",		        "bloonyfox",		        "Icon Colored Strumlines & Notes",					  "https://gamebanana.com/members/2751687",		"808080"],
+			["blobbert",		        "missing_icon",		        "Opponent Note Color (for legacy purposes)",					  "https://gamebanana.com/members/2723067",		"808080"],
 			[""],
 			["Shaders"],
 			["TheZoroForce240",		        "missing_icon",		        "RTX Shader",					  "https://gamebanana.com/members/1708748",		"808080"],
+			["Chara Maker",		        "missing_icon",		        "Erect Shaders (fixed)",					  "https://gamebanana.com/members/4082914",		"808080"],
+			["Ledonic",		        "missing_icon",		        "Drop Shadow Shader (fixed)",					  "https://gamebanana.com/members/3574043",		"808080"],
 			[""],
+			#end
 			["Sprites/Assets"],
 			["Vs. Tabi (V1)",	"missing_icon",      "Scared BF",		"https://gamebanana.com/mods/286388",	"808080"],
 			["pixel_ratto",		"missing_icon",		"Scared BF & GF (pixel)",			"https://gamebanana.com/members/2004377",		"808080"],
@@ -89,9 +97,11 @@ class WinMarioCreditsState extends MusicBeatState
 			["B-Sides",		"missing_icon",			"Character Select (game over), Crazy & Cool Pixel Sprite (edit by me)",		"https://gamebanana.com/mods/42724",	"808080"],
 			["YinaNoka",		"missing_icon",			"Ok Pixel Sprite (edit by me)",		"https://gamebanana.com/members/1942955",	"808080"],
 			["E-shrimp",		"missing_icon",			"Crap/Awful Pixel Sprite (edit by me)",		"https://gamebanana.com/members/1767623",	"808080"],
+			#if (LUA_ALLOWED)
 			["te-agmaat032", "missing_icon",		"Special Note Mechanics Pack (edit by me)",			"https://gamebanana.com/members/1769584",		"808080"],
 			["Punkinator7",	"missing_icon",	 "Special Note Mechanics Pack (edit by me)",			"https://gamebanana.com/members/1687904",			"808080"],
 			["Ciphernetics",	"missing_icon",	 "Danger Note (edit by me)",			"https://gamebanana.com/members/1866642",			"808080"],
+			#end
 			["DylanTails876",		        "missing_icon",		  "Character Select BF Speaker",			"https://gamebanana.com/members/1920694",		"808080"],
 			["This is fine",		        "missing_icon",		        "Made Erect BF (use to replace boring GF that y'all like to lust)",				"https://gamebanana.com/members/1800297",	"808080"],
 			[""],
@@ -106,7 +116,7 @@ class WinMarioCreditsState extends MusicBeatState
 			["MrpoloOfficial",		        "missing_icon",		        "Intro & Outro Video States (edit by me)",			"https://gamebanana.com/members/2307558",	"808080"],
 			["Lenin Anonimo",		        "missing_icon",		        "For Using Several of their Code",			"https://gamebanana.com/members/3509758",	"6000C0"],
 			#if desktop
-			["Lucas-Sanches",		        "missing_icon",		        "Converters State (but it is inaccrate.)",			"https://gamebanana.com/members/2088040",	"6000C0"],
+			["Lucas-Sanches",		        "missing_icon",		        "For using the code for Converters State\n(& Legacy Converters State)",			"https://gamebanana.com/members/2088040",	"6000C0"],
 			["SquidBowl",		        "tinkatonk",		        "GalleryState (edit by me)",			"https://gamebanana.com/members/2041479",	"804000"],
 			#end
 		];

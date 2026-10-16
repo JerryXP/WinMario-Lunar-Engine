@@ -100,10 +100,12 @@ class InitState extends MusicBeatState
 			FlxTransitionableState.skipNextTransOut = true;
 			MusicBeatState.switchState(new FlashingState(new StopandThink()));
 		}
-        else if (mustUpdate && !updateAlreadyShown){
-			updateAlreadyShown = true;
-            MusicBeatState.switchState(new OutdatedState(updateVersion,new StopandThink()));
-        }
+		else if (ClientPrefs.data.checkForUpdates) {
+        	if (mustUpdate && !updateAlreadyShown){
+				updateAlreadyShown = true;
+            	MusicBeatState.switchState(new OutdatedState(updateVersion,new StopandThink()));
+        	}
+		}
 		else
 		{
 			new FlxTimer().start(0.05, function(tmr:FlxTimer)

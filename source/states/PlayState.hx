@@ -245,7 +245,7 @@ class PlayState extends MusicBeatState
 		['AAAAA', 1]
 	];
 
-		public static function getRatingStuff():Array<Dynamic> {
+	public static function getRatingStuff():Array<Dynamic> {
 		return [
 			// Normal Ratings (0% - 100%) - Wife3 standard does not allow negative ratings
 			[Language.getPhrase('rating_terrible', 'Game Over'), 0], // 0% a 20%
@@ -2858,6 +2858,24 @@ override public function update(elapsed:Float)
 	setOnScripts('noMiss', instakillOnMiss);
 	setOnScripts('hideHud', ClientPrefs.data.hideHud);
 
+	setOnScripts('watermarkSong1', ClientPrefs.data.watermarkSong == 'WinMario');
+	setOnScripts('watermarkSong2', ClientPrefs.data.watermarkSong == 'WinMario (Alpha)');
+	setOnScripts('watermarkSong3', ClientPrefs.data.watermarkSong == 'Usaul');
+	setOnScripts('watermarkSong4', ClientPrefs.data.watermarkSong == 'Kade');
+	setOnScripts('watermarkSong5', ClientPrefs.data.watermarkSong == 'SongName Only');
+	setOnScripts('watermarkSong6', ClientPrefs.data.watermarkSong == 'Difficulty Name');
+	setOnScripts('watermarkSong0', ClientPrefs.data.watermarkSong == 'Disabled');
+	
+	setOnScripts('notedColored', ClientPrefs.data.shadedNote == 'ON');
+	setOnScripts('notedColoredLEGACY', ClientPrefs.data.shadedNote == 'ON (legacy)');
+
+	setOnScripts('iconColoredstrum', ClientPrefs.data.iconColoredstrum);
+
+	setOnScripts('timerBreak', ClientPrefs.data.timerBreak);
+	setOnScripts('popupMS', ClientPrefs.data.popupMS);
+	setOnScripts('healTxt', ClientPrefs.data.healTxt);
+	setOnScripts('comboNotehx', ClientPrefs.data.comboNotehx);
+
 	setOnScripts('colorDadTime', ClientPrefs.data.shadedTimeBar == 'Dad Health Color');
 	setOnScripts('colorBFTime', ClientPrefs.data.shadedTimeBar == 'BF Health Color');
 	setOnScripts('colorGFTime', ClientPrefs.data.shadedTimeBar == 'GF Health Color');
@@ -5330,6 +5348,14 @@ function strumPlayAnim(isDad:Bool, id:Int, time:Float)
 	if (isDad)
 	{
 		spr = opponentStrums.members[id];
+		
+		if(!ClientPrefs.data.opponentNote) {
+			if(spr != null)
+			{
+				spr.playAnim('static');
+				spr.resetAnim = 0;
+			}
+		}
 	}
 	else
 	{
