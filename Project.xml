@@ -6,7 +6,7 @@
 	<!-- _________________________ Application Settings _________________________ -->
 
 	<!-- Normal Version -->	
-	<app unless="PROFILE_BUILD || mobile" title="Friday Night Funkin': Lunar Engine"
+	<app unless="PROFILE_BUILD || mobile" title="Lunar Engine"
 		file="LunarEngine" packageName="com.winmario.LunarEngine" package="com.winmario.LunarEngine"
 		main="Main" version="1.0.0" company="Lunar (Lunar Engine)" />
 

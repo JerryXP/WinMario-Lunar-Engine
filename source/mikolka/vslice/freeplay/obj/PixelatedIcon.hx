@@ -50,7 +50,7 @@ class PixelatedIcon extends FlxFilteredSprite
         }
         this.loadGraphic(image,true,Math.floor(image.width / 3), Math.floor(image.height));
         animation.add("idle",[0],ICON_FRAMERATE,false);
-        animation.add("confirm",[1],ICON_FRAMERATE,false); // I know I add a Winning Icon Support, but It will load to death icon because a lot of mods is using No Winning Icon support.
+        animation.add("confirm",[2],ICON_FRAMERATE,false);
         this.scale.x = this.scale.y = 0.58;
         this.updateHitbox();
         this.origin.x = 100;

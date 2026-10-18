@@ -17,20 +17,20 @@
 			"text": "Not even English dictionary can describe how TERRIBLE you are!"
 		},
 		{
-			"sound": "",
+			"sound": "pixelText",
 			"speed": 0.05,
-			"portrait": "gf",
+			"portrait": "gf-pixel",
 			"boxState": "normal",
-			"expression": "talk",
+			"expression": "idle",
 			"text": "Go on then"
 		},
 		{
-			"sound": "",
+			"sound": "pixelText",
 			"speed": 0.05,
-			"portrait": "gf",
+			"portrait": "gf-pixel",
 			"boxState": "normal",
-			"expression": "demon",
-			"text": "I dare you!"
+			"expression": "idle",
+			"text": "I dare you..."
 		},
 		{
 			"sound": "pixelText",

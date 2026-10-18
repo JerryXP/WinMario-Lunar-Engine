@@ -18,6 +18,7 @@ import states.InitState;
 	public var keyViewerOffset:Array<Int> = [0, 0]; // X, Y offset for key viewer
 	public var keyViewerColor:String = 'Gray'; // Color name for key viewer
 	public var shadedTimeBar:String = 'Gradient'; // Changes the Color Timebar
+	public var timeTxthx:Bool = true; // Display the Clock
 	public var vsliceLegacyBar2:String = "Custom"; // Changes the Healthbar Color
 	public var opponentNote:Bool = true; // Think about like... Kade Engine. ; Opponent Note Glow
 	public var missonOksorCraps:Bool = false; // Like V-Slice, Okays (bads) & Awfuls (s###s) will count as Miss.

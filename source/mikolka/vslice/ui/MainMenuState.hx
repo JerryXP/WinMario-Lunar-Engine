@@ -12,7 +12,7 @@ import flixel.addons.display.FlxGridOverlay;
 
 class MainMenuState extends MusicBeatState
 {
-	public static var lunarVersion:String = '1.1.2'; // This is also used for Discord RPC
+	public static var lunarVersion:String = '1.2.5'; // This is also used for Discord RPC
 	public static var winmarioVersion:String = '3.3.75';
 
 	/**
