@@ -63,11 +63,10 @@ class LunarSettings extends BaseOptionsMenu
 			['Gradient', 'Dad Health Color', 'BF Health Color', 'GF Health Color', 'Note Hit', 'Kade', 'Psych']);
 		addOption(option);
 
-		var option:Option = new Option('Healthbar Type:',
-			'What type of Healthbar Color Do you want, Mr. Boring?',
-			'vsliceLegacyBar2',
-			STRING,
-			['Custom', 'RvB', 'Vanilla']);
+		var option:Option = new Option('Clock Text Display',
+			'Do you want to display the Clock?',
+			'timeTxthx',
+			BOOL);
 		addOption(option);
 
 		var option:Option = new Option('Opponent Note Glows',

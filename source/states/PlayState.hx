@@ -2875,6 +2875,7 @@ override public function update(elapsed:Float)
 	setOnScripts('popupMS', ClientPrefs.data.popupMS);
 	setOnScripts('healTxt', ClientPrefs.data.healTxt);
 	setOnScripts('comboNotehx', ClientPrefs.data.comboNotehx);
+	setOnScripts('timeTxthx', ClientPrefs.data.timeTxthx);
 
 	setOnScripts('colorDadTime', ClientPrefs.data.shadedTimeBar == 'Dad Health Color');
 	setOnScripts('colorBFTime', ClientPrefs.data.shadedTimeBar == 'BF Health Color');
