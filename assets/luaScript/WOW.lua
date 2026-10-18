@@ -71,7 +71,7 @@ function onUpdatePost()
 
     -- Kade
     if watermarkSong4 then
-        setTextString('watermark', songName .. " " .. difficultyName .. " - LE 1.2")
+        setTextString('watermark', songName .. " " .. difficultyName .. " - LE 1.2.5")
         setProperty('difficult.visible', false);
         if downscroll then
             setProperty('watermark.y', 10)
