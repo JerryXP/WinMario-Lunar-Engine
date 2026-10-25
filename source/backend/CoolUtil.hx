@@ -23,6 +23,22 @@ class CoolUtil
 		spr.screenCenter();
 		return spr;
 	}
+
+	/**
+	 * Parses JSON with the strict parser, falling back to TJSON.
+	 *
+	 * `haxe.Json` is substantially faster, but TJSON tolerates the hand-written sloppiness mods rely
+	 * on (comments, trailing commas, unquoted keys). Valid JSON is the overwhelming majority, so it
+	 * shouldn't pay for leniency only malformed files need. Nothing that parsed before stops parsing,
+	 * and if both fail it throws TJSON's error, so callers' try/catch behave as they did.
+	 */
+	public static function parseJson(raw:String):Dynamic {
+		try {
+			return haxe.Json.parse(raw);
+		} catch (error:Dynamic) {
+			return tjson.TJSON.parse(raw);
+		}
+	}
 	
 	inline public static function quantize(f:Float, snap:Float){
 		// changed so this actually works lol

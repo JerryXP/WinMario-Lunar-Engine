@@ -20,6 +20,9 @@ import shaders.VFDOverlay;
 #if !LEGACY_PSYCH
 import backend.Paths;
 #end
+#if hxWindowColorMode
+import hxwindowmode.WindowColorMode;
+#end
 
 using StringTools;
 
@@ -148,6 +151,44 @@ class FunkinPreloader extends FlxBasePreloader
 	{
 		// Nothing happens in the base preloader.
 		super.create();
+
+		#if hxWindowColorMode
+		WindowColorMode.setDarkMode();
+
+		// It will be Indiago if it's a New Year
+		if (Date.now().getMonth() == 0 && Date.now().getDate() == 1) {
+			WindowColorMode.setWindowBorderColor([25, 32, 64], true, false);
+		}
+
+		// It will be Rose if it's a Valentine's Day
+		else if (Date.now().getMonth() == 1 && Date.now().getDate() == 14) {
+			WindowColorMode.setWindowBorderColor([25, 32, 64], true, false);
+		}
+
+		// It will be Emerald if it's St. Patrick's Day
+		else if (Date.now().getMonth() == 2 && Date.now().getDate() == 17) {
+			WindowColorMode.setWindowBorderColor([16, 64, 16], true, false);
+		}
+
+		// It's Purple because it's my Birthday!
+		else if (Date.now().getMonth() == 7 && Date.now().getDate() == 28) {
+			WindowColorMode.setWindowBorderColor([64, 0, 64], true, false);
+		}
+
+		// it is the spooky month
+		else if (Date.now().getMonth() == 9 && Date.now().getDate() == 31) {
+			WindowColorMode.setWindowBorderColor([64, 32, 16], true, false);
+		}
+
+		// its krima!!
+		else if (Date.now().getMonth() == 11 && Date.now().getDate() == 25) {
+			WindowColorMode.setWindowBorderColor([96, 0, 0], true, false);
+		}
+		
+		else {
+			WindowColorMode.setWindowBorderColor([48, 32, 64], true, false);
+		}
+		#end
 
 		// Background color.
 		Lib.current.stage.color = 0xFF000000;

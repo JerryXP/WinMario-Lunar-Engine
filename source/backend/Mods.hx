@@ -12,6 +12,12 @@ typedef ModsList = {
 
 class Mods
 {
+	// When false, asset resolution (Paths) ignores `currentModDirectory` so a
+	// non-global mod can't override engine assets in core menus. Global mods are
+	// unaffected. Reset to true on every state switch (MusicBeatState.switchState);
+	// core-menu states set it false in create(). See plan: menu asset isolation.
+	static public var allowCurrentModAssets:Bool = true;
+	
 	static public var currentModDirectory(default,set):String = '';
 	public static final ignoreModFolders:Array<String> = [
 		'characters',

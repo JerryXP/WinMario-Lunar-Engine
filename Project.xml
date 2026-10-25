@@ -41,9 +41,9 @@
 	without FLX_NO_GAMEPAD: 11.8, without FLX_NO_NATIVE_CURSOR: 11.2-->
 	<set name="SWF_VERSION" value="11.8" />
 
-	<!-- ______________________ PSYCH ENGINE CUSTOMIZATION ______________________ -->
+	<!-- ______________________ LUNAR ENGINE CUSTOMIZATION ______________________ -->
 
-	<!-- Compiles mod support for Vs. WinMario. Feel free to disable if you're making a source mod -->
+	<!-- Compiles mod support for Lunar Engine. Feel free to disable if you're making a source mod -->
 	<define name="MODS_ALLOWED" if="desktop || mobile" />
 
 	<section unless="debug">
@@ -54,9 +54,12 @@
 		<define name="NATIVE_LOOKUP" if="MODS_ALLOWED" />
 	</section>
 
-	<!-- Adds support for Psych's lua/HScript files-->
+	<!-- Adds support for Lunar's lua/HScript files-->
 	<define name="HSCRIPT_ALLOWED" if="desktop || mobile" />
 	<define name="LUA_ALLOWED" if="cpp" />
+
+	<!-- Window Color haxeLib (Windows 11 Only)-->
+	<haxelib name="hxWindowColorMode" if="windows"/>
 
 	<!-- Enables Discord's Rich Presence integration-->
 	<define name="DISCORD_ALLOWED" if="desktop" unless="hl" />
@@ -262,7 +265,7 @@
 	<haxelib name="grig.audio" />
 	<haxelib name="funkin.vis" />
 
-	<!--Psych
+	<!--Lunar
 	stuff needed-->
 	<haxelib name="linc_luajit" if="LUA_ALLOWED" />
 	<haxelib name="hscript-iris" if="HSCRIPT_ALLOWED" version="1.1.3" />

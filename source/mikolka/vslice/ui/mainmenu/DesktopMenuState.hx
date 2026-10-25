@@ -10,7 +10,7 @@ import mikolka.vslice.ui.title.TitleState;
 import states.ModsMenuState;
 #end
 import states.AchievementsMenuState;
-import options.CreditsChoice;
+import states.CreditsState;
 import states.editors.MasterEditorMenu;
 #else
 import editors.MasterEditorMenu;
@@ -166,7 +166,7 @@ class DesktopMenuState extends FlxBasic
 							#end
 
 							case 'credits':
-								MusicBeatState.switchState(new options.CreditsChoice());
+								MusicBeatState.switchState(new CreditsState());
 							case 'options':
 								host.goToOptions();
 						}
