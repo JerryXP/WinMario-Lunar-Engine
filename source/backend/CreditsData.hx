@@ -89,7 +89,7 @@ class CreditsData {
 	**/
 	static function engineSections():Array<CreditSection> {
 		return [
-			section('Vs. WihnMario', [
+			section('Vs. WinMario', [
 				person('WM/LXP', 'win', 'The one who made this Engine',	[
 					{
 						label: 'YouTube',
