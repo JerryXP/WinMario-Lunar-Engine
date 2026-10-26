@@ -151,10 +151,10 @@ class LunarSettings extends BaseOptionsMenu
 		addOption(option);
 
 		var option:Option = new Option('Video Intro:',
-			"What Style do you like for the Video\n(NOTE: It was named after the WNR Startups made by other people)",
+			"What Style do you like for the Video",
 			'introvideoCutscene',
 			STRING,
-			['WinZinc', 'Win14', 'Win16', 'Win18', 'WinVista', 'Disabled']);
+			['Normal', 'Alternate', 'WinXP', 'WinVista B1', 'Mario World', 'WM/LXP Mix', 'Legacy', 'Disabled']);
 		addOption(option);
 
 		#if desktop
