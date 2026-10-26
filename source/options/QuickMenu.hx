@@ -47,7 +47,7 @@ class QuickMenu extends MusicBeatState
 				MusicBeatState.switchState(new options.OptionsState());
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			case 'Credits':
-				MusicBeatState.switchState(new options.CreditsChoice());
+				MusicBeatState.switchState(new states.CreditsState());
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			case 'Freeplay':
 				openSubState(new StickerSubState(null, (sticker) -> FreeplayState.build(null, sticker)));

@@ -11,7 +11,6 @@ import flixel.addons.transition.FlxTransitionSprite.GraphicTransTileDiamond;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.addons.transition.TransitionData;
 import flixel.addons.transition.TransitionData;
-import states.sub.TitleSub;
 import mikolka.compatibility.VsliceOptions;
 
 class DesktopState extends FlxState {
@@ -362,7 +361,7 @@ class DesktopState extends FlxState {
 		{
                         FlxTransitionableState.skipNextTransIn = true;
 		        FlxTransitionableState.skipNextTransOut = true;
-		        FlxG.switchState(new TitleSub());
+		        FlxG.switchState(new IntroVideoState());
                         FlxG.mouse.visible = false;
 
 		        closedState = true;

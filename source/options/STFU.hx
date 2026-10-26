@@ -14,6 +14,12 @@ class STFU extends BaseOptionsMenu {
 			BOOL,);
 		addOption(option);
 
+        var option:Option = new Option('Use results screen',
+			'It\'s Not Functional Right Now.',
+			'vsliceResults',
+			BOOL);
+		addOption(option);
+
         super();
     }
 }

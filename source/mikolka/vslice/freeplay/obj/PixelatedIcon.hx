@@ -48,9 +48,9 @@ class PixelatedIcon extends FlxFilteredSprite
           trace('[WARN] Character ${char} has no freeplay icon.');
           image = Paths.image("icons/icon-face");
         }
-        this.loadGraphic(image,true,Math.floor(image.width / 2), Math.floor(image.height));
+        this.loadGraphic(image,true,Math.floor(image.width / 3), Math.floor(image.height));
         animation.add("idle",[0],ICON_FRAMERATE,false);
-        animation.add("confirm",[1],ICON_FRAMERATE,false);
+        animation.add("confirm",[2],ICON_FRAMERATE,false);
         this.scale.x = this.scale.y = 0.58;
         this.updateHitbox();
         this.origin.x = 100;

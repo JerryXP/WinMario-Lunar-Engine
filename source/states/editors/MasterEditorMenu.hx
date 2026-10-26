@@ -18,7 +18,10 @@ class MasterEditorMenu extends MusicBeatState
 		'Chart Editor', 
 		'Character Editor', 
 		'Stage Editor', 
+		#if (debug && !mac && !mobile)
 		'Converters',
+		'Converters (OLD)',
+		#end
 		'Week Editor', 
 		'Test stickers', 
 		'Menu Character Editor', 
@@ -133,8 +136,12 @@ class MasterEditorMenu extends MusicBeatState
 					MusicBeatState.switchState(new StickerTest());
 				case 'Player editor':
 					MusicBeatState.switchState(new CharSelectEditor());
+				#if (debug && !mac && !mobile)
 				case 'Converters': 
+					MusicBeatState.switchState(new ConvertersState_New());
+				case 'Converters (OLD)': 
 					MusicBeatState.switchState(new ConvertersState());
+				#end
 				#if PROFILE_BUILD
 				case 'Crash the game':{
 					trace("Break the StackOverflow.com");

@@ -7,6 +7,39 @@ package backend;
 class CoolUtil
 {
 
+	/**
+	 * Cover-fits a full-screen background sprite: uniformly scales it so it always fills the whole
+	 * screen (cropping the overflow) at any aspect ratio, then re-centers it. Use for menu/UI
+	 * backgrounds that would otherwise leave gaps at wide resolutions. Not for gameplay (PlayState).
+	 * @param spr the loaded background sprite
+	 * @return the same sprite, for chaining
+	 */
+	public static function fillScreen(spr:flixel.FlxSprite):flixel.FlxSprite {
+		if (spr == null || spr.frameWidth <= 0 || spr.frameHeight <= 0)
+			return spr;
+		var cover:Float = Math.max(flixel.FlxG.width / spr.frameWidth, flixel.FlxG.height / spr.frameHeight);
+		spr.scale.set(cover, cover);
+		spr.updateHitbox();
+		spr.screenCenter();
+		return spr;
+	}
+
+	/**
+	 * Parses JSON with the strict parser, falling back to TJSON.
+	 *
+	 * `haxe.Json` is substantially faster, but TJSON tolerates the hand-written sloppiness mods rely
+	 * on (comments, trailing commas, unquoted keys). Valid JSON is the overwhelming majority, so it
+	 * shouldn't pay for leniency only malformed files need. Nothing that parsed before stops parsing,
+	 * and if both fail it throws TJSON's error, so callers' try/catch behave as they did.
+	 */
+	public static function parseJson(raw:String):Dynamic {
+		try {
+			return haxe.Json.parse(raw);
+		} catch (error:Dynamic) {
+			return tjson.TJSON.parse(raw);
+		}
+	}
+	
 	inline public static function quantize(f:Float, snap:Float){
 		// changed so this actually works lol
 		var m:Float = Math.fround(f * snap);

@@ -35,13 +35,6 @@ class DesktopSettingsSubState extends BaseOptionsMenu
 			['None', 'Login', 'Desktop', 'Both']);
 		addOption(option);
 
-		var option:Option = new Option('Time Format:',
-			"12 Hour is default.",
-			'clock',
-			STRING,
-			['12 Hour', '24 Hour']);
-		addOption(option);
-
 		var option:Option = new Option('Wallpaper:',
 			"What wallpaper?",
 			'wallpaper',

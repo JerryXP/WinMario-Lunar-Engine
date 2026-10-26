@@ -14,7 +14,7 @@
 	"songs": [
 		[
 			"Blue Balled",
-			"apple-free",
+			"apple",
 			[
 				255,
 				255,
@@ -23,7 +23,7 @@
 		],
 		[
 			"Terminal",
-			"apple-free",
+			"apple",
 			[
 				255,
 				255,
@@ -32,7 +32,7 @@
 		],
 		[
 			"Ejected",
-			"apple-angry-free",
+			"apple-angry",
 			[
 				255,
 				0,

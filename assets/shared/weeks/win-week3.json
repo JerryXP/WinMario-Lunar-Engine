@@ -2,7 +2,7 @@
 	"songs": [
 		[
 			"Hello World",
-			"windows-free",
+			"windows",
 			[
 				128,
 				0,
@@ -11,7 +11,7 @@
 		],
 		[
 			"Java",
-			"windows-free",
+			"windows",
 			[
 				128,
 				0,
@@ -20,7 +20,7 @@
 		],
 		[
 			"LCD",
-			"windows-free",
+			"windows",
 			[
 				128,
 				0,

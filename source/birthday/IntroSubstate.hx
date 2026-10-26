@@ -66,7 +66,7 @@ class IntroSubstate extends MusicBeatSubstate
 		{
 
 			case 2:
-					createCoolText(['Vs WinMario by'], 40);
+					createCoolText(['Vs. WinMario by'], 40);
 				case 4:
 					addMoreText('WM/LXP', 40);
 				case 5:
@@ -78,7 +78,7 @@ class IntroSubstate extends MusicBeatSubstate
 				case 8:
 					deleteCoolText();
 				case 9:
-					createCoolText(['We\'re Not associated', 'with'], -40);
+					createCoolText(['I am Not associated', 'with'], -40);
 				case 10:
 					addMoreText('newgrounds', -40);
 					ngSpr.visible = true;
