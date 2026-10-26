@@ -154,6 +154,7 @@ class CreditsData {
 			]),
 
 			section('Sprites/Assets', [
+				person("ChazbillYT",		        "",		        "BF alt animations",					  "https://gamebanana.com/members/2151108",	"808080"),
 				person("Vs. Tabi (V1)",	"tabi",      "Scared BF",		"https://gamebanana.com/mods/286388",	"f3c474"),
 				person("pixel_ratto",		"",		"Scared BF & GF (pixel)",			"https://gamebanana.com/members/2004377",		"FF8080"),
 				person("(._.)",		"",		"Expanded Pixel BF",			"https://gamebanana.com/members/1789351",		"000080"),
