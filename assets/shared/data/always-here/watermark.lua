@@ -4,7 +4,7 @@
     IntroTextSize = 25	--Size of the text for the Now Playing thing.
     IntroSubTextSize = 35 --size of the text for the Song Name.
     IntroSubText2Size = 20 --size of the text for the Artist Name.
-    IntroTagColor = 'ff8000' --Color of the tag at the end of the box.
+    IntroTagColor = 'FFFFFF' --Color of the tag at the end of the box.
     IntroTagWidth = 15	--Width of the box's tag thingy.
 
     --actual script
@@ -22,14 +22,14 @@
         addLuaSprite('JukeBox', true)
     
         --text for the song name
-        makeLuaText('JukeBoxSubText', 'Sugar Rush', 300, -305-IntroTagWidth, 220)
+        makeLuaText('JukeBoxSubText', 'Always Here', 300, -305-IntroTagWidth, 220)
         setTextAlignment('JukeBoxSubText', 'left')
         setObjectCamera('JukeBoxSubText', 'other')
         setTextSize('JukeBoxSubText', IntroSubTextSize)
         addLuaText('JukeBoxSubText')
     
         --text for the artist name
-        makeLuaText('JukeBoxSubText2', 'Sky!', 300, -305-IntroTagWidth, 260)
+        makeLuaText('JukeBoxSubText2', 'Kitty Pop & Demar', 300, -305-IntroTagWidth, 260)
         setTextAlignment('JukeBoxSubText2', 'left')
         setObjectCamera('JukeBoxSubText2', 'other')
         setTextSize('JukeBoxSubText2', IntroSubText2Size)

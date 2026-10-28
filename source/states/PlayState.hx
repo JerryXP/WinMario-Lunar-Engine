@@ -5538,7 +5538,7 @@ private function checkForAchievement(achievesToCheck:Array<String> = null)
 						unlock = (songName == 'finale' && isStoryMode && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice);
 
 					case 'win-week8':
-						unlock = (songName == 'galactic' && isStoryMode && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice);
+						unlock = (songName == 'always-here' && isStoryMode && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice);
 
 					//case 'good':
 						//unlock = (songName == 'galactic' && isStoryMode && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice);
@@ -5580,7 +5580,7 @@ private function checkForAchievement(achievesToCheck:Array<String> = null)
 						unlock = (songName == 'stargazer' && !usedPractice && !changedDifficulty);
 
 					case 'secret4':
-						unlock = (songName == 'sugar-rush' && !usedPractice && !changedDifficulty);
+						unlock = (songName == 'high-spirits' && !usedPractice && !changedDifficulty);
 					
 					case 'secret5':
 						unlock = (songName == 'salty-love' && !usedPractice && !changedDifficulty);

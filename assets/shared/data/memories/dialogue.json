@@ -162,7 +162,7 @@
 		},
 		{
 			"expression": "interest",
-			"text": "Hmm... I am thinking... Disability from D&B Gapple.",
+			"text": "Hmm... I am thinking... Memories! Because I can finally meet you again!",
 			"boxState": "normal",
 			"portrait": "win",
 			"speed": 0.05,
@@ -170,7 +170,7 @@
 		},
 		{
 			"expression": "excited",
-			"text": "Okay! Let’s Go!",
+			"text": "Okay! Let's Go!",
 			"boxState": "normal",
 			"portrait": "dino",
 			"speed": 0.05,
@@ -178,7 +178,7 @@
 		},
 		{
 			"expression": "optimism",
-			"text": "Let’s Do this!",
+			"text": "Let's Do this!",
 			"boxState": "normal",
 			"portrait": "win",
 			"speed": 0.05,

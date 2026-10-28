@@ -1,12 +1,12 @@
 {
-	"songRating": 6,
+	"songRating": 8,
 	"allowNewTag": true,
 	"allowErectVariants": false,
 	"freeplayPrevStart": 0,
 	"freeplayPrevEnd": 26.05,
 	"freeplaySongLength": 130.282,
 	"freeplayCharacter": "",
-	"albumId": "winvolume1",
+	"albumId": "winvolume7",
 	"altInstrumentalSongs": "",
 	"freeplayWeekName": "week 8"
 }

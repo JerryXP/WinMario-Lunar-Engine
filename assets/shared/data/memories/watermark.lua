@@ -22,14 +22,14 @@
         addLuaSprite('JukeBox', true)
     
         --text for the song name
-        makeLuaText('JukeBoxSubText', 'Disability', 300, -305-IntroTagWidth, 220)
+        makeLuaText('JukeBoxSubText', 'Memories', 300, -305-IntroTagWidth, 220)
         setTextAlignment('JukeBoxSubText', 'left')
         setObjectCamera('JukeBoxSubText', 'other')
         setTextSize('JukeBoxSubText', IntroSubTextSize)
         addLuaText('JukeBoxSubText')
     
         --text for the artist name
-        makeLuaText('JukeBoxSubText2', 'Sky!', 300, -305-IntroTagWidth, 260)
+        makeLuaText('JukeBoxSubText2', 'Kitty Pop & Demar', 300, -305-IntroTagWidth, 260)
         setTextAlignment('JukeBoxSubText2', 'left')
         setObjectCamera('JukeBoxSubText2', 'other')
         setTextSize('JukeBoxSubText2', IntroSubText2Size)
