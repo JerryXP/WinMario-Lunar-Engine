@@ -367,7 +367,7 @@ class CreditsData {
 				person("DarDevv",		        "",		        "Bios State (edit by me)",			"https://gamebanana.com/members/2014882",	"808080"),
 				person("Lenin Anonimo",		        "len",		        "For Using Several of their Code",			"https://gamebanana.com/members/3509758",	"03FC88"),
 				person("Lucas-Sanches",		        "lucas",		        "For using the code for Converters State\n(& Legacy Converters State)",			"https://gamebanana.com/members/2088040",	"FF8000"),
-				person("Timeless",		  "timeless",		      "The Note Event Animation in Title State when you enter the game.",			"https://gamebanana.com/members/5828656",	"200040"),
+				person("Timeless",		  "timeless",		      "The Note Event Animation in Title State when you enter the game.",			"https://discord.com/users/1347569284947382272",	"200040"),
 				person("TBar09",		  "tbar",		      "For hxWindowColorMode Libary",			"https://github.com/TBar09",	"0077CC"),
 				person('MeguminBOT', 'lulu', 'made the Custom Credits State', 'https://github.com/MeguminBOT', '8A6FB0'),
 				person("SquidBowl",		    "tinkatonk",		"GalleryState (edit by me)",			"https://gamebanana.com/members/2041479",	"804000"),

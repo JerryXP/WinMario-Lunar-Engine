@@ -1,8 +1,0 @@
-Hi, thank you for opening this file, But anyways, due to the Video File being over 100 MB, It can't be upload.
-But you need this Video File so it can be loaded on Week 16's Ending Credits, now... follow these steps.
-
-1. Go to this Drive Link & Download it.
-https://drive.google.com/file/d/1JVlxPbjFKVGnyXOlujzw1BikIRG3uEqc/view?usp=sharing
-
-2. Once it's done uploading, put this under "/assets/videos/" and put your video file there and your done!
-But anyways, thank you for reading this & Following this! Toodles!
