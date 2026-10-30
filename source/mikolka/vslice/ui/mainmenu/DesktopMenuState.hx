@@ -194,7 +194,7 @@ class DesktopMenuState extends FlxBasic
 					FlxTransitionableState.skipNextTransOut = false;
 					MusicBeatState.switchState(new options.OptionsStateCheat());
 				}
-				#if (!mac && !mobile)
+				#if (!mac || !mobile)
 				if (host.controls.justPressed('debug_2'))
 				{
 					selectedSomethin = true;

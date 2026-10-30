@@ -18,7 +18,7 @@ class MasterEditorMenu extends MusicBeatState
 		'Chart Editor', 
 		'Character Editor', 
 		'Stage Editor', 
-		#if (debug && !mac && !mobile)
+		#if (debug && !mac || !mobile)
 		'Converters',
 		'Converters (OLD)',
 		#end
@@ -136,7 +136,7 @@ class MasterEditorMenu extends MusicBeatState
 					MusicBeatState.switchState(new StickerTest());
 				case 'Player editor':
 					MusicBeatState.switchState(new CharSelectEditor());
-				#if (debug && !mac && !mobile)
+				#if (debug && !mac || !mobile)
 				case 'Converters': 
 					MusicBeatState.switchState(new ConvertersState_New());
 				case 'Converters (OLD)': 
