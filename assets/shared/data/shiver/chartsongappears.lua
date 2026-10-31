@@ -6,7 +6,7 @@ function onUpdate()
 
 if keyJustPressed('debug_1') then
 
-   loadSong('sugar-rush') -- type any song that you want
+   loadSong('high-spirits') -- type any song that you want
    setPropertyFromClass('PlayState', 'chartingMode', false)
 end
 end

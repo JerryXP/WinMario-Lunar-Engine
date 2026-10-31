@@ -1,5 +1,6 @@
 package states;
 
+#if desktop
 import backend.WeekData;
 import backend.Highscore;
 import backend.Song;
@@ -106,7 +107,7 @@ class SoundtrackState extends MusicBeatState
 		}
 		Mods.loadTopMod();
 
-		bg = new FlxSprite().loadGraphic("assets/shared/images/ostBG.png");
+		bg = new FlxSprite().loadGraphic(backend.Paths.image('ostBG'));
 		bg.antialiasing = ClientPrefs.data.antialiasing;
 		add(bg);
 		bg.screenCenter();
@@ -442,8 +443,13 @@ class SoundtrackState extends MusicBeatState
 			@:privateAccess
 			if(PlayState._lastLoadedModDirectory != Mods.currentModDirectory)
 			{
-				trace('NO');
+				trace('CHANGED MOD DIRECTORY, RELOADING STUFF');
 				Paths.freeGraphicsFromMemory();
+			}
+			
+			if (ClientPrefs.data.playSongOST) {
+				LoadingState.prepareToSong();
+				LoadingState.loadAndSwitchState(new PlayState());
 			}
 			#if !SHOW_LOADING_SCREEN FlxG.sound.music.stop(); #end
 			stopMusicPlay = true;
@@ -621,3 +627,4 @@ class SongMetadata
 		if(this.folder == null) this.folder = '';
 	}
 }
+#end

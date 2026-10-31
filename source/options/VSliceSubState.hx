@@ -7,7 +7,7 @@ class VSliceSubState extends BaseOptionsMenu {
         rpcTitle = "V-Slice settings menu";
 
 		var option:Option = new Option('Naughtyness',
-			'If disabled, some "raunchy content" (such as swearing, etc.) will be disabled\n(This setting is unused.)',
+			'If disabled, some "raunchy content" (such as swearing, etc.) will be disabled',
 			'vsliceNaughtyness',
 			BOOL);
 		addOption(option);

@@ -1,0 +1,5 @@
+You don't need to credit me if you use this event, I just wanted people to have a simple way to control the camera a little bit better.
+
+Value 1: Camera Target
+
+You can change Value 1 to be either "bf", "gf", or "dad" ("dad" can also be written as "opponent").

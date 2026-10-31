@@ -131,6 +131,33 @@ class PlayState extends MusicBeatState
 		['S', 1], //From 90% to 99%
 		['X', 1] //The value on this one isn't used actually, since Perfect is always "1"
 	];
+
+	// Pico Engine
+	// Taken from Pico Engine duh (https://github.com/Pico-Engine-Team/FNF-PicoEngine)
+	public static var ratingStuffpico:Array<Dynamic> = [
+		['E', 0.6],
+		['C', 0.7],
+		['B', 0.8],
+		['A', 0.9],
+		['S', 0.95],
+		['P', 0.97],
+		['P+', 1],
+	];
+
+	// Green Engine
+	// Taken from Green Engine duh (https://gamebanana.com/tools/21265)
+	public static var ratingStuffgreen:Array<Dynamic> = [
+		['Get Good!', 0.2], //From 0% to 19%
+		['Too Bad', 0.4], //From 20% to 39%
+		['Bad', 0.5], //From 40% to 49%
+		['...', 0.6], //From 50% to 59%
+		['69', 0.69], //From 60% to 68%
+		['Funny', 0.7], //69%
+		['Getting Good', 0.8], //From 70% to 79%
+		['Almost', 0.9], //From 80% to 89%
+		['Wow!', 1], //From 90% to 99%
+		['Green!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
+	];
 	
 	// Codename
 	public static var ratingStuffcodename:Array<Dynamic> = [
@@ -156,6 +183,20 @@ class PlayState extends MusicBeatState
 		['Great', 0.9],
 		['Sick!', 1],
 		['Perfect!!', 1]
+	];
+
+	// Psych Plus
+	public static var ratingStuffpsychALT:Array<Dynamic> = [
+		['You Suck!', 0.2],
+		['Shit', 0.4],
+		['Bad', 0.5],
+		['Bruh', 0.6],
+		['Meh', 0.69],
+		['Nice', 0.7],
+		['Good', 0.8],
+		['Great', 0.9],
+		['Sick!', 1],
+		['Flawless!!', 1]
 	];
 
 	// Kade
@@ -203,7 +244,6 @@ class PlayState extends MusicBeatState
 		['AAAA', 1],
 		['AAAAA', 1]
 	];
-
 		public static function getRatingStuff():Array<Dynamic> {
 		return [
 			// Normal Ratings (0% - 100%) - Wife3 standard does not allow negative ratings
@@ -847,7 +887,7 @@ class PlayState extends MusicBeatState
 		uiGroup.add(iconP2);
 
 		scoreTxt = new FlxText(0, healthBar.y + 40, FlxG.width, "", 20);
-		scoreTxt.setFormat(Paths.font("score.ttf"), 17, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreTxt.setFormat(Paths.font("score.ttf"), 17, (ClientPrefs.data.winmarioCustomscore != 'Green Engine' ? FlxColor.WHITE : FlxColor.GREEN), RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.25;
 		scoreTxt.visible = !ClientPrefs.data.hideHud;
@@ -1624,30 +1664,35 @@ class PlayState extends MusicBeatState
 
 		// RATING NAMES
 		// Default
-        var insult:String = Language.getPhrase('rating_$ratingName', ratingName);
+        var insult:String = Language.getPhrase('rating_winmario_$ratingName', ratingName);
 		// Legacy
-		var insultLegacyRating:String = Language.getPhrase('rating_$ratingLegacyName', ratingLegacyName);
-		var insultLegacyRank:String = Language.getPhrase('rating_$rankLegacyName', rankLegacyName);
+		var insultLegacyRating:String = Language.getPhrase('rating_winmarioLegacy_$ratingLegacyName', ratingLegacyName);
+		var insultLegacyRank:String = Language.getPhrase('rating_winmarioLegacy_$rankLegacyName', rankLegacyName);
+		// Pico Engine
+        var insultPico:String = Language.getPhrase('rating_pico_$ratingPicoName', ratingPicoName);
 		// Codename
-        var insultCodename:String = Language.getPhrase('rating_$ratingCodenameName', ratingCodenameName);
+        var insultCodename:String = Language.getPhrase('rating_codename_$ratingCodenameName', ratingCodenameName);
 		// Psych
         var insultPsych:String = Language.getPhrase('rating_$ratingPsychName', ratingPsychName);
-		var insultOS:String = Language.getPhrase('rating_$ratingOSName', ratingOSName);
+		var insultPsychPlus:String = Language.getPhrase('rating_plus_$ratingPsychPlusName', ratingPsychPlusName);
+		var insultGreen:String = Language.getPhrase('rating_green_$ratingGreenName', ratingGreenName);
+		var insultOS:String = Language.getPhrase('rating_osEngine_$ratingOSName', ratingOSName);
 		if(totalPlayed != 0)
 		{
 			insultPsych += ' (${percent}%) - ' + Language.getPhrase(ratingFC);
+			insultGreen += ' (${percent}%) - ' + Language.getPhrase(ratingFC);
 			insultLegacyRank += ' - ${percent}% ';
 		}
 
 		// Forever
-        var insultForever:String = Language.getPhrase('rating_$ratingForeverName', ratingForeverName);
+        var insultForever:String = Language.getPhrase('rating_forever_$ratingForeverName', ratingForeverName);
 		var div: String = ' • ';
 
 		// V-Slice
-        var scoreVanillia:String = FlxStringUtil.formatMoney(songScore).split('.')[0];
+        var scoreVanilla:String = FlxStringUtil.formatMoney(songScore).split('.')[0];
 		
 		// Kade
-        var insultKade:String = Language.getPhrase('rating_$ratingKadeName', ratingKadeName);
+        var insultKade:String = Language.getPhrase('rating_kade_$ratingKadeName', ratingKadeName);
 
 		// FC
         var fc:String = Language.getPhrase(ratingFC);
@@ -1675,6 +1720,28 @@ class PlayState extends MusicBeatState
 			else
 				tempScore = Language.getPhrase('score_text_legacy_instakill', 'Score: {1} | Results: {2} | Rank: {3} ({4})', [songScore, insultLegacyRating, insultLegacyRank, fc]);
         } 
+
+		else if (ClientPrefs.data.winmarioCustomscore == 'Pico Engine') {
+			if(!instakillOnMiss)
+				tempScore = Language.getPhrase('score_text_pico', 'Score: {1} | Misses: {2} | Accuracy: {3}% [{4}]', [songScore, songMisses, percent, insultPico]);
+			else
+				tempScore = Language.getPhrase('score_text_pico_instakill', 'Score: {1} | Accuracy: {2}% [{3}]', [songScore, percent, insultPico]);
+        }
+
+		// I made the Score Text Green for Green Engine's Score Text for special.
+		else if (ClientPrefs.data.winmarioCustomscore == 'Green Engine') {
+			if(!instakillOnMiss) 
+				tempScore = Language.getPhrase('score_text_green', 'Score: {1} | Misses: {2} | Rating: {3}', [songScore, songMisses, insultGreen]);
+			else 
+				tempScore = Language.getPhrase('score_text_green_instakill', 'Score: {1} | Rating: {2}', [songScore, insultGreen]);
+        }
+
+		else if (ClientPrefs.data.winmarioCustomscore == 'Psych Plus') {
+			if(!instakillOnMiss) 
+				tempScore = Language.getPhrase('score_text_plus', 'Score: {1} | Misses: {2} | Rating: {3}% / {4} [{5}] | TPS: {6}/{7}', [scoreStr, songMisses, percent, insultPsychPlus, fc, nps, maxNPS]);
+			else 
+				tempScore = Language.getPhrase('score_text_plus_instakill', 'Score: {1} | Rating: {2}% / {3} [{4}] | TPS: {5}/{6}', [scoreStr, percent, insultPsychPlus, fc, nps, maxNPS]);
+        }
 		
 		else if (ClientPrefs.data.winmarioCustomscore == 'Mic\'d Up') {
 			tempScore = Language.getPhrase('score_text_micd_up', 'Score: {1}\nMisses: {2}\nAccuracy: {3}%\nNPS: {4}', [songScore, songMisses, percent, nps]);
@@ -1702,11 +1769,11 @@ class PlayState extends MusicBeatState
 				tempScore = Language.getPhrase('score_text_kade', 'NPS: {1} (Max: {2}) | Score: {3} | Combo Breaks: {4} | Accuracy: {5}% | ({6}) {7}', [nps, maxNPS, songScore, songMisses, percent, fc, insultKade]);
         }
 
-		else if (ClientPrefs.data.winmarioCustomscore == 'Vanillia') {
+		else if (ClientPrefs.data.winmarioCustomscore == 'Vanilla') {
 			if(cpuControlled)
 				tempScore = Language.getPhrase('score_text_vslice_botplay', 'Bot Play enabled', []);
 			else
-				tempScore = Language.getPhrase('score_text_vslice', 'Score: {1}', [scoreVanillia]);
+				tempScore = Language.getPhrase('score_text_vslice', 'Score: {1}', [scoreVanilla]);
         }
 
 		else if (ClientPrefs.data.winmarioCustomscore == 'Forever') {
@@ -1737,7 +1804,7 @@ class PlayState extends MusicBeatState
     }
 
 
-    public dynamic function fullComboFunction()
+     public dynamic function fullComboFunction()
     {
         var marvelouss:Int = ratingsData[0].hits;
         var sicks:Int = ratingsData[1].hits;
@@ -1745,55 +1812,106 @@ class PlayState extends MusicBeatState
         var bads:Int = ratingsData[3].hits;
         var shits:Int = ratingsData[4].hits;
 
-
 		if (ClientPrefs.data.winmarioCustomscore == 'WinMario' || ClientPrefs.data.winmarioCustomscore == 'WinMario (Legacy)') {
-        	ratingFC = "N/A";
+			ratingFC = "N/A";
+
+			if (songMisses == 0)
+        	{
+				if (shits > 0)
+					ratingFC = 'NM'; //from psych online
+				else if (bads > 0)
+              	 	ratingFC = 'FC';
+				else if (goods > 0)
+					ratingFC = 'GFC';
+				else if (sicks > 0)
+              	 	ratingFC = 'SFC';
+				else if (marvelouss > 0)
+              	 	ratingFC = 'PFC';
+			}
+			else
+       		{
+				if (songMisses < 10)
+                	ratingFC = 'SDCB';
+            	else if (songMisses < 70)
+                	ratingFC = 'Clear';
+            	else if (songMisses > 70)
+              		ratingFC = 'Skill Issue';
+			}
 		} else if (ClientPrefs.data.winmarioCustomscore == 'Kade') {
-        	ratingFC = "N/A";
-		} 
-		else {
+			ratingFC = "N/A";
+
+			if (songMisses == 0)
+        	{
+				if (shits > 0)
+					ratingFC = 'FC';
+				else if (bads > 0)
+              	 	ratingFC = 'FC';
+				else if (goods > 0)
+					ratingFC = 'GFC';
+				else if (sicks > 0)
+              	 	ratingFC = 'MFC';
+				else if (marvelouss > 0)
+              	 	ratingFC = 'MFC';
+			}
+			else
+       		{
+				if (songMisses < 10)
+                	ratingFC = 'SDCB';
+            	else
+                	ratingFC = 'Clear';
+			}
+		} else if (ClientPrefs.data.winmarioCustomscore == 'Psych Plus') {
 			ratingFC = "";
+
+			if (songMisses == 0)
+        	{
+				if (shits > 0)
+					ratingFC = 'FC';
+				else if (bads > 0)
+              	 	ratingFC = 'BFC';
+				else if (goods > 0)
+					ratingFC = 'GFC';
+				else if (sicks > 0)
+              	 	ratingFC = 'SFC';
+				else if (marvelouss > 0)
+              	 	ratingFC = 'FFC';
+			}
+			else
+       		{
+				if (songMisses < 2)
+                	ratingFC = 'SMC';
+				else if (songMisses < 5)
+                	ratingFC = 'LMC';
+				else if (songMisses < 10)
+                	ratingFC = 'MMC';
+            	else
+                	ratingFC = 'HMC';
+			}
+		} else {
+			ratingFC = "";
+
+			if (songMisses == 0)
+        	{
+				if (shits > 0)
+					ratingFC = 'FC';
+				else if (bads > 0)
+              	 	ratingFC = 'FC';
+				else if (goods > 0)
+					ratingFC = 'GFC';
+				else if (sicks > 0)
+              	 	ratingFC = 'SFC';
+				else if (marvelouss > 0)
+              	 	ratingFC = 'SFC';
+			}
+			else
+       		{
+				if (songMisses < 10)
+                	ratingFC = 'SDCB';
+            	else
+                	ratingFC = 'Clear';
+			}
 		}
 
-        if (songMisses == 0)
-        {
-            if (shits > 0)
-				if (ClientPrefs.data.winmarioCustomscore == 'WinMario' || ClientPrefs.data.winmarioCustomscore == 'WinMario (Legacy)') {
-                	ratingFC = 'NM';
-				} else {
-					ratingFC = 'FC';
-				}
-            else if (bads > 0)
-                ratingFC = 'FC';
-            else if (goods > 0)
-                ratingFC = 'GFC';
-            else if (sicks > 0)
-                ratingFC = (ClientPrefs.data.winmarioCustomscore != 'Kade' ? 'SFC' : 'MFC');
-            else if (marvelouss > 0)
-				if (ClientPrefs.data.winmarioCustomscore != 'Kade') {
-					if (ClientPrefs.data.winmarioCustomscore != 'Forever') {
-                		ratingFC =  (ClientPrefs.data.winmarioCustomscore != 'Psych' ? 'PFC' : 'SFC');
-					} else {
-						ratingFC =  'SFC';
-					}
-				} else {
-					ratingFC = 'MFC';
-				}
-        }
-        else
-        {
-			if (ClientPrefs.data.winmarioCustomscore != 'WinMario' || ClientPrefs.data.winmarioCustomscore != 'WinMario (Legacy)') {
-            	if (songMisses < 10) ratingFC = 'SDCB';
-				else ratingFC = 'Clear';
-			} else {
-			if (songMisses < 10)
-                ratingFC = 'SDCB';
-            else if (songMisses < 70)
-                ratingFC = 'Clear';
-            else if (songMisses > 70)
-                ratingFC = 'Skill Issue';
-			}
-        }
     }
 
 	public function doScoreBop():Void
@@ -2683,6 +2801,25 @@ override public function update(elapsed:Float)
 	setOnScripts('botPlay', cpuControlled);
 	setOnScripts('noMiss', instakillOnMiss);
 	setOnScripts('hideHud', ClientPrefs.data.hideHud);
+
+	setOnScripts('watermarkSong1', ClientPrefs.data.watermarkSong == 'WinMario');
+	setOnScripts('watermarkSong2', ClientPrefs.data.watermarkSong == 'WinMario (Alpha)');
+	setOnScripts('watermarkSong3', ClientPrefs.data.watermarkSong == 'Usaul');
+	setOnScripts('watermarkSong4', ClientPrefs.data.watermarkSong == 'Kade');
+	setOnScripts('watermarkSong5', ClientPrefs.data.watermarkSong == 'SongName Only');
+	setOnScripts('watermarkSong6', ClientPrefs.data.watermarkSong == 'Difficulty Name');
+	setOnScripts('watermarkSong0', ClientPrefs.data.watermarkSong == 'Disabled');
+	
+	setOnScripts('notedColored', ClientPrefs.data.shadedNote == 'ON');
+	setOnScripts('notedColoredLEGACY', ClientPrefs.data.shadedNote == 'ON (legacy)');
+
+	setOnScripts('iconColoredstrum', ClientPrefs.data.iconColoredstrum);
+
+	setOnScripts('timerBreak', ClientPrefs.data.timerBreak);
+	setOnScripts('popupMS', ClientPrefs.data.popupMS);
+	setOnScripts('healTxt', ClientPrefs.data.healTxt);
+	setOnScripts('comboNotehx', ClientPrefs.data.comboNotehx);
+	setOnScripts('timeTxthx', ClientPrefs.data.timeTxthx);
 
 	setOnScripts('colorDadTime', ClientPrefs.data.shadedTimeBar == 'Dad Health Color');
 	setOnScripts('colorBFTime', ClientPrefs.data.shadedTimeBar == 'BF Health Color');
@@ -5156,6 +5293,14 @@ function strumPlayAnim(isDad:Bool, id:Int, time:Float)
 	if (isDad)
 	{
 		spr = opponentStrums.members[id];
+		
+		if(!ClientPrefs.data.opponentNote) {
+			if(spr != null)
+			{
+				spr.playAnim('static');
+				spr.resetAnim = 0;
+			}
+		}
 	}
 	else
 	{
@@ -5172,7 +5317,10 @@ function strumPlayAnim(isDad:Bool, id:Int, time:Float)
 public var ratingName:String = '?';
 public var ratingLegacyName:String = '?';
 public var rankLegacyName:String = '?';
+public var ratingGreenName:String = 'placeholder';
+public var ratingPicoName:String = 'N/A';
 public var ratingPsychName:String = '?';
+public var ratingPsychPlusName:String = '?';
 public var ratingForeverName:String = '?';
 public var ratingOSName:String = '?';
 public var ratingKadeName:String = 'N/A';
@@ -5195,7 +5343,12 @@ public function RecalculateRating(badHit:Bool = false, scoreBop:Bool = true)
 		ratingLegacyName = '?';
 		rankLegacyName = '?';
 
+		ratingPicoName = 'N/A';
+
+		ratingGreenName = 'placeholder';
+
 		ratingPsychName = '?';
+		ratingPsychPlusName = '?';
 
 		ratingForeverName = '?';
 
@@ -5242,6 +5395,26 @@ public function RecalculateRating(badHit:Bool = false, scoreBop:Bool = true)
 						break;
 					}
 
+			// Pico Engine
+			ratingPicoName = ratingStuffpico[ratingStuffpico.length - 1][0]; // Uses last string
+			if (ratingPercent < 1)
+				for (i in 0...ratingStuffpico.length - 1)
+					if (ratingPercent < ratingStuffpico[i][1])
+					{
+						ratingPicoName = ratingStuffpico[i][0];
+						break;
+					}
+
+			// Green Engine
+			ratingGreenName = ratingStuffgreen[ratingStuffgreen.length - 1][0]; // Uses last string
+			if (ratingPercent < 1)
+				for (i in 0...ratingStuffgreen.length - 1)
+					if (ratingPercent < ratingStuffgreen[i][1])
+					{
+						ratingGreenName = ratingStuffgreen[i][0];
+						break;
+					}
+
 			// Psych
 			ratingPsychName = ratingStuffpsych[ratingStuffpsych.length - 1][0]; // Uses last string
 			if (ratingPercent < 1)
@@ -5249,6 +5422,16 @@ public function RecalculateRating(badHit:Bool = false, scoreBop:Bool = true)
 					if (ratingPercent < ratingStuffpsych[i][1])
 					{
 						ratingPsychName = ratingStuffpsych[i][0];
+						break;
+					}
+
+			// Psych Plus
+			ratingPsychPlusName = ratingStuffpsychALT[ratingStuffpsychALT.length - 1][0]; // Uses last string
+			if (ratingPercent < 1)
+				for (i in 0...ratingStuffpsychALT.length - 1)
+					if (ratingPercent < ratingStuffpsychALT[i][1])
+					{
+						ratingPsychPlusName = ratingStuffpsychALT[i][0];
 						break;
 					}
 			
@@ -5295,7 +5478,18 @@ public function RecalculateRating(badHit:Bool = false, scoreBop:Bool = true)
 		fullComboFunction();
 	}
 	setOnScripts('rating', ratingPercent);
+
 	setOnScripts('ratingName', ratingName);
+	setOnScripts('ratingLegacyName', ratingLegacyName);
+	setOnScripts('rankLegacyName', rankLegacyName);
+	setOnScripts('ratingPicoName', ratingPicoName);
+	setOnScripts('ratingGreenName', ratingGreenName);
+	setOnScripts('ratingPsychName', ratingPsychName);
+	setOnScripts('ratingForeverName', ratingForeverName);
+	setOnScripts('ratingOSName', ratingOSName);
+	setOnScripts('ratingKadeName', ratingKadeName);
+	setOnScripts('ratingCodenameName', ratingCodenameName);
+
 	setOnScripts('ratingFC', ratingFC);
 	setOnScripts('totalPlayed', totalPlayed);
 	setOnScripts('totalNotesHit', totalNotesHit);
@@ -5344,7 +5538,7 @@ private function checkForAchievement(achievesToCheck:Array<String> = null)
 						unlock = (songName == 'finale' && isStoryMode && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice);
 
 					case 'win-week8':
-						unlock = (songName == 'galactic' && isStoryMode && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice);
+						unlock = (songName == 'always-here' && isStoryMode && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice);
 
 					//case 'good':
 						//unlock = (songName == 'galactic' && isStoryMode && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice);
@@ -5386,7 +5580,7 @@ private function checkForAchievement(achievesToCheck:Array<String> = null)
 						unlock = (songName == 'stargazer' && !usedPractice && !changedDifficulty);
 
 					case 'secret4':
-						unlock = (songName == 'sugar-rush' && !usedPractice && !changedDifficulty);
+						unlock = (songName == 'high-spirits' && !usedPractice && !changedDifficulty);
 					
 					case 'secret5':
 						unlock = (songName == 'salty-love' && !usedPractice && !changedDifficulty);

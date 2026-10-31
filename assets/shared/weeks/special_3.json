@@ -18,7 +18,7 @@
 	"songs": [
 		[
 			"Carefree",
-			"px-free",
+			"px",
 			[
 				128,
 				0,
@@ -27,7 +27,7 @@
 		],
 		[
 			"Win-High",
-			"px-free",
+			"px",
 			[
 				255,
 				255,
@@ -36,7 +36,7 @@
 		],
 		[
 			"Boogie",
-			"px-free",
+			"px",
 			[
 				0,
 				0,

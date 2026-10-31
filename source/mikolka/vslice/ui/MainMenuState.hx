@@ -16,11 +16,11 @@ class MainMenuState extends MusicBeatState
 	#if !LEGACY_PSYCH
 	public static var psychEngineVersion:String = '1.0.4'; // This is also used for Discord RPC
 	#if windows
-	public static var winmarioVersion:String = '3.3.75';
+	public static var winmarioVersion:String = '3.4';
 	#elseif (mac || linux)
-	public static var winmarioVersion:String = '3.3.75';
+	public static var winmarioVersion:String = '3.4';
 	#elseif mobile
-	public static var winmarioVersion:String = '3.3.75'; // Never Released but if there is a chance. 
+	public static var winmarioVersion:String = '3.4'; // Never Released but if there is a chance. 
 	#end
 	#end
 

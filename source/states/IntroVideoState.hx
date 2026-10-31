@@ -46,9 +46,6 @@ class IntroVideoState extends MusicBeatState
 			if (ClientPrefs.data.introvideoCutscene == 'Legacy')
 			startVideo('intro-legacy');
 
-			if (Date.now().getMonth() == 7 && Date.now().getDate() == 28)
-			MusicBeatState.switchState(new birthday.IntroVideoState());
-
 		super.create();
 	}
 
@@ -64,7 +61,11 @@ class IntroVideoState extends MusicBeatState
 		{
             		new FlxTimer().start(0.1, function(tmr:FlxTimer)
             		{
-				MusicBeatState.switchState(new mikolka.vslice.ui.title.TitleState());
+						if (Date.now().getMonth() == 7 && Date.now().getDate() == 28) {
+							MusicBeatState.switchState(new birthday.TitleState());
+						} else {
+							MusicBeatState.switchState(new mikolka.vslice.ui.title.TitleState());
+						}
             		});
 		});
 	}
@@ -72,15 +73,30 @@ class IntroVideoState extends MusicBeatState
 	override public function update(elapsed:Float):Void
 	{
 		#if desktop
-		if (controls.ACCEPT)
-			MusicBeatState.switchState(new mikolka.vslice.ui.title.TitleState());
+		if (controls.ACCEPT) {
+			if (Date.now().getMonth() == 7 && Date.now().getDate() == 28) {
+					MusicBeatState.switchState(new birthday.TitleState());
+				} else {
+					MusicBeatState.switchState(new mikolka.vslice.ui.title.TitleState());
+				}
+		}
 		#end
 		#if mobile
-		if (TouchUtil.justReleased && !SwipeUtil.swipeAny)
-			MusicBeatState.switchState(new mikolka.vslice.ui.title.TitleState());
+		if (TouchUtil.justReleased && !SwipeUtil.swipeAny) {
+			if (Date.now().getMonth() == 7 && Date.now().getDate() == 28) {
+					MusicBeatState.switchState(new birthday.TitleState());
+				} else {
+					MusicBeatState.switchState(new mikolka.vslice.ui.title.TitleState());
+				}
+		}
 		#end
-		if (ClientPrefs.data.introvideoCutscene == 'Disabled')
-        	MusicBeatState.switchState(new mikolka.vslice.ui.title.TitleState());
+		if (ClientPrefs.data.introvideoCutscene == 'Disabled') {
+			if (Date.now().getMonth() == 7 && Date.now().getDate() == 28) {
+					MusicBeatState.switchState(new birthday.TitleState());
+				} else {
+					MusicBeatState.switchState(new mikolka.vslice.ui.title.TitleState());
+				}
+		}
 
 		super.update(elapsed);
 	}

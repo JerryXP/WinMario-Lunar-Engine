@@ -43,6 +43,7 @@ class Note extends FlxSprite
 	public static final defaultNoteTypes:Array<String> = [
 		'', //Always leave this one empty pls
 		'Alt Animation',
+		'Swear Animation',
 		'Hey!',
 		'Hurt Note',
 		'GF Sing',
@@ -222,6 +223,8 @@ class Note extends FlxSprite
 					hitsoundChartEditor = false;
 				case 'Alt Animation':
 					animSuffix = '-alt';
+				case 'Swear Animation':
+					animSuffix = '-curse';
 				case 'No Animation':
 					noAnimation = true;
 					noMissAnimation = true;

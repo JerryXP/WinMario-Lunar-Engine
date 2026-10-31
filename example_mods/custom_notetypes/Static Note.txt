@@ -1,4 +1,0 @@
-texture = "noteassetshit/StaticNOTE_assets"
-noteSplashData.texture = "noteassetshit/splash/staticSplash"
-rgbShader.enabled = false
-

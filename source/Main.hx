@@ -94,7 +94,7 @@ class Main extends Sprite
 
 		//To celebrate The Developer's (WM/LXP) Birthday! (August 28)
 		if (Date.now().getMonth() == 7 && Date.now().getDate() == 28)
-			Lib.current.stage.window.title = "Happy Brithday, WM/LXP!";
+			Lib.current.stage.window.title = "Happy Birthday, WM/LXP!";
 
 		//Halloween
 		if (Date.now().getMonth() == 9 && Date.now().getDate() == 31)

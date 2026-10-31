@@ -18,6 +18,7 @@ import mikolka.vslice.components.ScreenshotPlugin;
 #if VIDEOS_ALLOWED
 import mikolka.vslice.ui.title.AttractState;
 #end
+import flixel.addons.display.FlxBackdrop;
 
 
 
@@ -40,6 +41,8 @@ typedef TitleData =
 class TitleState extends MusicBeatState
 {
 	public static var initialized:Bool = false;
+
+	final bgScrollSpeed = 20;
 
 	var enterTimer:FlxTimer;
 
@@ -83,13 +86,30 @@ class TitleState extends MusicBeatState
 		#if TITLE_SCREEN_EASTER_EGG easterEggData(); #end
 		Conductor.bpm = musicBPM;
 
+		var bgBfTop = new FlxBackdrop(Paths.image("fpsPlus/title/backgroundBf"), X);
+		bgBfTop.y = 365 - bgBfTop.height;
+		bgBfTop.velocity.x = bgScrollSpeed;
+		bgBfTop.alpha = 0.5;
+		bgBfTop.angle = 350;
+
+		var bgBfBottom = new FlxBackdrop(Paths.image("fpsPlus/title/backgroundBf"), X);
+		bgBfBottom.y = 355;
+		bgBfBottom.velocity.x = bgScrollSpeed * -1;
+		bgBfBottom.alpha = 0.5;
+		bgBfBottom.angle = 350;
+
 		logoBl = new FlxSprite(logoPosition.x+cutout_size, logoPosition.y);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 		logoBl.antialiasing = VsliceOptions.ANTIALIASING;
-
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
 		logoBl.animation.play('bump');
 		logoBl.updateHitbox();
+
+		var glow:FlxSprite = new FlxSprite().loadGraphic(Paths.image("fpsPlus/title/glow"));
+
+		var topBar:FlxSprite = new FlxSprite().loadGraphic(Paths.image("fpsPlus/title/barTop"));
+		
+		var bottomBar:FlxSprite = new FlxSprite().loadGraphic(Paths.image("fpsPlus/title/barBottom"));
 
 		swagShader = new ColorSwap();
 		gfDance = new FlxSprite(gfPosition.x+cutout_size, gfPosition.y);
@@ -100,6 +120,13 @@ class TitleState extends MusicBeatState
 			swagShader = new ColorSwap();
 			gfDance.shader = swagShader.shader;
 			logoBl.shader = swagShader.shader;
+			
+			bgBfTop.shader = swagShader.shader;
+			bgBfBottom.shader = swagShader.shader;
+
+			glow.shader = swagShader.shader;
+			bottomBar.shader = swagShader.shader;
+			topBar.shader = swagShader.shader;
 		}
 
 		gfDance.frames = Paths.getSparrowAtlas(characterImage);
@@ -142,13 +169,25 @@ class TitleState extends MusicBeatState
 			gfDance.shader = swagShader.shader;
 			logoBl.shader = swagShader.shader;
 			titleText.shader = swagShader.shader;
+			
+			bgBfTop.shader = swagShader.shader;
+			bgBfBottom.shader = swagShader.shader;
+
+			glow.shader = swagShader.shader;
+			bottomBar.shader = swagShader.shader;
+			topBar.shader = swagShader.shader;
 		}
 
 		var logo:FlxSprite = new FlxSprite().loadGraphic(Paths.image('logo'));
 		logo.antialiasing = VsliceOptions.ANTIALIASING;
 		logo.screenCenter();
 
+		add(bgBfTop);
+		add(bgBfBottom);
+		add(topBar);
 		add(gfDance);
+		add(bottomBar);
+		add(glow);
 		add(logoBl); // FNF Logo
 		add(titleText); // "Press Enter to Begin" text
 
@@ -329,6 +368,8 @@ class TitleState extends MusicBeatState
 
 				FlxG.camera.flash(VsliceOptions.FLASHBANG ? FlxColor.WHITE : 0x4CFFFFFF, 1);
 				FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+
+				backend.events.NotesEvent.triggerStandalone(this);
 
 				transitioning = true;
 				// FlxG.sound.music.stop();

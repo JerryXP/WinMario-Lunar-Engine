@@ -13,6 +13,7 @@ class OptionsState extends MusicBeatState
 		'Adjust Delay and Combo',
 		'Graphics',
 		'Visuals',
+		'Lunar Engine',
 		'Gameplay',
 		'P-Slice Options',
 		'V-Slice Options',
@@ -21,6 +22,7 @@ class OptionsState extends MusicBeatState
 		'Desktop',
 		'\nGo back to the Desktop.', 
 		#end
+		#if TRANSLATIONS_ALLOWED 'Language', #end
 		#if (TOUCH_CONTROLS_ALLOWED || mobile)'Mobile Options' #end
 	];
 	private var grpOptions:FlxTypedGroup<Alphabet>;
@@ -56,6 +58,8 @@ class OptionsState extends MusicBeatState
 				openSubState(new options.GraphicsSettingsSubState());
 			case 'Visuals':
 				openSubState(new options.VisualsSettingsSubState());
+			case 'Lunar Engine':
+				openSubState(new options.LunarSettings());
 			case 'Gameplay':
 				openSubState(new options.GameplaySettingsSubState());
 			case 'Adjust Delay and Combo':
