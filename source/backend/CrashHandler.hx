@@ -56,7 +56,7 @@ class CrashHandler
 		log.push(haxe.CallStack.toString(haxe.CallStack.exceptionStack(true)));
 		var logMsg = log.join('\n');
 		#if sys
-		var path = './crash/' + 'WINMARIO_' + Date.now().toString() + '.txt';
+		var path = './crash/' + 'LUNAR_critcal_' + Date.now().toString() + '.txt';
         File.saveContent(path, logMsg + '\n');
 		#end
 		trace(logMsg);

@@ -107,7 +107,7 @@ class SoundtrackState extends MusicBeatState
 		}
 		Mods.loadTopMod();
 
-		bg = new FlxSprite().loadGraphic("assets/shared/images/ostBG.png");
+		bg = new FlxSprite().loadGraphic(backend.Paths.image('ostBG'));
 		bg.antialiasing = ClientPrefs.data.antialiasing;
 		add(bg);
 		bg.screenCenter();
