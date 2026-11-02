@@ -38,17 +38,11 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var defaultList:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
-			["WinEngine Team"],
-			["WM/LXP", "win", "The short purple boy who cosplays as mario, I MEAN- the one who made this engine", "https://www.youtube.com/@WinMario_YT","8000FF"],
-			["Uhard999", 	"missing_icon", 	"Watermark and Health Script", 		"https://gamebanana.com/members/1872659",							 "FFFFFF"],
-			["DaPootisBirdYT", 	"missing_icon", 	"Winning Icon Script", 			"https://gamebanana.com/members/2031145",							 "FFFFFF"],
-			["Sacky Boi", 	"missing_icon", 		"TIMEBAR COLOR Script", 		"https://gamebanana.com/members/2005393",							 "FFFFFF"],
-			["BlixerTheGamebananer", "missing_icon", 	"OS Engine Bop Script", 	"https://gamebanana.com/members/2179280",							 "FFFFFF"],
-			["Stilic", 		"missing_icon", 				"Note Combo Script", 	"https://gamebanana.com/members/1893262",							 "FFFFFF"],
-			["daBlowBoi", 		"missing_icon", 				"Judgement Counter Script (edit by me)", 	"https://gamebanana.com/members/3778240",	 "FFFFFF"],
-			["MinerGalBr", 		"missing_icon", 				"Hotline 024 Script Combo (edit by me)", 	"https://gamebanana.com/members/2019622",	 "FFFFFF"],
-			["Windows Mario's Discord"],
-			["Join My Discord!",    "discord",    "if you are under 13, ignore it.",                                "https://discord.gg/p5kd2sExBN",    "5165F6"],
+			["WinMario Engine"],
+			["WM/LXP",		        "win",		        "The one who made this Engine",					         "https://www.youtube.com/@8681Angela",	"8000FF"],
+			["DaPootisBirdYT",	    "missing_icon",		"Script for Winning Icons",					          "https://gamebanana.com/members/2031145",	"FF00FF"],
+			["RamenDominoes",	    "ramen",		    "Script for Timebar Color",					          "https://gamebanana.com/members/2135195",	"FFC000"],
+			["Unard999",	        "missing_icon",		"Script for Bottom Left Watermark",					       "https://gamejolt.com/@Uhard999",	"FFFFFF"],
 			[""],
 			["Psych Engine Team"],
 			["Shadow Mario",		"shadowmario",		"Main Programmer and Head of Psych Engine",					"https://ko-fi.com/shadowmario",	"444444"],

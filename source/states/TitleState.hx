@@ -58,7 +58,7 @@ class TitleState extends MusicBeatState
 
 	#if TITLE_SCREEN_EASTER_EGG
 	final easterEggKeys:Array<String> = [
-		'SHADOW', 'RIVEREN', 'BBPANZU', 'PESSY', 'WINDOWS'
+		'SHADOW', 'RIVEREN', 'BBPANZU', 'PESSY'
 	];
 	final allowedKeys:String = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	var easterEggKeysBuffer:String = '';
@@ -293,12 +293,6 @@ class TitleState extends MusicBeatState
 				gfPosition.y += 60;
 				danceLeftFrames = [29, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 				danceRightFrames = [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28];
-			case 'WINDOWS':
-				characterImage = 'WinMarioBump';
-				animationName = 'gfDance0';
-				gfPosition.x += 35;
-				gfPosition.y += -40;
-				useIdle = true;
 		}
 	}
 
@@ -591,8 +585,6 @@ class TitleState extends MusicBeatState
 						sound = FlxG.sound.play(Paths.sound('JingleBB'));
 					case 'PESSY':
 						sound = FlxG.sound.play(Paths.sound('JinglePessy'));
-					case 'WINDOWS':
-						sound = FlxG.sound.play(Paths.sound('JingleWinMario'));
 
 					default: //Go back to normal ugly ass boring GF
 						remove(ngSpr);
@@ -627,7 +619,6 @@ class TitleState extends MusicBeatState
 						transitioning = false;
 						#if ACHIEVEMENTS_ALLOWED
 						if(easteregg == 'PESSY') Achievements.unlock('pessy_easter_egg');
-						if(easteregg == 'WINDOWS') Achievements.unlock('windows_easter_egg');
 						#end
 					};
 				}

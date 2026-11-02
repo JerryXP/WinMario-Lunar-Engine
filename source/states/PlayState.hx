@@ -77,16 +77,16 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
 	public static var ratingStuff:Array<Dynamic> = [
-		['Vomit. (Z)', 0.2], //From 0% to 19%
-		['Terrible! (F-)', 0.4], //From 20% to 39%
-		['Awful! (F)', 0.5], //From 40% to 49%
-		['Bad. (E)', 0.6], //From 50% to 59%
-		['Okay. (D)', 0.69], //From 60% to 68%
-		['Good (C)', 0.7], //69%
-		['Amazing (B)', 0.8], //From 70% to 79%
-		['Fantastic (A)', 0.9], //From 80% to 89%
-		['Crazy! (S)', 1], //From 90% to 99%
-		['Very Crazy!! (S+)', 1] //The value on this one isn't used actually, since Perfect is always "1"
+		['Vomit', 0.2], //From 0% to 19%
+		['Awful!', 0.4], //From 20% to 39%
+		['Very Bad', 0.5], //From 40% to 49%
+		['Bad', 0.6], //From 50% to 59%
+		['Okay.', 0.69], //From 60% to 68%
+		['Good', 0.7], //69%
+		['Very Good', 0.8], //From 70% to 79%
+		['Cool', 0.9], //From 80% to 89%
+		['Crazy!', 1], //From 90% to 99%
+		['Very Crazy!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
 	];
 
 	//event variables
@@ -187,7 +187,7 @@ class PlayState extends MusicBeatState
 	public var startingSong:Bool = false;
 	private var updateTime:Bool = true;
 	public static var changedDifficulty:Bool = false;
-	public static var chartingMode:Bool = true;
+	public static var chartingMode:Bool = false;
 
 	//Gameplay settings
 	public var healthGain:Float = 1;
@@ -500,7 +500,7 @@ class PlayState extends MusicBeatState
 
 		if(ClientPrefs.data.timeBarType == 'Song Name')
 		{
-			timeTxt.size = 12;
+			timeTxt.size = 24;
 			timeTxt.y += 3;
 		}
 
@@ -1153,8 +1153,8 @@ class PlayState extends MusicBeatState
 		}
 
 		var tempScore:String;
-		if(!instakillOnMiss) tempScore = Language.getPhrase('score_text', 'Goal: {1} | Oops: {2} | Results: {3}', [songScore, songMisses, str]);
-		else tempScore = Language.getPhrase('score_text_instakill', 'Goal: {1} | Results: {2}', [songScore, str]);
+		if(!instakillOnMiss) tempScore = Language.getPhrase('score_text', 'Score: {1} | Misses: {2} | Rating: {3}', [songScore, songMisses, str]);
+		else tempScore = Language.getPhrase('score_text_instakill', 'Score: {1} | Rating: {2}', [songScore, str]);
 		scoreTxt.text = tempScore;
 	}
 
@@ -1668,7 +1668,7 @@ class PlayState extends MusicBeatState
 	var startedCountdown:Bool = false;
 	var canPause:Bool = true;
 	var freezeCamera:Bool = false;
-	var allowDebugKeys:Bool = false;
+	var allowDebugKeys:Bool = true;
 
 	override public function update(elapsed:Float)
 	{
@@ -1748,12 +1748,9 @@ class PlayState extends MusicBeatState
 
 			var secondsTotal:Int = Math.floor(songCalc / 1000);
 			if(secondsTotal < 0) secondsTotal = 0;
-			var accsonglength:Int = Math.floor(songLength / 1000);
-
-			var acccurTime:Int = Math.floor(curTime / 1000);
 
 			if(ClientPrefs.data.timeBarType != 'Song Name')
-			timeTxt.text = SONG.song + ' (' + FlxStringUtil.formatTime(acccurTime, false) + ' / ' + FlxStringUtil.formatTime(accsonglength, false) + ')'; FlxStringUtil.formatTime(secondsTotal, true);
+				timeTxt.text = FlxStringUtil.formatTime(secondsTotal, false);
 		}
 
 		if (camZooming)

@@ -26,10 +26,8 @@ class FlashingState extends MusicBeatState
 
 		var warnText:FlxText = new FlxText(0, 0, FlxG.width,
 			"Hey!\n
-			This Mod Contains Flashing Lights.\n
-			& Thank you for downloading this mod.\n
-			All assets have been from different mods is not mine. All credits to people who made it.\n
-			Anyways... Do you wish to disable flashing lights?");
+			WinMario Engine is in the development, some subjects might change. oh and this version have flashing lights, so beware.\n
+			Do you wish to disable them?");
 		warnText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER);
 		warnText.screenCenter(Y);
 		texts.add(warnText);

@@ -57,7 +57,6 @@ class Achievements {
 		#end
 		#if (TITLE_SCREEN_EASTER_EGG || PSYCH_WATERMARKS)
 		createAchievement('pessy_easter_egg',		{name: "Engine Gal Pal", description: "Teehee, you found me~!", hidden: true});
-		createAchievement('windows_easter_egg',		{name: "Engine Guy Pal", description: "Hey! You've found me!", hidden: true});
 		#end
 
 		//dont delete this thing below
