@@ -1,7 +1,0 @@
-used in bad thoughts for da sick parts lol
-
-Value 1: beginning position
-to unactivate it just leave the value blank
-
-Value 1 only: 1 is for Flash & Bopping HUD, 0 or blank is for Ending of 
-bopping HUD or Just Flash

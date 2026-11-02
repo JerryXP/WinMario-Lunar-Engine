@@ -1,84 +1,127 @@
-# Lunar Engine
-(not to get confused with [Kirby's Lunar Engine](https://github.com/KirbyKid256/LunarEngine-Archive))
+![PsychionalEngineLogo](docs/img/PsychEngineLogoTweak.png)
 
-<a href="https://github.com/JerryXP/Vs-WinMario/tree/engine-ver">
-    <img src="spc_20260925_063551.png" alt="Logo" width="500" height="500">
-</a>
+Engine originally used on [Mind Games Mod](https://gamebanana.com/mods/301107), intended to be a fix for the vanilla version's many issues while keeping the casual play aspect of it. Also aiming to be an easier alternative to newbie coders.
 
-### -☆- What's that? -☆-
-Lunar Engine is a Forked Engine of [P-Slice](https://github.com/Psych-Slice/P-Slice), where it shows or uses the Elements, Stuff, and Utils of [Vs. WinMario](https://github.com/JerryXP/Vs-WinMario). Yes. This is also known as "*WinEngine*" where it is a [Modified Psych Engine](https://github.com/ShadowMario/FNF-PsychEngine) before [P-Slice](https://github.com/Psych-Slice/P-Slice). It's also known as *WinMario Engine*. But, I decided to make it called **Lunar Engine** because i'd like it better. But still... yes it's [modified psych 1.0.4](https://github.com/ShadowMario/FNF-PsychEngine) because it's easier for me to use.
-<br>
+## Installation:
 
-### -☆- Rules -☆-
-It's Ok to use my engine, at least I credit almost everyone, but anyways there are rules. If you use my engine, please just credit me for using it, I said it's a engine trying to be my mod I created, [Vs. WinMario](https://github.com/JerryXP/Vs-WinMario). Dave & Bambi Mods are ok, but using it for Spam tracks or Spamming keys are prohibited, because I don't want my engine to be popular because of your Dave & Bambi Spamming Track Mod. Do not use my Engine to program Malware or any Malicious. And last, do not ask for Android or iOS builds. And I have prove why: [https://youtube.com/shorts/_oE-09RRod0?si=k7mI4Vo3jhgOZfSn](https://youtube.com/shorts/_oE-09RRod0?si=k7mI4Vo3jhgOZfSn)<br>
-Cause that's annoying to FNF Devs.
-<br>
+Refer to [the Build Instructions](/docs/BUILDING.md)
 
-### -☆- What's the Difference? -☆-
-1. It has Winning Icons. Which is where if you had 80% or more... It will load! yeah yeah. It's optional. (it needs to be 450x150)(please thank [DaPootisBirdYT](https://gamebanana.com/members/2031145)) <br>
-<a href="https://github.com/JerryXP/Vs-WinMario/tree/engine-ver">
-    <img src="assets/shared/images/icons/icon-bf.png" alt="bf-win-icon" width="450" height="150">
-</a> <br>
+## Customization:
 
-2. It has Converters Menu. Where you can port any different Engine like [V-Slice](https://github.com/FunkinCrew/funkin) & [Codename](https://github.com/CodenameCrew/CodenameEngine) to Lunar (aka [P-Slice Fork](https://github.com/Psych-Slice/P-Slice)). But it can get the Information wrong. So please check everything before finishing it. (please thank [Lucas](https://github.com/Lucas62944) from [Pico Engine](https://github.com/Pico-Engine-Team)) <br> <a href="https://github.com/JerryXP/Vs-WinMario/tree/engine-ver">
-    <img src="docs/screenshot-2026-09-24-18-05-44.png" alt="imgLunarConverter" width="854" height="480">
-</a> <br>
+If you wish to disable things like *Lua Scripts* or *Video Cutscenes*, you can refer to the `Project.xml` file.
 
-3. New Options added like changing the time bar color, Score Text Info, Keybinds Viewer, and more at Lunar Engine Options. (please thank [TintGox](https://github.com/TintGox) & [Lenin](https://github.com/LeninAsto) from [The Psych Plus Team](https://github.com/Psych-Plus-Team))
-<br> <a href="https://github.com/JerryXP/Vs-WinMario/tree/engine-ver">
-    <img src="docs/screenshot-2026-09-24-18-13-03.png" alt="imgOptionslunar" width="854" height="480">
-</a> <br>
+Inside `Project.xml`, you will find several variables to customize Psych Engine to your liking.
 
-4. (Windows Only) When you close the game, the eindoe will do a fade out animation (please thank [Slushi](https://github.com/Slushi-Github) from [Slushi Engine](https://github.com/Slushi-Github/Slushi-Engine) & [Lenin](https://github.com/LeninAsto) from [The Psych Plus Team](https://github.com/Psych-Plus-Team))<br> (you need to go to docs/thevideofile.mp4 to see what it looks like.)<br>
+To start you off, disabling *Video Cutscenes* should be simple, simply delete the line `"VIDEOS_ALLOWED"` or comment it out by wrapping the line in XML-like comments, like this: `<!-- YOUR_LINE_HERE -->`
 
-5. Add more Notes & it's splashes , and Add Lil Buddies in the Chart Editor (please thank [Rozebud](https://github.com/ThatRozebudDude) for [Original](https://github.com/ThatRozebudDude/FPS-Plus-Public) and & [Awe](https://github.com/Awe-Some-Jack) from [AS Engine](https://github.com/Awe-Some-Jack/FNF-AS-Engine) for port.)<br> <a href="https://github.com/JerryXP/Vs-WinMario/tree/engine-ver">
-    <img src="docs/screenshot-2026-09-24-18-14-09.png" alt="notesLunaroptions" width="854" height="480">
-</a> <br> <a href="https://github.com/JerryXP/Vs-WinMario/tree/engine-ver">
-    <img src="docs/screenshot-2026-09-24-18-29-45.png" alt="lilBuddiesLunaroptions" width="854" height="480">
-</a> <br>
+Same goes for *Lua Scripts*, comment out or delete the line with `LUA_ALLOWED`, this and other customization options are all available within the `Project.xml` file.
 
-6. Add a Grid & Funkin Visulizer at the Main Menu State, Add a Grid in the Story Menu, and Have a new results screen. (please thank [Lenin](https://github.com/LeninAsto) from [The Psych Plus Team](https://github.com/Psych-Plus-Team)) 
-<br> <a href="https://github.com/JerryXP/Vs-WinMario/tree/engine-ver">
-    <img src="docs/screenshot-2026-09-24-18-12-32.png" alt="notesLunaroptions" width="854" height="480">
-</a> <br> <a href="https://github.com/JerryXP/Vs-WinMario/tree/engine-ver">
-    <img src="docs/screenshot-2026-09-24-18-14-48.png" alt="lilBuddiesLunaroptions" width="854" height="480">
-</a> <br> <a href="https://github.com/JerryXP/Vs-WinMario/tree/engine-ver">
-    <img src="docs/screenshot-2026-09-24-18-16-29.png" alt="lilBuddiesLunaroptions" width="854" height="480">
-</a> <br>
+## Softcoding (.lua/.hx)
+For this you can head over to [the wiki](https://shadowmario.github.io/psychengine.lua)
 
-7. the "scripts" folder is split-up into "luaScript" (Lua only) & "haxeScript" (HX Only)<br>
+There you can learn how to use the 212 PlayState funcions in your mod!
 
-### -☆- Information -☆-
-[P-Slice](https://github.com/Psych-Slice/P-Slice) Version: 3.4.2<br>
-*The engine I am currently using*
-<br>
+## Credits:
+* Shadow Mario - Main Programmer and Head of Psych Engine.
+* Riveren - Main Artist/Animator of Psych Engine.
 
-[Psych](https://github.com/ShadowMario/FNF-PsychEngine) Version: 1.0.4<br>
-*I was originally going to use 0.7.3 but SScript was not supported anymore, but since I use 1.0.4, it made me a lot better, and you know what? 1.0.4 made a huge improvements from 0.7.3, you know like... It finally has Haxe Script fix. :)*
-<br>
+### Special Thanks
+* bbpanzu - Ex-Team Member (Programmer).
+* crowplexus - HScript Iris, Input System v3, and Other PRs.
+* Kamizeta - Creator of Pessy, Psych Engine's mascot.
+* MaxNeton - Loading Screen Easter Egg Artist/Animator.
+* Keoiki - Note Splash Animations and Latin Alphabet.
+* SqirraRNG - Crash Handler and Base code for Chart Editor's Waveform.
+* EliteMasterEric - Runtime Shaders support and Other PRs.
+* MAJigsaw77 - .MP4 Video Loader Library (hxvlc).
+* iFlicky - Composer of Psync, Tea Time and some sound effects.
+* KadeDev - Fixed some issues on Chart Editor and Other PRs.
+* superpowers04 - LUA JIT Fork.
+* CheemsAndFriends - Creator of FlxAnimate.
+* Ezhalt - Pessy's Easter Egg Jingle.
+* MaliciousBunny - Video for the Final Update.
 
-FNF Emulator Version: 0.7.6<br>
-*The [funkin](https://github.com/FunkinCrew/funkin) version we tried to emulate."
-<br>
+***
 
-### -☆- Requirements -☆-
-[Windows](https://www.microsoft.com/windows), [MacOS](https://www.apple.com/mac/), and/or [Linux](https://www.linux.org/pages/download/) PC is needed.<br>
-(Linux Only) [Install VLC](https://www.videolan.org/vlc/)<br>
-(MacOS w/ ARM or Apple Silicon Chips Only) [Install Rosetta](https://support.apple.com/102527)<br>
-Storage: 256 GB<br>
-RAM: 8 GB<br>
-Your Computer needs to be 64-Bit<br>
-(Windows Only) Windows 7 or 8 Is minimum to run my Engine<br>
-(MacOS Only) MacOS 14 Sonoma Is minimum to run my Engine<br>
+# Features
 
-### -☆- If your on Mac & trying to compile the game, then please listen. -☆-
-So you're trying to compile my Engine but it failed, then it's possibly because you extract my Code by using Double left click. Which is where it can exclude the files. So... to also include the folders that have been exclude, open terminal and type (unzip "") place the zipped or tar.gz folder inside the terminal, and it will extract it.<br>
+## Attractive animated dialogue boxes:
 
-### -☆- Setup -☆-
-1. Install [Haxe](https://haxe.org) 4.3.6 or 4.3.7<br>
-2. Install [HaxeFlixel](https://haxeflixel.com/documentation/install-haxeflixel/)<br>
-3. Install [Git](https://git-scm.com/install/)<br>
-4. Install all libaries through the setup folder by left clicking it. (if Mac or Linux, open Terminal and type "chmod +x unix.sh" (replace +x with 755 if you have issues) and type "./unix.sh" and it will install.)<br>
-5. Compiled the Game. (by opening terminal and type "lime (test/build) (os) ; for "build", it's where you just compiled the Game and that's it. for "test" it's where you compiled the game and trying the game out for yourself. for (os), it depends on what os your using, if you're using Windows, then type, "windows", Mac? "mac", Linux? "linux".)<br>
+![Animated Dialogue Boxes](docs/img/dialogue.gif)
 
-## -☆- Now with all that... ENJOY MY ENGINE!!! -☆-
+## New Main Menu
+* A brand new menu that makes your experience even better!
+![Main Menu](docs/img/MainMenu.png)
+
+## Mod Support
+* Probably one of the main points of this engine, you can code in .lua files outside of the source code, making your own weeks without even messing with the source!
+* Comes with a Mod Organizing/Disabling Menu.
+![Mod Support](docs/img/ModsMenu.png)
+
+
+## Atleast one change to every week:
+### Week 1:
+  * New Dad Left sing sprite
+  * Unused stage lights are now used
+  * Dad Battle has a spotlight effect for the breakdown
+### Week 2:
+  * Both BF and Skid & Pump does "Hey!" animations
+  * Thunders does a quick light flash and zooms the camera in slightly
+  * Added a quick transition/cutscene to Monster
+### Week 3:
+  * BF does "Hey!" during Philly Nice
+  * Blammed has a cool new colors flash during that sick part of the song
+### Week 4:
+  * Better hair physics for Mom/Boyfriend (Maybe even slightly better than Week 7's :eyes:)
+  * Henchmen die during all songs. Yeah :(
+### Week 5:
+  * Bottom Boppers and GF does "Hey!" animations during Cocoa and Eggnog
+  * On Winter Horrorland, GF bops her head slower in some parts of the song.
+### Week 6:
+  * On Thorns, the HUD is hidden during the cutscene
+  * Also there's the Background girls being spooky during the "Hey!" parts of the Instrumental
+
+## Cool new Chart Editor changes and countless bug fixes
+![Chart Editor](docs/img/chart.png)
+* You can now chart "Event" notes, which are bookmarks that trigger specific actions that usually were hardcoded on the vanilla version of the game.
+* Your song's BPM can now have decimal values
+* You can manually adjust a Note's strum time if you're really going for milisecond precision
+* You can change a note's type on the Editor, it comes with five example types:
+  * Alt Animation: Forces an alt animation to play, useful for songs like Ugh/Stress
+  * Hey: Forces a "Hey" animation instead of the base Sing animation, if Boyfriend hits this note, Girlfriend will do a "Hey!" too.
+  * Hurt Notes: If Boyfriend hits this note, he plays a miss animation and loses some health.
+  * GF Sing: Rather than the character hitting the note and singing, Girlfriend sings instead.
+  * No Animation: Character just hits the note, no animation plays.
+
+## Multiple editors to assist you in making your own Mod
+![Master Editor Menu](docs/img/editors.png)
+* Working both for Source code modding and Downloaded builds!
+
+## Story mode menu rework:
+![Story Mode Menu](docs/img/storymode.png)
+* Added a different BG to every song (less Tutorial)
+* All menu characters are now in individual spritesheets, makes modding it easier.
+
+## Credits menu
+![Credits Menu](docs/img/credits.png)
+* You can add a head icon, name, description and a Redirect link for when the player presses Enter while the item is currently selected.
+
+## Awards/Achievements
+* The engine comes with 16 example achievements that you can mess with and learn how it works (Check Achievements.hx and search for "checkForAchievement" on PlayState.hx)
+![Achievements](docs/img/Achievements.png)
+
+## Options menu:
+* You can change Note colors, Delay and Combo Offset, Controls and Preferences there.
+ * On Preferences you can toggle Downscroll, Middlescroll, Anti-Aliasing, Framerate, Low Quality, Note Splashes, Flashing Lights, etc.
+![Options](docs/img/Options.png)
+
+## Other gameplay features:
+* When the enemy hits a note, their strum note also glows.
+* Lag doesn't impact the camera movement and player icon scaling anymore.
+* Some stuff based on Week 7's changes has been put in (Background colors on Freeplay, Note splashes)
+* You can reset your Score on Freeplay/Story Mode by pressing Reset button.
+* You can listen to a song or adjust Scroll Speed/Damage taken/etc. on Freeplay by pressing Space.
+* You can enable "Combo Stacking" in Gameplay Options. This causes the combo sprites to just be one sprite with an animation rather than sprites spawning each note hit.
+
+
+#### Psych Engine by ShadowMario, Friday Night Funkin' by ninjamuffin99

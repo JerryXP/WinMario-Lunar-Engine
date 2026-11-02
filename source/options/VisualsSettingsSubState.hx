@@ -4,11 +4,9 @@ import objects.Note;
 import objects.StrumNote;
 import objects.NoteSplash;
 import objects.Alphabet;
-import options.Option;
 
 class VisualsSettingsSubState extends BaseOptionsMenu
 {
-	public static var pauseMusics:Array<String> = ['None', 'Buoy Base Galaxy', 'Rainbow Road (MK8)', 'Rainbow Road (DS)', 'Sunshine Airport', 'SNES Rainbow Road (MK8)', 'Death Egg Zone Act 1 (SnK Alt)', 'Death Egg Zone Act 2 (SnK Alt)', 'Steam Gardens (8-Bit)', 'DataLog (NEO R)', 'Tutorial (NEO R)(INST)', 'Bopeebo (NEO R)(INST)', 'South (NEO R)(INST)', 'Prelude (VIP Edit)', 'Rainbow Road (Wii)', 'Rogueport (Sublevel Three)', 'Another World', 'Bring Me Back to Live', 'C U Again', 'Slow', 'Infinite'];
 	var noteOptionID:Int = -1;
 	var notes:FlxTypedGroup<StrumNote>;
 	var splashes:FlxTypedGroup<NoteSplash>;
@@ -44,7 +42,7 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 
 			noteSkins.insert(0, ClientPrefs.defaultData.noteSkin); //Default skin always comes first
 			var option:Option = new Option('Note Skins:',
-				"Select your preferred Note skin.",
+				"Select your prefered Note skin.",
 				'noteSkin',
 				STRING,
 				noteSkins);
@@ -53,7 +51,6 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 			noteOptionID = optionsArray.length - 1;
 		}
 		
-		if (PlayState.SONG != null) PlayState.SONG.splashSkin = null; // Fix this component not working when entering from a song!
 		var noteSplashes:Array<String> = Mods.mergeAllTextsNamed('images/noteSplashes/list.txt');
 		if(noteSplashes.length > 0)
 		{
@@ -62,27 +59,12 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 
 			noteSplashes.insert(0, ClientPrefs.defaultData.splashSkin); //Default skin always comes first
 			var option:Option = new Option('Note Splashes:',
-				"Select your preferred Note Splash variation or turn it off.",
+				"Select your prefered Note Splash variation.",
 				'splashSkin',
 				STRING,
 				noteSplashes);
 			addOption(option);
 			option.onChange = onChangeSplashSkin;
-		}
-
-		var holdSkins:Array<String> = Mods.mergeAllTextsNamed('images/holdCovers/list.txt');
-		if(holdSkins.length > 0)
-		{
-			if(!holdSkins.contains(ClientPrefs.data.holdSkin))
-				ClientPrefs.data.holdSkin = ClientPrefs.defaultData.holdSkin; //Reset to default if saved splashskin couldnt be found
-			holdSkins.remove(ClientPrefs.defaultData.holdSkin);
-			holdSkins.insert(0, ClientPrefs.defaultData.holdSkin); //Default skin always comes first
-			var option:Option = new Option('Hold Splashes:',
-				"Select your preferred Hold Splash variation or turn it off.",
-				'holdSkin',
-				STRING,
-				holdSkins);
-			addOption(option);
 		}
 
 		var option:Option = new Option('Note Splash Opacity',
@@ -97,17 +79,6 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 		addOption(option);
 		option.onChange = playNoteSplashes;
 
-		var option:Option = new Option('Note Hold Splash Opacity',
-			'How much transparent should the Note Hold Splash be.\n0% disables it.',
-			'holdSplashAlpha',
-			PERCENT);
-		option.scrollSpeed = 1.6;
-		option.minValue = 0.0;
-		option.maxValue = 1;
-		option.changeValue = 0.1;
-		option.decimals = 1;
-		addOption(option);
-
 		var option:Option = new Option('Hide HUD',
 			'If checked, hides most HUD elements.',
 			'hideHud',
@@ -118,11 +89,11 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 			"What should the Time Bar display?",
 			'timeBarType',
 			STRING,
-			['WinMario (simple)', 'WinMario (complex)', 'Time Elapsed', 'Time Left', 'Song Name', 'Disabled']);
+			['Time Left', 'Time Elapsed', 'Song Name', 'Disabled']);
 		addOption(option);
 
 		var option:Option = new Option('Flashing Lights',
-			"Turn it off if you're epileptic.",
+			"Uncheck this if you're sensitive to flashing lights!",
 			'flashing',
 			BOOL);
 		addOption(option);
@@ -150,30 +121,20 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 		option.decimals = 1;
 		addOption(option);
 		
+		#if !mobile
 		var option:Option = new Option('FPS Counter',
 			'If unchecked, hides FPS Counter.',
-			'showFPSOpacity',
-			PERCENT);
-		option.scrollSpeed = 1.6;
-		option.minValue = 0.0;
-		option.maxValue = 1;
-		option.changeValue = 0.1;
-		option.decimals = 1;
-		addOption(option);
-		option.onChange = onChangeFPSCounter;
-
-		var option:Option = new Option('FPS Rework',
-			'If checked, uses the reworked version of FPS counter.',
-			'fpsRework',
+			'showFPS',
 			BOOL);
 		addOption(option);
 		option.onChange = onChangeFPSCounter;
+		#end
 		
 		var option:Option = new Option('Pause Music:',
 			"What song do you prefer for the Pause Screen?",
 			'pauseMusic',
 			STRING,
-			pauseMusics);
+			['None', 'Tea Time', 'Breakfast', 'Breakfast (Pico)']);
 		addOption(option);
 		option.onChange = onChangePauseMusic;
 		
@@ -205,13 +166,10 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 	}
 
 	var notesShown:Bool = false;
-	var lastSelected:Int = -1;
-	override function changeSelection(change:Float,usePrecision:Bool = false)
+	override function changeSelection(change:Int = 0)
 	{
-		super.changeSelection(change,usePrecision);
-		if(lastSelected == curSelected) return;
-		else lastSelected = curSelected;
-
+		super.changeSelection(change);
+		
 		switch(curOption.variable)
 		{
 			case 'noteSkin', 'splashSkin', 'splashAlpha':
@@ -245,7 +203,7 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 		if(ClientPrefs.data.pauseMusic == 'None')
 			FlxG.sound.music.volume = 0;
 		else
-			FlxG.sound.playMusic(Paths.music("pause/" + Paths.formatToSongPath(ClientPrefs.data.pauseMusic)));
+			FlxG.sound.playMusic(Paths.music(Paths.formatToSongPath(ClientPrefs.data.pauseMusic)));
 
 		changedMusic = true;
 	}
@@ -271,57 +229,57 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 	}
 
 	function onChangeSplashSkin()
+	{
+		var skin:String = NoteSplash.defaultNoteSplash + NoteSplash.getSplashSkinPostfix();
+		for (splash in splashes)
+			splash.loadSplash(skin);
+
+		playNoteSplashes();
+	}
+
+	function playNoteSplashes()
+	{
+		var rand:Int = 0;
+		if (splashes.members[0] != null && splashes.members[0].maxAnims > 1)
+			rand = FlxG.random.int(0, splashes.members[0].maxAnims - 1); // For playing the same random animation on all 4 splashes
+
+		for (splash in splashes)
 		{
-			var skin:String = NoteSplash.defaultNoteSplash + NoteSplash.getSplashSkinPostfix();
-			for (splash in splashes)
-				splash.loadSplash(skin);
-	
-			playNoteSplashes();
-		}
-	
-		function playNoteSplashes()
-		{
-			var rand:Int = 0;
-			if (splashes.members[0] != null && splashes.members[0].maxAnims > 1)
-				rand = FlxG.random.int(0, splashes.members[0].maxAnims - 1); // For playing the same random animation on all 4 splashes
-	
-			for (splash in splashes)
+			splash.revive();
+
+			splash.spawnSplashNote(0, 0, splash.ID, null, false);
+			if (splash.maxAnims > 1)
+				splash.noteData = splash.noteData % Note.colArray.length + (rand * Note.colArray.length);
+
+			var anim:String = splash.playDefaultAnim();
+			var conf = splash.config.animations.get(anim);
+			var offsets:Array<Float> = [0, 0];
+
+			var minFps:Int = 22;
+			var maxFps:Int = 26;
+			if (conf != null)
 			{
-				splash.revive();
-	
-				splash.spawnSplashNote(0, 0, splash.ID, null, false);
-				if (splash.maxAnims > 1)
-					splash.noteData = splash.noteData % Note.colArray.length + (rand * Note.colArray.length);
-	
-				var anim:String = splash.playDefaultAnim();
-				var conf = splash.config.animations.get(anim);
-				var offsets:Array<Float> = [0, 0];
-	
-				var minFps:Int = 22;
-				var maxFps:Int = 26;
-				if (conf != null)
-				{
-					offsets = conf.offsets;
-	
-					minFps = conf.fps[0];
-					if (minFps < 0) minFps = 0;
-	
-					maxFps = conf.fps[1];
-					if (maxFps < 0) maxFps = 0;
-				}
-	
-				splash.offset.set(10, 10);
-				if (offsets != null)
-				{
-					splash.offset.x += offsets[0];
-					splash.offset.y += offsets[1];
-				}
-	
-				if (splash.animation.curAnim != null)
-					splash.animation.curAnim.frameRate = FlxG.random.int(minFps, maxFps);
+				offsets = conf.offsets;
+
+				minFps = conf.fps[0];
+				if (minFps < 0) minFps = 0;
+
+				maxFps = conf.fps[1];
+				if (maxFps < 0) maxFps = 0;
 			}
+
+			splash.offset.set(10, 10);
+			if (offsets != null)
+			{
+				splash.offset.x += offsets[0];
+				splash.offset.y += offsets[1];
+			}
+
+			if (splash.animation.curAnim != null)
+				splash.animation.curAnim.frameRate = FlxG.random.int(minFps, maxFps);
 		}
-	
+	}
+
 	override function destroy()
 	{
 		if(changedMusic && !OptionsState.onPlayState) FlxG.sound.playMusic(Paths.music('freakyMenu'), 1, true);
@@ -329,13 +287,11 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 		super.destroy();
 	}
 
+	#if !mobile
 	function onChangeFPSCounter()
 	{
-		if(Main.debugDisplay != null){
-			Main.debugDisplay.isAdvanced = ClientPrefs.data.fpsRework;
-			Main.debugDisplay.visible = ClientPrefs.data.showFPSOpacity != 0;
-			Main.debugDisplay.backgroundOpacity = ClientPrefs.data.showFPSOpacity;
-		}
+		if(Main.fpsVar != null)
+			Main.fpsVar.visible = ClientPrefs.data.showFPS;
 	}
-
+	#end
 }

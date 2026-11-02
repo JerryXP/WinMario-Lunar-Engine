@@ -30,8 +30,7 @@ class CustomSubstate extends MusicBeatSubstate
 				PlayState.instance.vocals.pause();
 			}
 		}
-		instance = new CustomSubstate(name);
-		PlayState.instance.openSubState(instance);
+		PlayState.instance.openSubState(new CustomSubstate(name));
 	}
 
 	public static function closeCustomSubstate()
@@ -39,7 +38,6 @@ class CustomSubstate extends MusicBeatSubstate
 		if(instance != null)
 		{
 			PlayState.instance.closeSubState();
-			instance = null;
 			return true;
 		}
 		return false;
@@ -60,24 +58,6 @@ class CustomSubstate extends MusicBeatSubstate
 		}
 		return false;
 	}
-	
-	#if TOUCH_CONTROLS_ALLOWED
-	public static function insertLuaTpad(?pos:Int = -1)
-	{
-		if(instance != null)
-		{
-			var tagObject:FlxObject = PlayState.instance.luaTouchPad;
-
-			if(tagObject != null)
-			{
-				if(pos < 0) instance.add(tagObject);
-				else instance.insert(pos, tagObject);
-				return true;
-			}
-		}
-		return false;
-	}	
-	#end
 
 	override function create()
 	{

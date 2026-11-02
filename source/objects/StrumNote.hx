@@ -111,7 +111,6 @@ class StrumNote extends FlxSprite
 			animation.addByPrefix('red', 'arrowRIGHT');
 
 			antialiasing = ClientPrefs.data.antialiasing;
-			var noteScale = ClientPrefs.data.extraHints == "ARROWS";
 			setGraphicSize(Std.int(width * 0.7));
 
 			switch (Math.abs(noteData) % 4)
@@ -144,18 +143,7 @@ class StrumNote extends FlxSprite
 
 	public function playerPosition()
 	{
-		// Arrow mode hitboxes require arrows to be in special place.
 		x += Note.swagWidth * noteData;
-		#if TOUCH_CONTROLS_ALLOWED
-		final isHitboxArrowMode = ClientPrefs.data.extraHints == "ARROWS" && ClientPrefs.data.middleScroll;
-		//Spacing between arrows
-		final ARROW_SPREAD = 90;
-		if(isHitboxArrowMode && player == 1) {
-			x += ARROW_SPREAD * (noteData-1);
-			x -= 45;
-		}
-		#end
-		
 		x += 50;
 		x += ((FlxG.width / 2) * player);
 	}

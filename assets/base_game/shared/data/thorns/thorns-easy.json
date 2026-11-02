@@ -1,6 +1,6 @@
 {
 	"song": {
-		"player1": "scared-bf-pixel",
+		"player1": "bf-pixel",
 		"player2": "spirit",
 		"notes": [
 			{
@@ -1909,7 +1909,7 @@
 				"mustHitSection": true
 			}
 		],
-		"gfVersion": "scared-gf-pixel",
+		"gfVersion": "gf-pixel",
 		"events": [],
 		"player3": null,
 		"song": "Thorns",

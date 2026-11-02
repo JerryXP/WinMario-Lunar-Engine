@@ -1,8 +1,8 @@
 package psychlua;
 
-import flixel.FlxState;
 import backend.WeekData;
 import objects.Character;
+import backend.StageData;
 
 import openfl.display.BlendMode;
 import Type.ValueType;
@@ -72,7 +72,7 @@ class LuaUtils
 			return value;
 		}
 
-		if(MusicBeatState.getVariables().exists(variable))
+		if(instance is MusicBeatState && MusicBeatState.getVariables().exists(variable))
 		{
 			MusicBeatState.getVariables().set(variable, value);
 			return value;
@@ -109,7 +109,7 @@ class LuaUtils
 			return instance.get(variable);
 		}
 
-		if(MusicBeatState.getVariables().exists(variable))
+		if(instance is MusicBeatState && MusicBeatState.getVariables().exists(variable))
 		{
 			var retVal:Dynamic = MusicBeatState.getVariables().get(variable);
 			if(retVal != null)
@@ -125,12 +125,12 @@ class LuaUtils
 
 		var settings:Map<String, Dynamic> = FlxG.save.data.modSettings.get(modName);
 		var path:String = Paths.mods('$modName/data/settings.json');
-		if(NativeFileSystem.exists(path))
+		if(FileSystem.exists(path))
 		{
 			if(settings == null || !settings.exists(saveTag))
 			{
 				if(settings == null) settings = new Map<String, Dynamic>();
-				var data:String = NativeFileSystem.getContent(path);
+				var data:String = File.getContent(path);
 				try
 				{
 					//FunkinLua.luaTrace('getModSetting: Trying to find default value for "$saveTag" in Mod: "$modName"');
@@ -161,7 +161,9 @@ class LuaUtils
 				{
 					var errorTitle = 'Mod name: ' + Mods.currentModDirectory;
 					var errorMsg = 'An error occurred: $e';
-					CoolUtil.showPopUp(errorMsg, errorTitle);
+					#if windows
+					lime.app.Application.current.window.alert(errorMsg, errorTitle);
+					#end
 					trace('$errorTitle - $errorMsg');
 				}
 			}
@@ -196,8 +198,8 @@ class LuaUtils
 				return false;
 		}*/
 
-		//trace(variable);//! FlxState implements iterator for Playstate, but we can't use them like MAPs
-		if(variable.exists != null && variable.keyValueIterator != null && !Std.isOfType(variable,FlxState)) return true;
+		//trace(variable);
+		if(variable.exists != null && variable.keyValueIterator != null) return true;
 		return false;
 	}
 
@@ -262,6 +264,9 @@ class LuaUtils
 		}
 		return false;
 	}
+	public static function isLuaSupported(value:Any):Bool {
+		return (value == null || isOfTypes(value, [Bool, Int, Float, String, Array]) || Type.typeof(value) == ValueType.TObject);
+	}
 	
 	public static function getTargetInstance()
 	{
@@ -271,7 +276,9 @@ class LuaUtils
 
 	public static inline function getLowestCharacterGroup():FlxSpriteGroup
 	{
-		var group:FlxSpriteGroup = PlayState.instance.gfGroup;
+		var stageData:StageFile = StageData.getStageFile(PlayState.SONG.stage);
+		var group:FlxSpriteGroup = (stageData.hide_girlfriend ? PlayState.instance.boyfriendGroup : PlayState.instance.gfGroup);
+
 		var pos:Int = PlayState.instance.members.indexOf(group);
 
 		var newPos:Int = PlayState.instance.members.indexOf(PlayState.instance.boyfriendGroup);
@@ -308,7 +315,7 @@ class LuaUtils
 			}
 
 			if(prefix != null) obj.animation.addByIndices(name, prefix, indices, '', framerate, loop);
-			else obj.animation.addByIndices(name, prefix, indices, '', framerate, loop);
+			else obj.animation.add(name, indices, framerate, loop);
 
 			if(obj.animation.curAnim == null)
 			{
@@ -403,26 +410,10 @@ class LuaUtils
 		return 'linux';
 		#elseif mac
 		return 'mac';
-		#elseif hl
-		return 'hashlink';
-		#elseif (html5 || emscripten || nodejs || winjs || electron)
+		#elseif html5
 		return 'browser';
 		#elseif android
 		return 'android';
-		#elseif webos
-		return 'webos';
-		#elseif tvos
-		return 'tvos';
-		#elseif watchos
-		return 'watchos';
-		#elseif air
-		return 'air';
-		#elseif flash
-		return 'flash';
-		#elseif (ios || iphonesim)
-		return 'ios';
-		#elseif neko
-		return 'neko';
 		#elseif switch
 		return 'switch';
 		#else
@@ -520,9 +511,12 @@ class LuaUtils
 
 	public static function cameraFromString(cam:String):FlxCamera {
 		switch(cam.toLowerCase()) {
+			case 'camgame' | 'game': return PlayState.instance.camGame;
 			case 'camhud' | 'hud': return PlayState.instance.camHUD;
 			case 'camother' | 'other': return PlayState.instance.camOther;
 		}
-		return PlayState.instance.camGame;
+		var camera:FlxCamera = MusicBeatState.getVariables().get(cam);
+		if (camera == null || !Std.isOfType(camera, FlxCamera)) camera = PlayState.instance.camGame;
+		return camera;
 	}
 }

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="bf-pixel.png">
-	<!-- Created using the Spritesheet and XML generator -->
-	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
-	<SubTexture name="crying0000" x="0" y="0" width="62" height="49" frameX="2" frameY="2" frameWidth="58" frameHeight="45"/>
-	<SubTexture name="idle0000" x="0" y="49" width="62" height="49" frameX="2" frameY="2" frameWidth="58" frameHeight="45"/>
-	<SubTexture name="shaking0000" x="62" y="0" width="62" height="49" frameX="2" frameY="2" frameWidth="58" frameHeight="45"/>
-	<SubTexture name="uneasy0000" x="62" y="49" width="62" height="49" frameX="2" frameY="2" frameWidth="58" frameHeight="45"/>
-</TextureAtlas>

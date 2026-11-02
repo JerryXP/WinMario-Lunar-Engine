@@ -15,8 +15,6 @@
 
 	"preload": {
 		"images/halloween_bg": 2,
-		"sounds/thunder_1": 3,
-		"sounds/thunder_2": 3,
 		"images/halloween_bg_low": 1
 	},
 

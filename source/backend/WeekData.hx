@@ -64,9 +64,8 @@ class WeekData {
 	// HELP: Is there any way to convert a WeekFile to WeekData without having to put all variables there manually? I'm kind of a noob in haxe lmao
 	public function new(weekFile:WeekFile, fileName:String) {
 		// here ya go - MiguelItsOut
-		var fields = Reflect.fields(#if js js.lib.Object.getPrototypeOf(this) #else this #end);	
 		for (field in Reflect.fields(weekFile))
-			if(fields.contains(field)) // Reflect.hasField() won't fucking work :/
+			if(Reflect.fields(this).contains(field)) // Reflect.hasField() won't fucking work :/
 				Reflect.setProperty(this, field, Reflect.getProperty(weekFile, field));
 
 		this.fileName = fileName;
@@ -114,21 +113,21 @@ class WeekData {
 		#if MODS_ALLOWED
 		for (i in 0...directories.length) {
 			var directory:String = directories[i] + 'weeks/';
-			if(NativeFileSystem.exists(directory)) {
+			if(FileSystem.exists(directory)) {
 				var listOfWeeks:Array<String> = CoolUtil.coolTextFile(directory + 'weekList.txt');
 				for (daWeek in listOfWeeks)
 				{
 					var path:String = directory + daWeek + '.json';
-					if(NativeFileSystem.exists(path))
+					if(FileSystem.exists(path))
 					{
 						addWeek(daWeek, path, directories[i], i, originalLength);
 					}
 				}
 
-				for (file in NativeFileSystem.readDirectory(directory))
+				for (file in FileSystem.readDirectory(directory))
 				{
 					var path = haxe.io.Path.join([directory, file]);
-					if (!NativeFileSystem.isDirectory(path) && file.endsWith('.json'))
+					if (!FileSystem.isDirectory(path) && file.endsWith('.json'))
 					{
 						addWeek(file.substr(0, file.length - 5), path, directories[i], i, originalLength);
 					}
@@ -163,10 +162,15 @@ class WeekData {
 
 	private static function getWeekFile(path:String):WeekFile {
 		var rawJson:String = null;
-
-		if(NativeFileSystem.exists(path)) {
-			rawJson = NativeFileSystem.getContent(path);
+		#if MODS_ALLOWED
+		if(FileSystem.exists(path)) {
+			rawJson = File.getContent(path);
 		}
+		#else
+		if(OpenFlAssets.exists(path)) {
+			rawJson = Assets.getText(path);
+		}
+		#end
 
 		if(rawJson != null && rawJson.length > 0) {
 			return cast tjson.TJSON.parse(rawJson);

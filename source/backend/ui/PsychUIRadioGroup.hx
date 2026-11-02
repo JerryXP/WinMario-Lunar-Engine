@@ -1,5 +1,6 @@
 package backend.ui;
 
+import flixel.util.FlxDestroyUtil;
 import flixel.FlxObject;
 
 class PsychUIRadioGroup extends FlxSpriteGroup

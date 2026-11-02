@@ -1,7 +1,5 @@
 package options;
 
-import options.Option;
-
 class GameplaySettingsSubState extends BaseOptionsMenu
 {
 	public function new()
@@ -41,24 +39,11 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		addOption(option);
 		option.onChange = onChangeAutoPause;
 
-		var option:Option = new Option('Pop Up Score',
-			"If unchecked, hitting notes won't make \"sick\", \"good\".. and combo popups\n(Useful for low end " + Main.platform + ").",
-			'popUpRating',
-			BOOL);
-		addOption(option);
-
 		var option:Option = new Option('Disable Reset Button',
 			"If checked, pressing Reset won't do anything.",
 			'noReset',
 			BOOL);
 		addOption(option);
-
-		var option:Option = new Option('Vibrations',
-			"If checked, your device will vibrate at some cases.",
-			'vibrating',
-			BOOL);
-		addOption(option);
-		option.onChange = onChangeVibration;
 
 		var option:Option = new Option('Sustains as One Note',
 			"If checked, Hold Notes can't be pressed if you miss,\nand count as a single Hit/Miss.\nUncheck this if you prefer the old Input System.",
@@ -79,7 +64,7 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		option.onChange = onChangeHitsoundVolume;
 
 		var option:Option = new Option('Rating Offset',
-			'Changes how late/early you have to hit for a "Crazy!!"\nHigher values mean you have to hit later.',
+			'Changes how late/early you have to hit for a "Sick!"\nHigher values mean you have to hit later.',
 			'ratingOffset',
 			INT);
 		option.displayFormat = '%vms';
@@ -88,26 +73,15 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		option.maxValue = 30;
 		addOption(option);
 
-		var option:Option = new Option('Crazy!! (Marvelous!!) Hit Window',
-			'Changes the amount of time you have\nfor hitting a "Crazy!!" in milliseconds.',
-			'marvelousWindow',
-			FLOAT);
-		option.displayFormat = '%vms';
-		option.scrollSpeed = 15;
-		option.minValue = 15.0;
-		option.maxValue = 22.5;
-		option.changeValue = 0.5;
-		addOption(option);
-
-		var option:Option = new Option('Cool! (Sick!) Hit Window',
-			'Changes the amount of time you have\nfor hitting a "Cool!" in milliseconds.',
+		var option:Option = new Option('Sick! Hit Window',
+			'Changes the amount of time you have\nfor hitting a "Sick!" in milliseconds.',
 			'sickWindow',
 			FLOAT);
 		option.displayFormat = '%vms';
 		option.scrollSpeed = 15;
 		option.minValue = 15.0;
 		option.maxValue = 45.0;
-		option.changeValue = 0.5;
+		option.changeValue = 0.1;
 		addOption(option);
 
 		var option:Option = new Option('Good Hit Window',
@@ -118,18 +92,18 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		option.scrollSpeed = 30;
 		option.minValue = 15.0;
 		option.maxValue = 90.0;
-		option.changeValue = 0.5;
+		option.changeValue = 0.1;
 		addOption(option);
 
-		var option:Option = new Option('Ok (Bad) Hit Window',
-			'Changes the amount of time you have\nfor hitting a "Ok" in milliseconds.',
+		var option:Option = new Option('Bad Hit Window',
+			'Changes the amount of time you have\nfor hitting a "Bad" in milliseconds.',
 			'badWindow',
 			FLOAT);
 		option.displayFormat = '%vms';
 		option.scrollSpeed = 60;
 		option.minValue = 15.0;
 		option.maxValue = 135.0;
-		option.changeValue = 0.5;
+		option.changeValue = 0.1;
 		addOption(option);
 
 		var option:Option = new Option('Safe Frames',
@@ -142,8 +116,6 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		option.changeValue = 0.1;
 		addOption(option);
 
-		
-
 		super();
 	}
 
@@ -152,9 +124,4 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 
 	function onChangeAutoPause()
 		FlxG.autoPause = ClientPrefs.data.autoPause;
-
-	function onChangeVibration()
-	{
-		HapticUtil.vibrate(0, Constants.DEFAULT_VIBRATION_DURATION);
-	}
 }

@@ -1,19 +1,15 @@
 package states.editors.content;
 
-import haxe.io.Path;
 import openfl.net.FileReference;
 import openfl.events.Event;
 import openfl.events.IOErrorEvent;
 import flash.net.FileFilter;
 
 import haxe.Exception;
-#if sys
 import sys.io.File;
-#end
 import lime.ui.*;
 
 import flixel.FlxBasic;
-import StringTools;
 
 //Currently only supports OPEN and SAVE, might change that in the future, who knows
 class FileDialogHandler extends FlxBasic
@@ -107,8 +103,7 @@ class FileDialogHandler extends FlxBasic
 	{
 		@:privateAccess
 		this.path = _fileRef.__path;
-		_fileRef.load();
-		this.data = _fileRef.data.toString(); //TODO Test this File.getContent(this.path);
+		this.data = File.getContent(this.path);
 		this.completed = true;
 		trace('Loaded file from: $path');
 
@@ -204,7 +199,7 @@ class FileReferenceCustom extends FileReference
 
 			for (type in typeFilter)
 			{
-				filters.push(type.extension.replace("*.", "").replace(";", ","));
+				filters.push(StringTools.replace(StringTools.replace(type.extension, "*.", ""), ";", ","));
 			}
 
 			filter = filters.join(";");

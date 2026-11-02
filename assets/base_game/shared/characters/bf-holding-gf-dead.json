@@ -1,7 +1,10 @@
 {
 	"animations": [
 		{
-			"offsets": [37, -3],
+			"offsets": [
+				37,
+				-3
+			],
 			"indices": [],
 			"fps": 24,
 			"anim": "deathLoop",
@@ -9,7 +12,10 @@
 			"name": "BF Dead with GF Loop"
 		},
 		{
-			"offsets": [37, 14],
+			"offsets": [
+				37,
+				14
+			],
 			"indices": [],
 			"fps": 24,
 			"anim": "firstDeath",
@@ -17,7 +23,10 @@
 			"name": "BF Dies with GF"
 		},
 		{
-			"offsets": [37, 28],
+			"offsets": [
+				37,
+				28
+			],
 			"indices": [],
 			"fps": 24,
 			"anim": "deathConfirm",
@@ -27,12 +36,21 @@
 	],
 	"no_antialiasing": false,
 	"image": "characters/bfHoldingGF-DEAD",
-	"position": [0, 350],
+	"position": [
+		0,
+		350
+	],
 	"healthicon": "bf",
 	"flip_x": true,
-	"healthbar_colors": [49, 176, 209],
-	"camera_position": [0, 0],
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
 	"sing_duration": 4,
-	"scale": 1.05,
-	"_editor_isPlayer": true
+	"scale": 1.05
 }

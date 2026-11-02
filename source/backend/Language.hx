@@ -57,7 +57,7 @@ class Language
 	inline public static function getPhrase(key:String, ?defaultPhrase:String, values:Array<Dynamic> = null):String
 	{
 		#if TRANSLATIONS_ALLOWED
-		#if debug trace(formatKey(key)); #end
+		//trace(formatKey(key));
 		var str:String = phrases.get(formatKey(key));
 		if(str == null) str = defaultPhrase;
 		#else
@@ -73,15 +73,6 @@ class Language
 
 		return str;
 	}
-
-	public static function cacheSpecificPhrases(keys:Array<String>, defaults:Array<String>):Array<String> {
-        var cached:Array<String> = [];
-        for (i in 0...keys.length) {
-            var defaultPhrase = (i < defaults.length) ? defaults[i] : keys[i];
-            cached.push(getPhrase(keys[i], defaultPhrase));
-        }
-        return cached;
-    }
 
 	// More optimized for file loading
 	inline public static function getFileTranslation(key:String)

@@ -1,9 +1,2 @@
-Mario Version
-Luigi Version
-Shiny
-Tabi
-Vanilla
 Future
-Future-(Vanilla)
 Chip
-Chip-(Vanilla)

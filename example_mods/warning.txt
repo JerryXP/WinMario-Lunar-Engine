@@ -1,0 +1,10 @@
+do not touch or mess with the folder that says "Winengine_", this is for the mod
+
+(1) What happens if I delete it?
+	If you delete it, it might look weird while you played the game.
+
+(2) Can I just modified it?
+	If you know what are you doing, but sure, just be careful.
+
+(3) What if I deleted on of the scripts?
+	NO.

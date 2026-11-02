@@ -5,7 +5,7 @@ import objects.Character;
 import objects.Bar;
 import flixel.addons.display.shapes.FlxShapeCircle;
 
-import mikolka.stages.erect.MainStageErect as BackgroundStage;
+import states.stages.StageWeek1 as BackgroundStage;
 
 class NoteOffsetState extends MusicBeatState
 {
@@ -56,14 +56,10 @@ class NoteOffsetState extends MusicBeatState
 
 		persistentUpdate = true;
 		FlxG.sound.pause();
-		// Stage
-		if(true){
 
-			Paths.setCurrentLevel(stageDirectory);
-			var stage = new BackgroundStage();
-			stage.create();
-			add(stage);
-		}
+		// Stage
+		Paths.setCurrentLevel(stageDirectory);
+		new BackgroundStage();
 
 		// Characters
 		gf = new Character(400, 130, 'gf');
@@ -181,8 +177,8 @@ class NoteOffsetState extends MusicBeatState
 	var onComboMenu:Bool = true;
 	var holdingObjectType:Null<Bool> = null;
 
-	var startMousePos:FlxPoint = FlxPoint.get();
-	var startComboOffset:FlxPoint = FlxPoint.get();
+	var startMousePos:FlxPoint = new FlxPoint();
+	var startComboOffset:FlxPoint = new FlxPoint();
 
 	override public function update(elapsed:Float)
 	{
@@ -350,7 +346,7 @@ class NoteOffsetState extends MusicBeatState
 				}
 			}
 
-			if(controls.RESET #if TOUCH_CONTROLS_ALLOWED || touchPad.buttonC.justPressed #end)
+			if(controls.RESET)
 			{
 				for (i in 0...ClientPrefs.data.comboOffset.length)
 				{
@@ -363,13 +359,11 @@ class NoteOffsetState extends MusicBeatState
 		{
 			if(controls.UI_LEFT_P)
 			{
-				holdTime = 0;
 				barPercent = Math.max(delayMin, Math.min(ClientPrefs.data.noteOffset - 1, delayMax));
 				updateNoteDelay();
 			}
 			else if(controls.UI_RIGHT_P)
 			{
-				holdTime = 0;
 				barPercent = Math.max(delayMin, Math.min(ClientPrefs.data.noteOffset + 1, delayMax));
 				updateNoteDelay();
 			}
@@ -380,11 +374,8 @@ class NoteOffsetState extends MusicBeatState
 				holdTime += elapsed;
 				if(controls.UI_LEFT) mult = -1;
 			}
-			if(controls.UI_LEFT_R || controls.UI_RIGHT_R)
-			{
-				holdTime = 0;
-				updateNoteDelay();
-			}
+
+			if(controls.UI_LEFT_R || controls.UI_RIGHT_R) holdTime = 0;
 
 			if(holdTime > 0.5)
 			{
@@ -393,7 +384,7 @@ class NoteOffsetState extends MusicBeatState
 				updateNoteDelay();
 			}
 
-			if(controls.RESET #if TOUCH_CONTROLS_ALLOWED || touchPad.buttonC.justPressed #end)
+			if(controls.RESET)
 			{
 				holdTime = 0;
 				barPercent = 0;
@@ -418,7 +409,7 @@ class NoteOffsetState extends MusicBeatState
 			if(OptionsState.onPlayState)
 			{
 				if(ClientPrefs.data.pauseMusic != 'None')
-					FlxG.sound.playMusic(Paths.music("pause/" + Paths.formatToSongPath(ClientPrefs.data.pauseMusic)));
+					FlxG.sound.playMusic(Paths.music(Paths.formatToSongPath(ClientPrefs.data.pauseMusic)));
 				else
 					FlxG.sound.music.volume = 0;
 			}
@@ -540,36 +531,18 @@ class NoteOffsetState extends MusicBeatState
 			controllerPointer.visible = controls.controllerMode;
 		}
 
-		#if TOUCH_CONTROLS_ALLOWED
-        removeTouchPad();
-		#end
-
 		var str:String;
 		var str2:String;
-		final accept:String = (controls.mobileC) ? "A" : (!controls.controllerMode) ? "ACCEPT" : "Start";
 		if(onComboMenu)
-		{
 			str = Language.getPhrase('combo_offset', 'Combo Offset');
-			#if TOUCH_CONTROLS_ALLOWED
-			addTouchPad('NONE', 'A_B_C');
-			addTouchPadCamera(false);
-			#end
-		} else {
+		else
 			str = Language.getPhrase('note_delay', 'Note/Beat Delay');
-			#if TOUCH_CONTROLS_ALLOWED
-			addTouchPad('LEFT_FULL', 'A_B_C');
-			addTouchPadCamera(false);
-			#end
-		}
 
-		str2 = Language.getPhrase('switch_on_button', '(Press {1} to Switch)', [accept]);
+		if(!controls.controllerMode)
+			str2 = Language.getPhrase('switch_on_accept', '(Press Accept to Switch)');
+		else
+			str2 = Language.getPhrase('switch_on_start', '(Press Start to Switch)');
 
 		changeModeText.text = '< ${str.toUpperCase()} ${str2.toUpperCase()} >';
-	}
-
-	override function destroy(){
-		startMousePos.put();
-		startComboOffset.put();
-		super.destroy();
 	}
 }

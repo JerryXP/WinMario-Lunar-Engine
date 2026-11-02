@@ -1,45 +1,36 @@
 package backend;
 
+import openfl.utils.Assets;
+import lime.utils.Assets as LimeAssets;
 
-#if cpp
-@:cppFileCode('#include <thread>')
-#end
 class CoolUtil
 {
-
-	/**
-	 * Cover-fits a full-screen background sprite: uniformly scales it so it always fills the whole
-	 * screen (cropping the overflow) at any aspect ratio, then re-centers it. Use for menu/UI
-	 * backgrounds that would otherwise leave gaps at wide resolutions. Not for gameplay (PlayState).
-	 * @param spr the loaded background sprite
-	 * @return the same sprite, for chaining
-	 */
-	public static function fillScreen(spr:flixel.FlxSprite):flixel.FlxSprite {
-		if (spr == null || spr.frameWidth <= 0 || spr.frameHeight <= 0)
-			return spr;
-		var cover:Float = Math.max(flixel.FlxG.width / spr.frameWidth, flixel.FlxG.height / spr.frameHeight);
-		spr.scale.set(cover, cover);
-		spr.updateHitbox();
-		spr.screenCenter();
-		return spr;
-	}
-
-	/**
-	 * Parses JSON with the strict parser, falling back to TJSON.
-	 *
-	 * `haxe.Json` is substantially faster, but TJSON tolerates the hand-written sloppiness mods rely
-	 * on (comments, trailing commas, unquoted keys). Valid JSON is the overwhelming majority, so it
-	 * shouldn't pay for leniency only malformed files need. Nothing that parsed before stops parsing,
-	 * and if both fail it throws TJSON's error, so callers' try/catch behave as they did.
-	 */
-	public static function parseJson(raw:String):Dynamic {
-		try {
-			return haxe.Json.parse(raw);
-		} catch (error:Dynamic) {
-			return tjson.TJSON.parse(raw);
+	public static function checkForUpdates(url:String = null):String {
+		if (url == null || url.length == 0)
+			url = "https://raw.githubusercontent.com/ShadowMario/FNF-PsychEngine/main/gitVersion.txt";
+		var version:String = states.MainMenuState.psychEngineVersion.trim();
+		if(ClientPrefs.data.checkForUpdates) {
+			trace('checking for updates...');
+			var http = new haxe.Http(url);
+			http.onData = function (data:String)
+			{
+				var newVersion:String = data.split('\n')[0].trim();
+				trace('version online: $newVersion, your version: $version');
+				if(newVersion != version) {
+					trace('versions arent matching! please update');
+					version = newVersion;
+					http.onData = null;
+					http.onError = null;
+					http = null;
+				}
+			}
+			http.onError = function (error) {
+				trace('error: $error');
+			}
+			http.request();
 		}
+		return version;
 	}
-	
 	inline public static function quantize(f:Float, snap:Float){
 		// changed so this actually works lol
 		var m:Float = Math.fround(f * snap);
@@ -53,19 +44,13 @@ class CoolUtil
 	inline public static function coolTextFile(path:String):Array<String>
 	{
 		var daList:String = null;
-		if(NativeFileSystem.exists(path)) daList = NativeFileSystem.getContent(path);
+		#if (sys && MODS_ALLOWED)
+		if(FileSystem.exists(path)) daList = File.getContent(path);
+		#else
+		if(Assets.exists(path)) daList = Assets.getText(path);
+		#end
 		return daList != null ? listFromString(daList) : [];
 	}
-
-	/**
-	 * Return string with first character uppercase'd, rest lowercase'd
-	 * @param	str
-	 * @return
-	 */
-	 inline public static function FUL(str:String):String
-		{
-			return str.substr(0, 1).toUpperCase() + str.substr(1, str.length - 1).toLowerCase();
-		}
 
 	inline public static function colorFromString(color:String):FlxColor
 	{
@@ -96,20 +81,7 @@ class CoolUtil
 
 		return Math.floor(value * Math.pow(10, decimals)) / Math.pow(10, decimals);
 	}
-	#if linux
-	public static function sortAlphabetically(list:Array<String>):Array<String> {
-		if (list == null) return [];
 
-		list.sort((a, b) -> {
-			var upperA = a.toUpperCase();
-			var upperB = b.toUpperCase();
-			
-			return upperA < upperB ? -1 : upperA > upperB ? 1 : 0;
-		});
-		return list;
-	}
-	#end
-	
 	inline public static function dominantColor(sprite:flixel.FlxSprite):Int
 	{
 		var countByColor:Map<Int, Int> = [];
@@ -173,7 +145,7 @@ class CoolUtil
 			Sys.command(command, [folder]);
 			trace('$command $folder');
 		#else
-			FlxG.log.error("Platform is not supported for CoolUtil.openFolder");
+			FlxG.error("Platform is not supported for CoolUtil.openFolder");
 		#end
 	}
 
@@ -190,7 +162,7 @@ class CoolUtil
 	inline public static function getSavePath():String {
 		final company:String = FlxG.stage.application.meta.get('company');
 		// #if (flixel < "5.0.0") return company; #else
-		return '${company}/${flixel.util.FlxSave.validate("PsychEngine")}'; //! hardcoding for backwards compatibility
+		return '${company}/${flixel.util.FlxSave.validate(FlxG.stage.application.meta.get('file'))}';
 		// #end
 	}
 
@@ -208,23 +180,4 @@ class CoolUtil
 				text.borderStyle = NONE;
 		}
 	}
-
-	public static function showPopUp(message:String, title:String):Void
-	{
-		#if android
-		AndroidTools.showAlertDialog(title, message, {name: "OK", func: null}, null);
-		#else
-		FlxG.stage.window.alert(message, title);
-		#end
-	}
-
-	#if cpp
-    @:functionCode('
-        return std::thread::hardware_concurrency();
-    ')
-	#end
-    public static function getCPUThreadsCount():Int
-    {
-        return 1;
-    }
 }

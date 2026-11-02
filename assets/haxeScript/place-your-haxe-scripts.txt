@@ -1,1 +1,0 @@
-Place your HAXE scripts in here! (it needs to be .hx)

@@ -32,14 +32,7 @@ class ControlsSubState extends MusicBeatSubstate
 		[true, 'Reset', 'reset', 'Reset'],
 		[true, 'Accept', 'accept', 'Accept'],
 		[true, 'Back', 'back', 'Back'],
-		[true, 'Capture', 'screenshot', 'Capture'],
 		[true, 'Pause', 'pause', 'Pause'],
-		[false],
-		[false, 'P-SLICE'],
-		[true,"Chr menu","char_select","Character Menu"],
-		[true,"FP left","bar_left","Freeplay left"],
-		[true,"FP right","bar_right","Freeplay right"],
-		[true,"Favorite","favorite","Freeplay favorite"],
 		[false],
 		[false, 'VOLUME'],
 		[false, 'Mute', 'volume_mute', 'Volume Mute'],
@@ -61,16 +54,14 @@ class ControlsSubState extends MusicBeatSubstate
 	var grpBinds:FlxTypedGroup<Alphabet>;
 	var selectSpr:AttachedSprite;
 
-	var gamepadColor:FlxColor = 0xff007806;
-	var keyboardColor:FlxColor = 0xff3a0078;
+	var gamepadColor:FlxColor = 0xfffd7194;
+	var keyboardColor:FlxColor = 0xff7192fd;
 	var onKeyboardMode:Bool = true;
 	
 	var controllerSpr:FlxSprite;
 	
 	public function new()
 	{
-		controls.isInSubstate = true;
-
 		super();
 
 		#if DISCORD_ALLOWED
@@ -81,7 +72,7 @@ class ControlsSubState extends MusicBeatSubstate
 		options.push([true]);
 		options.push([true, defaultKey]);
 
-		bg = new FlxSprite().loadGraphic(Paths.image('optionsSide'));
+		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
 		bg.color = keyboardColor;
 		bg.antialiasing = ClientPrefs.data.antialiasing;
 		bg.screenCenter();
@@ -119,9 +110,6 @@ class ControlsSubState extends MusicBeatSubstate
 		add(text);
 
 		createTexts();
-		#if TOUCH_CONTROLS_ALLOWED
-		addTouchPad('NONE', 'B');
-		#end
 	}
 
 	var lastID:Int = 0;
@@ -292,9 +280,8 @@ class ControlsSubState extends MusicBeatSubstate
 
 		if(!binding)
 		{
-			if(#if TOUCH_CONTROLS_ALLOWED touchPad.buttonB.justPressed || #end FlxG.keys.justPressed.ESCAPE || FlxG.gamepads.anyJustPressed(B))
+			if(FlxG.keys.justPressed.ESCAPE || FlxG.gamepads.anyJustPressed(B))
 			{
-				controls.isInSubstate = false;
 				close();
 				return;
 			}
@@ -320,11 +307,8 @@ class ControlsSubState extends MusicBeatSubstate
 					bindingText = new Alphabet(FlxG.width / 2, 160, Language.getPhrase('controls_rebinding', 'Rebinding {1}', [options[curOptions[curSelected]][3]]), false);
 					bindingText.alignment = CENTERED;
 					add(bindingText);
-
-					final escape:String = (controls.mobileC) ? "B" : "ESC";
-					final backspace:String = (controls.mobileC) ? "C" : "Backspace";
 					
-					bindingText2 = new Alphabet(FlxG.width / 2, 340, Language.getPhrase('controls_rebinding2', 'Hold {1} to Cancel\nHold {2} to Delete', [escape, backspace]), true);
+					bindingText2 = new Alphabet(FlxG.width / 2, 340, Language.getPhrase('controls_rebinding2', 'Hold ESC to Cancel\nHold Backspace to Delete'), true);
 					bindingText2.alignment = CENTERED;
 					add(bindingText2);
 
