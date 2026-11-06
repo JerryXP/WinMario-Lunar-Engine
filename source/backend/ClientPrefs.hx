@@ -9,6 +9,7 @@ import states.InitState;
 // Add a variable here and it will get automatically saved
 @:structInit class SaveVariables {
 	// LUNAR ENGINE SETTINGS
+	public var modPreviews:Bool = false;
 	public var showComboSprite:Bool = false; // Show the Combo Sprite
 	public var showComboNumLune:Bool = true; // Show the Combo Num Sprites
 	public var showRatingLune:Bool = true; // Show the Combo Rating Sprites

@@ -27,7 +27,6 @@ class DesktopMenuState extends FlxBasic
 		'freeplay',
 		#if desktop 'ost', #end
 		#if ACHIEVEMENTS_ALLOWED 'awards', #end
-		#if desktop 'gallery', #end
 		'credits',
 		'options'
 	];
@@ -130,8 +129,6 @@ class DesktopMenuState extends FlxBasic
 							#if desktop
 							case 'ost':
 								MusicBeatState.switchState(new states.SoundtrackState());
-							case 'gallery':
-								MusicBeatState.switchState(new states.GalleryState());
 							#end
 							case 'freeplay':
 								{
