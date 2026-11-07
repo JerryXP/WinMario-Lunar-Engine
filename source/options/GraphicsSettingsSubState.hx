@@ -54,7 +54,7 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 		option.onChange = () -> MobileScaleMode.enabled = ClientPrefs.data.wideScreen;
 		addOption(option);
 
-		var option:Option = new Option('Color Accessibility:',
+		var option:Option = new Option('Color Accessibility',
 		    "Select several options according to your color blindness disorder.",
 			'colorblindMode',
 			STRING,

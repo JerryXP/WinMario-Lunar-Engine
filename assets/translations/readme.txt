@@ -1,0 +1,1 @@
+You can store all Shared assets

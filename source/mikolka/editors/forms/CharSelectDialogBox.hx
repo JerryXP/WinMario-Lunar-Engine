@@ -3,7 +3,6 @@ package mikolka.editors.forms;
 import mikolka.vslice.components.crash.UserErrorSubstate;
 #if !LEGACY_PSYCH  import states.editors.content.FileDialogHandler; #end
 import mikolka.editors.editorProps.CharJson;
-import mikolka.editors.substates.ResultsScreenEdit;
 import mikolka.editors.substates.FreeplayEditSubstate;
 
 #if !LEGACY_PSYCH  
@@ -118,11 +117,6 @@ class CharSelectDialogBox extends PsychUIBox
 			parent.persistentUpdate = false;
 			parent.openSubState(new FreeplayEditSubstate(activePlayer));
 		});
-		var btn_result:PsychUIButton = new PsychUIButton(150, 90, "Edit Results", () ->
-		{
-			parent.persistentUpdate = false;
-			parent.openSubState(new ResultsScreenEdit(activePlayer));
-		});
 
 		// GF
 		var btn_gf_prev:PsychUIButton = new PsychUIButton(20, 20, "Anims preview", () ->
@@ -171,7 +165,6 @@ class CharSelectDialogBox extends PsychUIBox
 
 		tab.add(btn_player_prev);
 		tab.add(btn_dj);
-		tab.add(btn_result);
 
 		tab.add(btn_save);
 

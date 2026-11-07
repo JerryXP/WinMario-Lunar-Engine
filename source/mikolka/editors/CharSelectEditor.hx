@@ -54,7 +54,7 @@ class CharSelectEditor extends MusicBeatState
 
 	override function create()
 	{
-		FlxG.sound.music.pause();
+		FlxG.sound.playMusic(Paths.music('editors/player-char_select'));
 		FlxG.mouse.visible = true;
 		CacheSystem.clearStoredMemory();
 		CacheSystem.clearUnusedMemory();

@@ -34,7 +34,7 @@ class LunarSettings extends BaseOptionsMenu
 			BOOL);
 		addOption(option);
 
-		var option:Option = new Option('Color Icon Note:',
+		var option:Option = new Option('Color Icon Note',
 		    "What Type?\n(NOTE: THIS IS ONLY FOR RGB NOTES. NOT RECOMMENDED FOR NON-RGB NOTES)",
 		    'shadedNote',
 		    STRING,
@@ -54,7 +54,7 @@ class LunarSettings extends BaseOptionsMenu
 			BOOL);
 		addOption(option);
 
-		var option:Option = new Option('Key Viewer Color:',
+		var option:Option = new Option('Key Viewer Color',
 			'Select the color for the key viewer buttons.',
 			'keyViewerColor',
 			STRING,
@@ -62,7 +62,7 @@ class LunarSettings extends BaseOptionsMenu
 		addOption(option);
 		option.onChange = onChangeKeyViewerColor;
 
-		var option:Option = new Option('Color TimeBar Type:',
+		var option:Option = new Option('Color TimeBar Type',
 		    "What Type?",
 		    'shadedTimeBar',
 		    STRING,
@@ -99,14 +99,14 @@ class LunarSettings extends BaseOptionsMenu
 			BOOL);
 		addOption(option);
 
-		var option:Option = new Option('Icon Bounce:',
+		var option:Option = new Option('Icon Bounce',
 		    'Select the type of bounce icon you prefer. NOTE: Scripts using this setting may break with non-default values. It is recommended to leave it as Default.',
 			'iconBounceType',
 			STRING,
 			['Default', 'D&B', 'Old', 'NF']);
 		addOption(option);
 
-		var option:Option = new Option('ScoreTxt Info:',
+		var option:Option = new Option('ScoreTxt Info',
 		    'No, not Custom HUD. Custom Score Text Info.',
 			'winmarioCustomscore',
 			STRING,
@@ -156,7 +156,7 @@ class LunarSettings extends BaseOptionsMenu
 			BOOL);
 		addOption(option);
 
-		var option:Option = new Option('Video Intro:',
+		var option:Option = new Option('Video Intro',
 			"What Style do you like for the Video\n(NOTE: It was named after the WNR Startups made by other people)",
 			'introvideoCutscene',
 			STRING,
@@ -171,7 +171,7 @@ class LunarSettings extends BaseOptionsMenu
 		addOption(option);
 		#end
 
-		var option:Option = new Option('Time Format:',
+		var option:Option = new Option('Time Format',
 			"12 Hour is default.",
 			'clock',
 			STRING,
