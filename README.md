@@ -10,7 +10,7 @@ Lunar Engine is a Forked Engine of [P-Slice](https://github.com/Psych-Slice/P-Sl
 <br>
 
 ### -☆- Rules -☆-
-It's Ok to use my engine, at least I credit almost everyone, but anyways there are rules. If you use my engine, please just credit me for using it, I said it's a engine trying to be my mod I created, [Vs. WinMario](https://github.com/JerryXP/Vs-WinMario). Dave & Bambi Mods are ok, but using it for Spam tracks or Spamming keys are prohibited, because I don't want my engine to be popular because of your Dave & Bambi Spamming Track Mod. Do not use my Engine to program Malware or any Malicious. And last, do not ask for Android or iOS builds. And I have prove why: [https://youtube.com/shorts/_oE-09RRod0?si=k7mI4Vo3jhgOZfSn](https://youtube.com/shorts/_oE-09RRod0?si=k7mI4Vo3jhgOZfSn)<br>
+It's Ok to use my engine, at least I credit almost everyone, but anyways there are rules. If you use my engine, please just credit me for using it, I said it's a engine trying to be my mod I created, [Vs. WinMario](https://github.com/JerryXP/Vs-WinMario). Dave & Bambi Mods are ok, but using it for Spam tracks or Spamming keys are prohibited, because I don't want my engine to be popular because of your Dave & Bambi Spamming Track Mod. Do not use my Engine to program Malware or any Malicious. **PLEASE DO NOT USE MY/OUR/THEIR STUFF TO PROGRAM OR TRAIN FOR AI, OTHERWISE I WILL FORCE YOU TO TAKE IT DOWN.** And last, do not ask for Android or iOS builds. And I have prove why: [https://youtube.com/shorts/_oE-09RRod0?si=k7mI4Vo3jhgOZfSn](https://youtube.com/shorts/_oE-09RRod0?si=k7mI4Vo3jhgOZfSn)<br>
 Cause that's annoying to FNF Devs.
 <br>
 
