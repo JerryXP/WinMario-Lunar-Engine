@@ -43,7 +43,7 @@ class LunarSettings extends BaseOptionsMenu
 		addOption(option);
 
 		var option:Option = new Option('Grids on Pause Menu',
-			'(some 1 dude complain about the this. ugh...)\nIf unchecked, the grids on Pause Menu will be off.',
+			'(some 1 dude complain about this. ugh...)\nIf unchecked, the grids on Pause Menu will be off.',
 			'gridsPause',
 			BOOL);
 		addOption(option);
