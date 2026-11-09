@@ -11,7 +11,8 @@ class LunarSettings extends BaseOptionsMenu
 		rpcTitle = 'Lunar Engine Settings Menu'; //for Discord Rich Presence
 
 		var option:Option = new Option('Mod Previews',
-			'If checked, steals mod previews function from imeless engnie',
+			'If checked, the images will be appeared on Mods Menu.',
+			// 'If checked, steals mod previews function from imeless engnie',
 			'modPreviews',
 			BOOL);
 		addOption(option);
@@ -39,6 +40,12 @@ class LunarSettings extends BaseOptionsMenu
 		    'shadedNote',
 		    STRING,
 			['OFF', 'ON', 'ON (legacy)']);
+		addOption(option);
+
+		var option:Option = new Option('Grids on Pause Menu',
+			'(some 1 dude complain about the this. ugh...)\nIf unchecked, the grids on Pause Menu will be off.',
+			'gridsPause',
+			BOOL);
 		addOption(option);
 
 		var option:Option = new Option('Debug Keys',

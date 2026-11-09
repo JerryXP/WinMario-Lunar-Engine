@@ -73,12 +73,12 @@ class PauseSubState extends MusicBeatSubstate
 
 	override function create()
 	{
-		if(!VsliceOptions.LOW_QUALITY) {
-		var grid:FlxBackdrop = new FlxBackdrop(FlxGridOverlay.createGrid(80, 80, 160, 160, true, 0x7FFFFFFF, 0x0));
-		grid.velocity.set(40, 40);
-		grid.alpha = 0;
-		FlxTween.tween(grid, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
-		add(grid);
+		if(!VsliceOptions.LOW_QUALITY || ClientPrefs.data.gridsPause) {
+			var grid:FlxBackdrop = new FlxBackdrop(FlxGridOverlay.createGrid(80, 80, 160, 160, true, 0x7FFFFFFF, 0x0));
+			grid.velocity.set(40, 40);
+			grid.alpha = 0;
+			FlxTween.tween(grid, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
+			add(grid);
 		}
 		FlxG.sound.play(Paths.sound('pause_sfx'), 0.7);
 		controls.isInSubstate = true;

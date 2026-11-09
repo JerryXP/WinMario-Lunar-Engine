@@ -67,7 +67,7 @@ class LoadingState extends MusicBeatState
 	#if PSYCH_WATERMARKS
 	var logo:FlxSprite;
 	var pessy:FlxSprite;
-	var loadingText:FlxText;
+	//var loadingText:FlxText;
 
 	var timePassed:Float;
 	var shakeFl:Float;
@@ -78,6 +78,13 @@ class LoadingState extends MusicBeatState
 	var pressedTimes:Int = 0;
 	#else
 	var funkay:FlxSprite;
+	var runningBF:FlxSprite;
+	var loadingText:FlxText;
+	//var completeText:FlxText;
+	var runningGF:FlxSprite;
+	var micDisplay:FlxSprite;
+	var timePassed:Float;
+	var shakeFl:Float;
 	#end
 
 	#if HSCRIPT_ALLOWED
@@ -175,40 +182,92 @@ class LoadingState extends MusicBeatState
 		}
 		#end
 
-		#if PSYCH_WATERMARKS // PSYCH LOADING SCREEN
-		var bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
-		bg.antialiasing = ClientPrefs.data.antialiasing;
-		bg.setGraphicSize(Std.int(FlxG.width));
-		bg.color = 0xFFD16FFF;
-		bg.updateHitbox();
-		addBehindBar(bg);
+		//#if PSYCH_WATERMARKS // PSYCH LOADING SCREEN
+		//var bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
+		//bg.antialiasing = ClientPrefs.data.antialiasing;
+		//bg.setGraphicSize(Std.int(FlxG.width));
+		//bg.color = 0xFFD16FFF;
+		//bg.updateHitbox();
 
-		loadingText = new FlxText((FlxG.width / 2) - 200, 600, 400, Language.getPhrase('now_loading', 'Now Loading', ['...']), 32);
-		loadingText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, LEFT, OUTLINE_FAST, FlxColor.BLACK);
-		loadingText.borderSize = 2;
-		addBehindBar(loadingText);
+		//loadingText = new FlxText((FlxG.width / 2) - 200, 600, 400, Language.getPhrase('now_loading', 'Now Loading', ['...']), 32);
+		//loadingText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, LEFT, OUTLINE_FAST, FlxColor.BLACK);
+		//loadingText.borderSize = 2;
 
-		logo = new FlxSprite(0, 0).loadGraphic(Paths.image('loading_screen/icon'));
-		logo.antialiasing = ClientPrefs.data.antialiasing;
-		logo.scale.set(0.75, 0.75);
-		logo.updateHitbox();
-		logo.screenCenter();
-		logo.x -= 50;
-		logo.y -= 40;
-		addBehindBar(logo);
-		#else // BASE GAME LOADING SCREEN
-		var bg = new FlxSprite().makeGraphic(1, 1, 0xFFCAFF4D);
+		//logo = new FlxSprite(0, 0).loadGraphic(Paths.image('loading_screen/icon'));
+		//logo.antialiasing = ClientPrefs.data.antialiasing;
+		//logo.scale.set(0.75, 0.75);
+		//logo.updateHitbox();
+		//logo.screenCenter();
+		//logo.x -= 50;
+		//logo.y -= 40;
+		//addBehindBar(logo);
+		//#else // BASE GAME LOADING SCREEN
+		var bg = new FlxSprite().makeGraphic(1, 1, 0xFF000000);
 		bg.scale.set(FlxG.width, FlxG.height);
 		bg.updateHitbox();
 		bg.screenCenter();
-		addBehindBar(bg);
+		add(bg);
 
-		funkay = new FlxSprite().loadGraphic(Paths.image('loadingScreens/loadingscreen-' + FlxG.random.int(1, 15)));
+		funkay = new FlxSprite().loadGraphic(Paths.image('loadingScreens/loadingscreen-' + FlxG.random.int(1, 10)));
 		funkay.antialiasing = ClientPrefs.data.antialiasing;
 		funkay.setGraphicSize(0, FlxG.height);
 		funkay.updateHitbox();
-		addBehindBar(funkay);
-		#end
+		add(funkay);
+
+		loadingText = new FlxText((FlxG.width / 2) - 200, 40, 640, Language.getPhrase('now_loading', 'Loading', ['...']), 32);
+		loadingText.setFormat(Paths.font("Neon Rave Italic.ttf"), 32, FlxColor.WHITE, LEFT, OUTLINE_FAST, FlxColor.BLACK);
+		loadingText.borderSize = 2;
+		loadingText.x = 20 + 0 * 52;
+		loadingText.y = 620;
+		loadingText.size = 64;
+		add(loadingText);
+
+		//completeText = new FlxText((FlxG.width / 2) - 200, 40, 640, Language.getPhrase('now_complete', 'Complete!'), 32);
+		//completeText.setFormat(Paths.font("Neon Rave Italic.ttf"), 32, FlxColor.LIME, LEFT, OUTLINE_FAST, FlxColor.BLACK);
+		//completeText.borderSize = 2;
+		//completeText.x = 40 + 0 * 52;
+		//completeText.y = 640;
+		//completeText.size = 64;
+
+		//new FlxTimer().start(3.0, function(tmr:FlxTimer) {
+            //remove(loadingText);
+			//add(completeText);
+       	//});
+
+		micDisplay = new FlxSprite().loadGraphic(Paths.image('loading/mic-stand'));
+		micDisplay.antialiasing = ClientPrefs.data.antialiasing;
+		micDisplay.x = 1000;
+		micDisplay.y = 620;
+		micDisplay.scrollFactor.x = 0;
+		micDisplay.scrollFactor.y = 0;
+		micDisplay.scale.set(0.3, 0.3);
+		micDisplay.updateHitbox();
+		add(micDisplay);
+
+		if (FlxG.random.bool(50)) {
+			runningBF = new FlxSprite(1000, 445);
+			runningBF.frames = Paths.getSparrowAtlas('loading/bf');
+			runningBF.animation.addByPrefix('run', 'run', 24, true);
+			runningBF.animation.play('run');
+			runningBF.scrollFactor.x = 0;
+			runningBF.scrollFactor.y = 0;
+			runningBF.scale.set(0.3, 0.3); 
+			runningBF.antialiasing = ClientPrefs.data.antialiasing;
+			runningBF.updateHitbox();
+			add(runningBF);
+		} else {
+			runningGF = new FlxSprite(1020, 400);
+			runningGF.frames = Paths.getSparrowAtlas('loading/gf');
+			runningGF.animation.addByPrefix('run', 'run', 24, true);
+			runningGF.animation.play('run');
+			runningGF.scrollFactor.x = 0;
+			runningGF.scrollFactor.y = 0;
+			runningGF.scale.set(0.3, 0.3); 
+			runningGF.antialiasing = ClientPrefs.data.antialiasing;
+			runningGF.updateHitbox();
+			add(runningGF);
+		}
+		//#end
 		super.create();
 
 		if (stateChangeDelay <= 0 && checkLoaded())
@@ -267,9 +326,9 @@ class LoadingState extends MusicBeatState
 		}
 		#end
 
-		#if PSYCH_WATERMARKS // PSYCH LOADING SCREEN
+		
 		timePassed += elapsed;
-		shakeFl += elapsed * 3000;
+		shakeFl += elapsed * 6000;
 		var dots:String = '';
 		switch (Math.floor(timePassed % 1 * 3))
 		{
@@ -280,8 +339,9 @@ class LoadingState extends MusicBeatState
 			case 2:
 				dots = '...';
 		}
-		loadingText.text = Language.getPhrase('now_loading', 'Now Loading{1}', [dots]);
+		loadingText.text = Language.getPhrase('now_loading', 'Loading{1}', [dots]);
 
+		#if PSYCH_WATERMARKS // PSYCH LOADING SCREEN
 		if (!spawnedPessy)
 		{
 			if (!transitioning && controls.ACCEPT)
