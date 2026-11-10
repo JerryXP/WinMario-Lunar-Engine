@@ -9,12 +9,12 @@ class STFU extends BaseOptionsMenu {
         title = Language.getPhrase("private_menu","N/A");
         rpcTitle = "N/A";
 		
-		var option:Option = new Option('Mod Previews',
-			'If checked, the images will be appeared on Mods Menu.',
+		// var option:Option = new Option('Mod Previews',
+			// 'If checked, the images will be appeared on Mods Menu.',
 			// 'If checked, steals mod previews function from imeless engnie',
-			'modPreviews',
-			BOOL);
-		addOption(option);
+			// 'modPreviews',
+			// BOOL);
+		// addOption(option);
 
 		var option:Option = new Option('Use legacy bar',
 			'Makes health bar and score text much simpler',
