@@ -10,13 +10,6 @@ class LunarSettings extends BaseOptionsMenu
 		title = Language.getPhrase('lunar_menu', 'Lunar Engine Settings');
 		rpcTitle = 'Lunar Engine Settings Menu'; //for Discord Rich Presence
 
-		var option:Option = new Option('Mod Previews',
-			'If checked, the images will be appeared on Mods Menu.',
-			// 'If checked, steals mod previews function from imeless engnie',
-			'modPreviews',
-			BOOL);
-		addOption(option);
-
 		var option:Option = new Option('Combo Sprite Here',
 			'If checked, shows a Combo Sprite',
 			'showComboSprite',

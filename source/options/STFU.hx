@@ -3,10 +3,18 @@ import options.Option;
 
 //PLEASE SHUT THE FLIP UP
 // hey... please leave this alone... Thank You.
+// Do not add a New Option Category to redirect to this.
 class STFU extends BaseOptionsMenu {
     public function new() {
         title = Language.getPhrase("private_menu","N/A");
         rpcTitle = "N/A";
+		
+		var option:Option = new Option('Mod Previews',
+			'If checked, the images will be appeared on Mods Menu.',
+			// 'If checked, steals mod previews function from imeless engnie',
+			'modPreviews',
+			BOOL);
+		addOption(option);
 
 		var option:Option = new Option('Use legacy bar',
 			'Makes health bar and score text much simpler',

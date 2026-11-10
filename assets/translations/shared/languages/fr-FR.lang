@@ -1,0 +1,279 @@
+Français (French)
+
+// Gameplay
+score_text_psych: "Score : {1} | Fautes : {2} | rank : {3}"
+score_text_psych_instakill: "Score : {1} | Rank : {2}"
+botplay: "Automatique"
+
+rating_you_suck: "T'es Trop Nul !"
+rating_shit: "Merde"
+rating_bad: "Nul"
+rating_bruh: "Mal"
+rating_meh: "Mouai"
+rating_nice: "Bien"
+rating_good: "Très bien !"
+rating_great: "Exellent !"
+rating_sick: "Incroyable !"
+rating_perfect: "Parfait !!"
+
+// Dialogues
+dialogue_skip: "Appui sur Echap pour passer les dialogues."
+
+// Pause Menu
+pause_resume: "Reprendre"
+pause_restart_song: "Recommencer"
+pause_leave_charting_mode: "Quitter l'éditeur de chart"
+pause_skip_time: "passer à"
+pause_end_song: "finir la musique"
+pause_change_difficulty: "changer de difficultés"
+pause_toggle_practice_mode: "passer au mode invincible"
+pause_toggle_botplay: "passer en mode Robot"
+pause_options: "Options"
+pause_exit_to_menu: "Retourner au menu"
+pause_back: "Retour"
+practice_mode: "Mode Pratique"
+charting_mode: "Mode Charter"
+blueballed: "Couilles Bleus : {1}"
+
+// Main Menu
+images/mainmenu/menu_story_mode: "images/mainmenu/menu_story_mode"
+images/mainmenu/menu_freeplay: "images/mainmenu/menu_freeplay"
+images/mainmenu/menu_credits: "images/mainmenu/menu_credits"
+
+// Story Mode
+images/Menu_Tracks: "images/pt-BR/Menu_Tracks"
+week_score: "PONTUAÇÃO: {1}"
+
+storyname_week1: "le père rockeur"
+storyname_week2: "LE MOIS EFFRAYANT !"
+storyname_week3: "pico"
+storyname_week4: "La mère tueuse"
+storyname_week5: "La neige rouge"
+storyname_week6: "simulateur de confrontation avec moawling"
+storyname_weekend1: "Les dettes"
+
+// Freeplay
+personal_best: "Meilleur Score : {1} ({2}%)"
+freeplay_tip: "Appuie sur "Espace" pour écouter la musique / appui sur Ctrl pour aller au contrôl / Appuyer sur RESET pour réinitialiser votre rank et score."
+
+musicplayer_playing: "Musique : {1}"
+musicplayer_paused: "Musique: {1} (en pause)"
+musicplayer_tip: "Appui sur Espace pour mettre en pause / Appui sur Echap pour quitter / Appui sur R pour réinitialiser la musique jouée"
+
+// Mods Menu
+no_mods_installed: "PAS DE MODS INSTALLÉS\nAPPUI SUR ECHAP POUR QUITTER ET INSTALLE UN MOD !"
+no_mods_found: "Aucun mods n'a été trouvés."
+mod_restart: "* Déplacer ou basculer ou modifier redémarrera le jeu."
+reload_button: "RELANCER LE MOD"
+enable_all_button: "TOUT REACTIVER"
+disable_all_button: "TOUT DÉSACTIVER"
+
+// Reset Score/Achievement
+reset_score: "réinitialiser le score de :"
+reset_achievement: "réinitialiser la quête :"
+yes: "Oui"
+no: "Non"
+
+// Achievements
+achievement_friday_night_play: "Friday Night Funkin'"
+description_friday_night_play: "Avoir un vendredi....funky."
+achievement_week1_nomiss: "Elle m'appelle aussi papa"
+description_week1_nomiss: "Finir la Week 1 en difficile avec aucunes fautes."
+achievement_week2_nomiss: "Finis les farces"
+description_week2_nomiss: "Finir la Week 2 en difficile avec aucunes fautes."
+achievement_week3_nomiss: "Appelle moi le tueur à gages"
+description_week3_nomiss: "Finir la Week 3 en difficile avec aucunes fautes."
+achievement_week4_nomiss: "Madame la tueuse"
+description_week4_nomiss: "Finir la Week 4 en difficile avec aucunes fautes."
+achievement_week5_nomiss: "Noël sans dames"
+description_week5_nomiss: "Finir la Week 5 en difficile avec aucunes fautes."
+achievement_week6_nomiss: "Score Incroyable !!"
+description_week6_nomiss: "Finir la Week 6 en difficile avec aucunes fautes."
+achievement_week7_nomiss: "SALE FILS DE PU-"
+description_week7_nomiss: "Finir la Week 7 en difficile avec aucunes fautes."
+achievement_ur_bad: "Funker pas très funky.."
+description_ur_bad: "Complète une chanson avec un pourçentage inférieur à 20%."
+achievement_ur_good: "Perfectionniste"
+description_ur_good: "Complète une chanson avec un pourçentage à 100%."
+achievement_roadkill_enthusiast: "Passionné de Roadkill"
+description_roadkill_enthusiast: "Regardez les henchmans mourir 50 fois."
+achievement_oversinging: "Trop chanter... ?"
+description_oversinging: "Chantez pendant 10 secondes sans revenir au idle."
+achievement_hype: "HYPERACTIF"
+description_hype: "FINIR UNE CHANSON SANS REVENIR AU IDLE."
+achievement_two_keys: "Juste nous deux !"
+description_two_keys: "Terminez une chanson en appuyant seulement sur deux touches."
+achievement_toastie: "grille-pain simulateur"
+description_toastie: "Avez-vous essayé de lancer le jeu sur un grille-pain ?"
+achievement_debugger: "Mode Debug"
+description_debugger: "Complète la chanson "Test" dans le menu chart."
+
+// Options
+options_note_colors: "Couleurs des notes"
+options_controls: "Contrôles"
+options_adjust_delay_and_combo: "Ajustements"
+options_gameplay: "Graphismes"
+options_visuals: "Visuels"
+options_graphics: "Gameplay"
+options_language: "Langues"
+
+graphics_menu: "Paramètres du Gameplay"
+visuals_menu: "Paramètres visuels"
+gameplay_menu: "Paramètres de Graphismes"
+
+// Note Colors Menu
+note_colors_tip: "Appuyez sur RESET pour réinitialiser la partie sélectionnée de la note."
+note_colors_hold_tip: "Maintenez {1} et appuyez sur RESET pour réinitialiser complètement la note sélectionnée."
+note_colors_shift: "Shift"
+note_colors_lb: "Bouton de l'Épaule Gauche"
+
+// Adjust Delay and Combo Menu
+delay_beat_hit: "Battu!"
+delay_current_offset: "Délai: {1} ms";
+combo_rating_offset: "Décalage de Classement:"
+combo_numbers_offset: "Décalage des Nombres:"
+combo_offset: "Décalage du Combo"
+note_delay: "Délai des Notes"
+switch_on_accept: "(Appuyez sur Accepter pour Changer)"
+switch_on_start: "(Appuyez sur Start pour Changer)"
+
+// Controls Menu
+keygroup_notes: "NOTES"
+keygroup_ui: "MENUS"
+keygroup_volume: "VOLUME"
+keygroup_debug: "DEBUG"
+
+key_note_left: "Gauche"
+key_note_down: "Bas"
+key_note_up: "Haut"
+key_note_right: "Droite"
+key_ui_left: "Gauche"
+key_ui_down: "Bas"
+key_ui_up: "Haut"
+key_ui_right: "Droite"
+key_reset: "Réinitialiser"
+key_accept: "Accepter"
+key_back: "Retour"
+key_pause: "Pause"
+key_volume_mute: "Muet"
+key_volume_up: "Augmenter"
+key_volume_down: "Diminuer"
+key_debug_1: "Bouton 1"
+key_debug_2: "Bouton 2"
+
+controls_rebinding: "Changement de {1}"
+controls_rebinding2: "Maintenez ESC pour Annuler\nBackspace pour Effacer"
+reset_to_default_keys: "Réinitialiser aux Paramètres par Défaut"
+
+// Gameplay Changers
+setting_scroll_type: "Type de Défilement"
+setting_scroll_type-multiplicative: "Multiplicatif"
+setting_scroll_type-constant: "Constant"
+setting_scroll_speed: "Vitesse de Défilement"
+setting_playback_rate: "Vitesse de Lecture"
+setting_health_gain_multiplier: "Multiplicateur de Vie Gagnée"
+setting_health_loss_multiplier: "Multiplicateur de Vie Perdue"
+setting_instakill_on_miss: "Mort Instantanée en cas de fautes
+setting_practice_mode: "Mode Invincible"
+setting_botplay: "Mode Automatique"
+
+// Graphics Settings
+setting_low_quality: "Basse Qualité"
+description_low_quality: "Si coché, désactive certains éléments de fond,\nraccourcit le temps de chargement et améliore les performances."
+setting_anti-aliasing: "Anti-Aliasing"
+description_anti-aliasing: "Si décoché, désactive l'anti-aliasing, augmente les performances au prix de graphismes moins lisses."
+setting_shaders: "Shaders"
+description_shaders: "Si décoché, désactive les shaders.\nIls sont utilisés pour certains effets spéciaux et peuvent être exigeants pour les CPU faibles."
+setting_gpu_caching: "Mise en Cache GPU"
+description_gpu_caching: "Si écoché, certains effets visuels peuvent être désactivés, car certains effets peuvent être\ntrès gourmands en mémoire et causent des ralentissements."
+setting_framerate: "Limite d'IPS"
+description_framerate: "Bloque la limite d'images par seconde (IPS) pour\nne pas dépasser cette valeur, économise du CPU et du GPU."
+
+// Paramètres Visuels
+
+setting_note_skins: "Styles de Notes"
+setting_note_skins-default: "Par Défaut"
+setting_note_skins-future: "Futuriste"
+setting_note_skins-chip: "Puce"
+description_note_skins: "Choisissez votre style de Notes préféré."
+setting_note_splashes: "Impact des Notes"
+setting_note_splashes-psych: "Psychédélique"
+setting_note_splashes-diamond: "Diamant"
+setting_note_splashes-electric: "Électrique"
+setting_note_splashes-sparkles: "Étincelles"
+setting_note_splashes-vanilla: "Original"
+description_note_splashes: "Choisissez votre style d'Impact des Notes préféré."
+setting_note_splash_opacity: "Opacité de l'Impact"
+description_note_splash_opacity: "À quel point les Impacts des Notes doivent-ils être transparents ?"
+setting_hide_hud: "Cacher HUD"
+description_hide_hud: "Si coché, la plupart des éléments de l'interface utilisateur seront cachés."
+setting_time_bar: "Barre de Temps :"
+setting_time_bar-time_left: "Temps Restant"
+setting_time_bar-time_elapsed: "Temps Écoulé"
+setting_time_bar-song_name: "Nom de la Chanson"
+setting_time_bar-disabled: "Désactivée"
+description_time_bar: "Que doit afficher la Barre de Temps ?"
+setting_flashing_lights: "Lumières Clignotantes"
+description_flashing_lights: "Décochez ceci si vous êtes sensible aux lumières clignotantes !"
+setting_camera_zooms: "Zoom de la Caméra"
+description_camera_zooms: "Si décoché, la caméra ne fera pas de zoom sur les temps de la musique."
+setting_score_text_grow_on_hit: "Le Texte de Score Sautille au Toucher"
+description_score_text_grow_on_hit: "Si décoché, désactive le texte du score qui saute\nlorsque vous touchez une note."
+setting_health_bar_opacity: "Opacité de la Barre de Vie"
+description_health_bar_opacity: "À quel point la Barre de Vie et les icônes doivent-ils être transparents ?"
+setting_fps_counter: "Compteur de FPS"
+description_fps_counter: "Si décoché, cache le compteur dans le coin supérieur gauche de l'écran."
+setting_pause_music: "Musique de Pause :"
+setting_pause_music-none: "Aucune"
+description_pause_screen_song: "Quelle musique préférez-vous pour l'écran de pause ?"
+setting_check_for_updates: "Rechercher des Mises à Jour"
+description_check_for_updates: "Dans les versions officielles du Psych Engine, cochez cette case pour\nêtre informé des mises à jour au lancement du jeu."
+setting_discord_rich_presence: "Discord Rich Presence"
+description_discord_rich_presence: "Décochez cette case pour éviter les fuites accidentelles de votre Mod,\ncela masquera ce que vous jouez pour les autres."
+setting_combo_stacking: "Empilement de Combo"
+description_combo_stacking: "Si décoché, les nombres de combo ne s'empileront pas\nlorsque vous touchez une note, rendant le jeu plus lisible."
+
+// Paramètres de Jeu
+setting_downscroll: "Défilement vers le Bas"
+description_downscroll: "Si activé, les notes défileront de haut en bas, contrairement à la norme."
+setting_middlescroll: "Défilement Central"
+description_middlescroll: "Si activé, vos notes et celles de l'adversaire seront centrées."
+setting_opponent_notes: "Notes de l'Adversaire"
+description_opponent_notes: "Si désactivé, les notes de l'adversaire seront cachées."
+setting_ghost_tapping: "Appui Fantôme"
+description_ghost_tapping: "Si activé, vous ne recevrez pas de pénalités pour appuyer sur les boutons lorsqu'il n'y a pas de notes à jouer."
+setting_auto_pause: "Pause Automatique"
+description_auto_pause: "Si activé, la fenêtre sera automatiquement mise en pause si elle n'est pas au premier plan."
+setting_disable_reset_button: "Désactiver le Bouton de Réinitialisation"
+description_disable_reset_button: "Si activé, appuyer sur Réinitialiser ne tuera pas le joueur."
+setting_hitsound_volume: "Volume du Son de Réussite"
+description_hitsound_volume: "Les notes émettent un son de "Tick!" lorsque vous les touchez."
+setting_rating_offset: "Décalage de Réussite"
+description_rating_offset: "Avance/retarde le moment de réussir, des valeurs élevées feront que vous réussirez plus tôt/tard."
+setting_sick_hit_window: "Fenêtre de Réussite "Sick!""
+description_sick_hit_window: "Change le temps maximum pour réussir une note avec une classification "Sick!" en millisecondes."
+setting_good_hit_window: "Fenêtre de Réussite "Good""
+description_good_hit_window: "Change le temps maximum pour réussir une note avec une classification "Good" en millisecondes."
+setting_bad_hit_window: "Fenêtre de Réussite "Bad""
+description_bad_hit_window: "Change le temps maximum pour réussir une note avec une classification "Bad" en millisecondes."
+setting_safe_frames: "Frames de Sécurité"
+description_safe_frames: "Ajuste combien de temps vous aurez de plus ou de moins\npour réussir une note un peu plus tôt ou plus tard."
+setting_sustains_as_one_note: "Notes Longues Fusionnées"
+description_sustains_as_one_note: "Si activé, les notes longues ne pourront pas être réussies si la principale n'est pas réussie,\nplus un seul échec sera compté."
+
+// Écran de Chargement
+now_loading: "Chargement{1}"
+
+// Difficultés
+difficulty_easy: "Facile"
+difficulty_normal: "Normal"
+difficulty_hard: "Difficile"
+
+images/menudifficulties/easy: "images/fr/menudifficulties/easy"
+images/menudifficulties/hard: "images/fr/menudifficulties/hard"
+
+
+
+
+
+

@@ -11,23 +11,21 @@ class LanguageSubState extends MusicBeatSubstate
 	var curSelected:Int = 0;
 	public function new()
 	{
-		controls.isInSubstate = true;
 		super();
 
-		var bg = new FlxSprite().loadGraphic(Paths.image('optionsSide'));
+		var bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
 		bg.color = 0xFFea71fd;
 		bg.antialiasing = ClientPrefs.data.antialiasing;
-		bg.setGraphicSize(Std.int(bg.width * 1.175));
 		bg.screenCenter();
 		add(bg);
 		add(grpLanguages);
 
 		languages.push(ClientPrefs.defaultData.language); //English (US)
 		displayLanguages.set(ClientPrefs.defaultData.language, Language.defaultLangName);
-		var directories:Array<String> = Mods.directoriesWithFile(Paths.getSharedPath(), 'data/');
+		var directories:Array<String> = Mods.directoriesWithFile(Paths.getSharedPath(), 'languages/');
 		for (directory in directories)
 		{
-			for (file in NativeFileSystem.readDirectory(directory))
+			for (file in FileSystem.readDirectory(directory))
 			{
 				if(file.toLowerCase().endsWith('.lang'))
 				{
@@ -38,7 +36,11 @@ class LanguageSubState extends MusicBeatSubstate
 					if(!displayLanguages.exists(langFile))
 					{
 						var path:String = '$directory/$file';
-						var txt:String = NativeFileSystem.getContent(path);
+						#if MODS_ALLOWED 
+						var txt:String = File.getContent(path);
+						#else
+						var txt:String = Assets.getText(path);
+						#end
 
 						var id:Int = txt.indexOf('\n');
 						if(id > 0) //language display name shouldnt be an empty string or null
@@ -118,7 +120,6 @@ class LanguageSubState extends MusicBeatSubstate
 				MusicBeatState.resetState();
 			}
 			else close();
-			controls.isInSubstate = false;
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 		}
 
