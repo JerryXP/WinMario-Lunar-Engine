@@ -507,7 +507,7 @@ class ModsMenuState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		if (ClientPrefs.data.modPreviews && !exiting && modsList.all.length > 0)
+		if (!exiting && modsList.all.length > 0)
 		{
 			if (pvWaiting)
 			{
@@ -1138,21 +1138,21 @@ class ModsMenuState extends MusicBeatState
 	/** Called from updateModDisplayData(): resets scroll/gallery when the selected mod changes. */
 	function refreshPreviews(folder:String)
 	{
-		if (!ClientPrefs.data.modPreviews)
-		{
-			pvWaiting = pvLoading = false;
-			previewQueue = [];
-			previewPaths = [];
-			if (previewGroup != null) previewGroup.visible = false;
-			if (descTrack != null) descTrack.visible = false;
-			if (descThumb != null) descThumb.visible = false;
-			modDesc.size = 24;
-			modDesc.x = bgDescription.x + 15;
-			modDesc.y = bgDescription.y + 15;
-			modDesc.fieldWidth = bgDescription.width - 30;
-			modDesc.clipRect = null;
-			return;
-		}
+		// if (!ClientPrefs.data.modPreviews)
+		// {
+			// pvWaiting = pvLoading = false;
+			// previewQueue = [];
+			// previewPaths = [];
+			// if (previewGroup != null) previewGroup.visible = false;
+			// if (descTrack != null) descTrack.visible = false;
+			// if (descThumb != null) descThumb.visible = false;
+			// modDesc.size = 24;
+			// modDesc.x = bgDescription.x + 15;
+			// modDesc.y = bgDescription.y + 15;
+			// modDesc.fieldWidth = bgDescription.width - 30;
+			// modDesc.clipRect = null;
+			// return;
+		// }
 		if (shownFolder != folder)
 		{
 			shownFolder = folder;
@@ -1320,7 +1320,7 @@ class ModsMenuState extends MusicBeatState
 	function updateGallery():Bool
 	{
 		var n:Int = previewPaths.length;
-		if (!ClientPrefs.data.modPreviews || !hasGallery || n < 1)
+		if (!hasGallery || n < 1)
 			return false;
 
 		var hit:Int = galleryHit();
