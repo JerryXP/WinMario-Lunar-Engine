@@ -240,7 +240,6 @@
 
 	<section if="MODS_ALLOWED">
 		<assets path='example_mods' rename='mods' embed='false' />
-		<assets path='MCO7' rename='mods' if="desktop" embed='false' />
 	</section>
 
 	<assets path='art/readme.txt' rename='thank you.txt' unless="mobile" />
