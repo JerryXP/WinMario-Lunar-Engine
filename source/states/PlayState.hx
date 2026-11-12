@@ -57,7 +57,7 @@ import openfl.geom.Rectangle;
  *
  * here's some useful tips if you are making a mod in source:
  *
- * If you want to add your stage to the game, copy states/stages/Template.hx,
+ * If you want to add your stage to the game, copy mikolka/stages/standard/Template.hx,
  * and put your stage code there, then, on PlayState, search for
  * "switch (curStage)", and add your stage to that list.
  *
@@ -723,7 +723,10 @@ class PlayState extends MusicBeatState
        
         {
             #if HSCRIPT_ALLOWED
-            if (file.toLowerCase().endsWith('.hx'))
+            if (file.toLowerCase().endsWith('.hx')
+				|| file.toLowerCase().endsWith('.hxc')
+				|| file.toLowerCase().endsWith('.hscript')
+				|| file.toLowerCase().endsWith('.hxs'))
                 initHScript(folder + file);
             #end
         }

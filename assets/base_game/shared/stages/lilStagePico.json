@@ -1,0 +1,72 @@
+{
+	"camera_boyfriend": [
+		60,
+		90
+	],
+	"preload": {
+		"images/chartEditor/lilStage": 3
+	},
+	"_editorMeta": {
+		"boyfriend": "lilPico",
+		"dad": "lilGuy",
+		"gf": "gf"
+	},
+	"boyfriend": [
+		130,
+		99
+	],
+	"stageUI": "",
+	"girlfriend": [
+		400,
+		130
+	],
+	"objects": [
+		{
+			"x": 0,
+			"y": 1,
+			"scale": [
+				1,
+				1
+			],
+			"image": "chartEditor/song/stageP",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "lilGround",
+			"antialiasing": false,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"type": "gf"
+		},
+		{
+			"type": "dad"
+		},
+		{
+			"type": "boyfriend"
+		}
+	],
+	"camera_girlfriend": [
+		145,
+		125
+	],
+	"defaultZoom": 1.85,
+	"opponent": [
+		25,
+		4
+	],
+	"directory": "",
+	"camera_speed": 10,
+	"hide_girlfriend": true,
+	"camera_opponent": [
+		-190,
+		110
+	]
+}

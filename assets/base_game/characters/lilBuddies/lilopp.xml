@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="lilopp.png">
+<SubTexture name="lilopp Down0000" x="332" y="0" width="91" height="82" frameX="-7" frameY="-127" frameWidth="300" frameHeight="256" />
+<SubTexture name="lilopp Down0001" x="240" y="224" width="81" height="88" frameX="-12" frameY="-121" frameWidth="300" frameHeight="256" />
+<SubTexture name="lilopp Down0002" x="161" y="224" width="79" height="89" frameX="-13" frameY="-120" frameWidth="300" frameHeight="256" />
+<SubTexture name="lilopp idle0000" x="174" y="0" width="78" height="102" frameX="-12" frameY="-107" frameWidth="300" frameHeight="256" />
+<SubTexture name="lilopp idle0001" x="0" y="122" width="79" height="102" frameX="-11" frameY="-107" frameWidth="300" frameHeight="256" />
+<SubTexture name="lilopp Left0000" x="252" y="99" width="74" height="98" frameX="-8" frameY="-110" frameWidth="300" frameHeight="256" />
+<SubTexture name="lilopp Left0001" x="79" y="122" width="73" height="101" frameX="-11" frameY="-108" frameWidth="300" frameHeight="256" />
+<SubTexture name="lilopp Left0002" x="152" y="122" width="70" height="99" frameX="-12" frameY="-109" frameWidth="300" frameHeight="256" />
+<SubTexture name="lilopp Right0000" x="79" y="224" width="82" height="97" frameX="-9" frameY="-111" frameWidth="300" frameHeight="256" />
+<SubTexture name="lilopp Right0001" x="252" y="0" width="80" height="99" frameX="-8" frameY="-109" frameWidth="300" frameHeight="256" />
+<SubTexture name="lilopp Right0002" x="0" y="224" width="79" height="98" frameX="-9" frameY="-110" frameWidth="300" frameHeight="256" />
+<SubTexture name="lilopp Up0000" x="0" y="0" width="55" height="122" frameX="-25" frameY="-87" frameWidth="300" frameHeight="256" />
+<SubTexture name="lilopp Up0001" x="55" y="0" width="60" height="119" frameX="-23" frameY="-90" frameWidth="300" frameHeight="256" />
+<SubTexture name="lilopp Up0002" x="115" y="0" width="59" height="119" frameX="-23" frameY="-90" frameWidth="300" frameHeight="256" />
+</TextureAtlas>

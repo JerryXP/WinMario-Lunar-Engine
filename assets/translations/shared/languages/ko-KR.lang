@@ -1,5 +1,14 @@
 Korean (KR)
 
+fonts/Neon Rave Italic.ttf: "shared/languages/fonts/NotoSansKR-Medium.ttf"
+fonts/score.ttf: "shared/languages/fonts/NotoSansKR-Medium.ttf"
+fonts/bot.ttf: "shared/languages/fonts/NotoSansKR-Medium.ttf"
+fonts/week.ttf: "shared/languages/fonts/NotoSansKR-Medium.ttf"
+fonts/track.ttf: "shared/languages/fonts/NotoSansKR-Medium.ttf"
+fonts/vcr.ttf: "shared/languages/fonts/NotoSansKR-Medium.ttf"
+fonts/pixel-latin.ttf: "shared/languages/fonts/NotoSansKR-Medium.ttf"
+fonts/cool.ttf: "shared/languages/fonts/NotoSansKR-Medium.ttf"
+
 // Gameplay
 score_text_psych: "점수: {1} | 미스: {2} | 정확도: {3}"
 score_text_psych_instakill: "점수: {1} | 정확도: {2}"

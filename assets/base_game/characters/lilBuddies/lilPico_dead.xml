@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="lilPico_dead.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="dead0000" x="0" y="0" width="98" height="114" frameX="1" frameY="2" frameWidth="95" frameHeight="110"/>
+	<SubTexture name="dead0001" x="0" y="0" width="98" height="114" frameX="1" frameY="2" frameWidth="95" frameHeight="110"/>
+	<SubTexture name="dead0002" x="98" y="0" width="98" height="113" frameX="2" frameY="1" frameWidth="95" frameHeight="110"/>
+	<SubTexture name="dead0003" x="98" y="0" width="98" height="113" frameX="2" frameY="1" frameWidth="95" frameHeight="110"/>
+</TextureAtlas>
