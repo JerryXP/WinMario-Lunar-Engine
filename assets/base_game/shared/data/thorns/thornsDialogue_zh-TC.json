@@ -1,0 +1,49 @@
+{
+	"style": "decay",
+	"dialogue": [
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "dead",
+			"text": "被困在這裡這麼久，終於能與生命體直接接觸了……"
+		},	{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "dead",
+			"text": "偏偏是她。"
+		},	{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "dead",
+			"text": "我會讓她的父親對我以及所有人所做的一切付出代價……"
+		},	{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "dead",
+			"text": "我會打敗你們，讓我取代你們的位置。"
+		},	{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "dead",
+			"text": "不介意借用你們的身體吧？這樣才公平……"
+		},
+		{
+			"sound": "pixelText",
+			"speed": 0.045,
+			"portrait": "bf-pixel",
+			"boxState": "normal",
+			"expression": "shaking",
+			"text": "..."
+		}
+	]
+}

@@ -1,0 +1,49 @@
+{
+	"style": "decay",
+	"dialogue": [
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "dead",
+			"text": "ながいあいだここにとじこめられていたのに、ほんものののにんげんとふれあうなんて......。"
+		},	{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "dead",
+			"text": "よりにもよってアイツのこむすめとは......。"
+		},	{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "dead",
+			"text": "アイツには、ワタシや他のみんなにしたことのつぐないをしてもらおう"
+		},	{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "dead",
+			"text": "お前をたおして、うばってやる。"
+		},	{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "dead",
+			"text": "体をかりられてもいいんだろ？フェアなんだから..."
+		},
+		{
+			"sound": "pixelText",
+			"speed": 0.045,
+			"portrait": "bf-pixel",
+			"boxState": "normal",
+			"expression": "shaking",
+			"text": "skdoo bee bap bop fup ckp(なにいってんのこいつ　きも　あっちいけ　あとバグらせるな)"
+		}
+	]
+}

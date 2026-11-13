@@ -1,0 +1,29 @@
+{
+	"style": "pixel",
+	"dialogue": [
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "idle",
+			"text": "아, 새로운 순결한 아가씨께서 진정한 사랑을 찾으러 왔어요!"
+		},				
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "idle",
+			"text": "신사들 간의 세레나데는 그녀의 아름다운 마음이 어디에 머물지 결정할 겁니다."
+		},
+		{
+			"sound": "pixelText",
+			"speed": 0.045,
+			"portrait": "bf-pixel",
+			"boxState": "normal",
+			"expression": "idle",
+			"text": "삡 뽀 빱"
+		}
+	]
+}

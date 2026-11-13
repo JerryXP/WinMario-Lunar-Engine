@@ -3,7 +3,7 @@ Deutsch (German)
 // Gameplay
 score_text_psych: "Punkte : {1} | Fehler : {2} | Rang : {3}"
 score_text_psych_instakill: "Punkte : {1} | Rang : {2}"
-botplay: "Automatisch"
+bot_mode: "Automatisch"
 
 rating_you_suck: "Du Bist Total Schlecht!"
 rating_shit: "Scheiße"
@@ -41,7 +41,6 @@ images/mainmenu/menu_freeplay: "images/mainmenu/menu_freeplay"
 images/mainmenu/menu_credits: "images/mainmenu/menu_credits"
 
 // Story Mode
-images/Menu_Tracks: "images/pt-BR/Menu_Tracks"
 week_score: "PUNKTE: {1}"
 
 storyname_week1: "Rock-Papa"
@@ -263,7 +262,4 @@ now_loading: "Lädt{1}"
 difficulty_easy: "Einfach"
 difficulty_normal: "Normal"
 difficulty_hard: "Schwierig"
-
-images/menudifficulties/easy: "images/pt-BR/menudifficulties/easy"
-images/menudifficulties/hard: "images/pt-BR/menudifficulties/hard"
 

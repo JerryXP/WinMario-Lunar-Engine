@@ -1,9 +1,9 @@
 Español (Spanish)
 
 // Gameplay
-score_text: "Puntuación : {1} | Errores : {2} | rango : {3}"
-score_text_instakill: "Puntuación : {1} | Rango : {2}"
-botplay: "Automático"
+score_text_psych: "Puntuación : {1} | Errores : {2} | Rango : {3}"
+score_text_psych_instakill: "Puntuación : {1} | Rango : {2}"
+bot_mode: "Automático"
 
 rating_you_suck: "¡Eres Muy Malo!"
 rating_shit: "Mierda"
@@ -41,7 +41,6 @@ images/mainmenu/menu_freeplay: "images/mainmenu/menu_freeplay"
 images/mainmenu/menu_credits: "images/mainmenu/menu_credits"
 
 // Story Mode
-images/Menu_Tracks: "images/pt-BR/Menu_Tracks"
 week_score: "PUNTUACIÓN: {1}"
 
 storyname_week1: "el padre rockero"

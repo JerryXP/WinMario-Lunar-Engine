@@ -1,0 +1,29 @@
+{
+	"style": "pixel",
+	"dialogue": [
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "angry",
+			"text": "對於一條醜陋的蟲子來說，還不錯。"
+		},				
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "angry",
+			"text": "但這次，你女朋友替我吹完蕭後，我就把你的老二擰下來。"
+		},
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "bf-pixel",
+			"boxState": "normal",
+			"expression": "idle",
+			"text": "→↑↓↓←↑"
+		}
+	]
+}

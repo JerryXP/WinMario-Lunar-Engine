@@ -12,7 +12,7 @@ fonts/cool.ttf: "shared/languages/fonts/NotoSansKR-Medium.ttf"
 // Gameplay
 score_text_psych: "점수: {1} | 미스: {2} | 정확도: {3}"
 score_text_psych_instakill: "점수: {1} | 정확도: {2}"
-botplay: "봇플레이"
+bot_mode: "봇플레이"
 
 rating_you_suck: "너 존나 못해!"
 rating_shit: "젠장"
@@ -32,11 +32,6 @@ dialogue_skip: "뒤로가기 눌러서 스킵"
 practice_mode: "연습 모드"
 charting_mode: "차팅 모드"
 blueballed: "퍼런불알: {1}"
-
-// Main Menu
-images/mainmenu/menu_story_mode: "images/mainmenu/menu_story_mode"
-images/mainmenu/menu_freeplay: "images/mainmenu/menu_freeplay"
-images/mainmenu/menu_credits: "images/mainmenu/menu_credits"
 
 // Story Mode
 images/Menu_Tracks: "images/ko-KR/Menu_Tracks"
@@ -63,9 +58,6 @@ musicplayer_tip: "스페이스바 누르면 일시정지 / ESC 누르면 그만 
 no_mods_installed: "설치한 모드가 없습니다\n뒤로가기 버튼을 눌러 나간 다음 모드를 추가 해주세요"
 no_mods_found: "모드를 찾을 수 없습니다."
 mod_restart: "* 모드를 이동하거나 끄거나 켜면 게임이 다시 시작됩니다."
-reload_button: "RELOAD"
-enable_all_button: "ENABLE ALL"
-disable_all_button: "DISABLE ALL"
 
 // Achievements
 achievement_friday_night_play: "Freaky on a Friday Night"
@@ -108,8 +100,6 @@ description_pessy_easter_egg: "헤헤, 네가 날 찾았어~!"
 // Note Colors Menu
 note_colors_tip: "리셋을 눌러 선택한 노트를 재설정합니다."
 note_colors_hold_tip: "{1}을(를) 누른 채로 리셋을 누르면 선택한 노트가 완전히 재설정됩니다."
-note_colors_shift: "Shift"
-note_colors_lb: "Left Shoulder Button"
 
 // Adjust Delay and Combo Menu
 delay_beat_hit: "Beat!"

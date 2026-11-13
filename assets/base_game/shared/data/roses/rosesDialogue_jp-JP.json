@@ -1,0 +1,29 @@
+{
+	"style": "pixel",
+	"dialogue": [
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "angry",
+			"text": "みにくいむしにしてはわるくない。"
+		},				
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "angry",
+			"text": "でも今回は、お前のGirlfriendがオレのタマをうがいしおわったあとに、お前のタマを引きちぎってやる。"
+		},
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "bf-pixel",
+			"boxState": "normal",
+			"expression": "idle",
+			"text": "Bop beep be be skdoo bep(どんとこいや　このblueballが)"
+		}
+	]
+}

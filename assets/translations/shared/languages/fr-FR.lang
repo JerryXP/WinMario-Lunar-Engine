@@ -3,7 +3,7 @@ Français (French)
 // Gameplay
 score_text_psych: "Score : {1} | Fautes : {2} | rank : {3}"
 score_text_psych_instakill: "Score : {1} | Rank : {2}"
-botplay: "Automatique"
+bot_mode: "Automatique"
 
 rating_you_suck: "T'es Trop Nul !"
 rating_shit: "Merde"
@@ -41,7 +41,6 @@ images/mainmenu/menu_freeplay: "images/mainmenu/menu_freeplay"
 images/mainmenu/menu_credits: "images/mainmenu/menu_credits"
 
 // Story Mode
-images/Menu_Tracks: "images/pt-BR/Menu_Tracks"
 week_score: "PONTUAÇÃO: {1}"
 
 storyname_week1: "le père rockeur"

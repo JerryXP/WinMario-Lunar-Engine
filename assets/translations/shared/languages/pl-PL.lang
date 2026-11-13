@@ -6,7 +6,7 @@ Polski (Polish)
 // Gameplay
 score_text_psych: "Wynik: {1} | Skuchy: {2} | Ocena: {3}"
 score_text_psych_instakill: "Wynik: {1} | Ocena: {2}"
-botplay: "Botplay"
+bot_mode: "Botplay"
 
 rating_you_suck: "Ssiesz!"
 rating_shit: "Kurwa"

@@ -1,0 +1,49 @@
+{
+	"style": "decay",
+	"dialogue": [
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "dead",
+			"text": "Contatto diretto con veri umani, dopo essere rimasto intrappolato qui per così tanto tempo..."
+		},	{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "dead",
+			"text": "e proprio LEI."
+		},	{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "dead",
+			"text": "Farò pagare a suo padre quello che ha fatto a me e a tutti gli altri,,,,,"
+		},	{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "dead",
+			"text": "Ti batterò e ti farò prendere il mio posto."
+		},	{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "dead",
+			"text": "Non ti dispiace che i tuoi corpi vengano presi in prestito, vero? È solamente giusto..."
+		},
+		{
+			"sound": "pixelText",
+			"speed": 0.045,
+			"portrait": "bf-pixel",
+			"boxState": "normal",
+			"expression": "shaking",
+			"text": "..."
+		}
+	]
+}

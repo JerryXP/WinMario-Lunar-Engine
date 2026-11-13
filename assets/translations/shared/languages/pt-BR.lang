@@ -3,7 +3,7 @@ Português (Portuguese)
 // Gameplay
 score_text_psych: "Pontos: {1} | Erros: {2} | Avaliação: {3}"
 score_text_psych_instakill: "Pontos: {1} | Avaliação: {2}"
-botplay: "Automático"
+bot_mode: "Automático"
 
 rating_you_suck: "Que Horrível!"
 rating_shit: "Merda"

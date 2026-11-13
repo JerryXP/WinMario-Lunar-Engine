@@ -3,7 +3,7 @@
 // Gameplay
 score_text_psych: "Punti: {1} | Errori: {2} | Valutazione: {3}"
 score_text_psych_instakill: "Punti: {1} | Valutazione: {2}"
-botplay: "Gioco Automatico"
+bot_mode: "Gioco Automatico"
 
 rating_you_suck: "Fai schifo!"
 rating_shit: "Merda"
