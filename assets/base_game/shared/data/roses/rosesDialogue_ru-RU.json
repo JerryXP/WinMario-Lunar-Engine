@@ -1,0 +1,29 @@
+{
+	"style": "pixel",
+	"dialogue": [
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "angry",
+			"text": "Неплохо для уродского червя."
+		},				
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "angry",
+			"text": "Но в этот раз я оторву твои яйца, пока твоя девушка будет лизать мои."
+		},
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "bf-pixel",
+			"boxState": "normal",
+			"expression": "idle",
+			"text": "Боп бип бе бе скдо беп"
+		}
+	]
+}

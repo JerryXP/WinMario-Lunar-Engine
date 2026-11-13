@@ -1,0 +1,162 @@
+Russian (RU)
+
+fonts/Neon Rave Italic.ttf: "shared/languages/fonts/rus/vcr.ttf"
+fonts/score.ttf: "shared/languages/fonts/rus/vcr.ttf"
+fonts/bot.ttf: "shared/languages/fonts/rus/vcr.ttf"
+fonts/week.ttf: "shared/languages/fonts/rus/vcr.ttf"
+fonts/track.ttf: "shared/languages/fonts/rus/vcr.ttf"
+fonts/vcr.ttf: "shared/languages/fonts/rus/vcr.ttf"
+fonts/pixel-latin.ttf: "shared/languages/fonts/rus/pixel-latin.ttf"
+fonts/cool.ttf: "shared/languages/fonts/rus/vcr.ttf"
+
+// Gameplay
+score_text_psych: "Очки: {1} | Промахов: {2} | Оценка: {3}"
+score_text_psych_instakill: "Очки: {1} | Оценка: {2}"
+bot_mode: "Ботплей"
+
+rating_you_suck: "Скилл исуе"
+rating_shit: "Дерьмо"
+rating_bad: "Плохо"
+rating_bruh: "Брух"
+rating_meh: "Мех"
+rating_nice: "Непхоло"
+rating_good: "Хорошо"
+rating_great: "Отлично"
+rating_sick: "Здорово!"
+rating_perfect: "Идеально!!"
+
+// Dialogues
+dialogue_skip: "Нажми BACK, чтобы пропустить"
+
+// Pause Menu
+practice_mode: "Режим практики"
+charting_mode: "Режим чартинга"
+blueballed: "Поражений: {1}"
+
+// Story Mode
+images/Menu_Tracks: "images/ru-RU/Menu_Tracks"
+week_score: "РЕКОРД ОЧКОВ: {1}"
+
+storyname_tutorial: "Обучение"
+storyname_week1: "Дорогой папочка"
+storyname_week2: "Жуткий Месяц"
+storyname_week3: "Пико"
+storyname_week4: "Мамочка должна Убивать"
+storyname_week7: "Танкмен ft.  JohnnyUtah"
+storyname_week5: "красный снег"
+storyname_week6: "симулятор ненависти ft. moawling"
+storyname_weekend1: "из-за долгов"
+
+// Freeplay
+personal_best: "ЛУЧШИЙ РЕЗУЛЬТАТ: {1} ({2}%)"
+freeplay_tip: "Нажми ПРОБЕЛ, чтобы прослушать песню / Нажми CTRL, чтобы настроить модификаторы / Нажми R, чтобы обнулить рекорд"
+
+musicplayer_playing: "Музыка: {1}"
+musicplayer_paused: "Музыка: {1} (ПАУЗА)"
+musicplayer_tip: "Нажми SPACE, чтобы остановить / Нажми ESC, чтобы остановить / Нажми R, чтобы перезапустить песню"
+
+// Mods Menu
+no_mods_installed: "НЕ УСТАНОВЛЕНО МОДОВ\nНАЖМИТЕ BACK, ЧТОБЫ ВЫЙТИ И УСТАНОВИТЕ МОД"
+no_mods_found: "Не найдено модов."
+mod_restart: "* Этот мод требует перезапустить игру."
+
+// Achievements
+achievement_friday_night_play: "Чумовой пятничный вечер"
+description_friday_night_play: "Поиграйте пятничным.. вечером."
+achievement_week1_nomiss: "Она тоже называет меня Папочкой"
+description_week1_nomiss: "Пройдите первую неделю на высокой сложности без промахов."
+achievement_week2_nomiss: "Никаких больше Трюков"
+description_week2_nomiss: "Пройдите вторую неделю на высокой сложности без промахов."
+achievement_week3_nomiss: "Называй меня Хитманом"
+description_week3_nomiss: "Пройдите третью неделю на высокой сложности без промахов."
+achievement_week4_nomiss: "Убийца Леди"
+description_week4_nomiss: "Пройдите чётвертую неделю на высокой сложностиD без промахов."
+achievement_week5_nomiss: "Незабываемое рождество"
+description_week5_nomiss: "Пройдите пятую неделю на высокой сложности без промахов."
+achievement_week6_nomiss: "Новый Рекорд!!"
+description_week6_nomiss: "Пройдите шестую неделю на высокой сложности без промахов."
+achievement_week7_nomiss: "Чёрт возьми, бл.."
+description_week7_nomiss: "Пройдите седьмую неделю на высокой сложности без промахов."
+achievement_ur_bad: "Что за Позор!"
+description_ur_bad: "Пройдите любую песню с аккуратностью ниже 20%."
+achievement_ur_good: "Перфекционист"
+description_ur_good: "Пройдите любую песню с аккуратностью 100%"
+achievement_roadkill_enthusiast: "Придорожный убийца-энтузиаст"
+description_roadkill_enthusiast: "Увидьте 50 смертей Хенчманов."
+achievement_oversinging: "Сильно перепеть..?"
+description_oversinging: "Держите ноту в течении 10 секунд."
+achievement_hype: "Гиперактвный"
+description_hype: "Пройдите любую песню не становять в Idle позу."
+achievement_two_keys: "Только ты и я"
+description_two_keys: "Пройдите любую песню нажимания только две стрелки."
+achievement_toastie: "ПК - картошка"
+description_toastie: "Пытались ли вы запустить игру на картошке?"
+achievement_debugger: "Дебаггер"
+description_debugger: "Пройдите песню "Test" из режима чартинга."
+
+// Note Colors Menu
+note_colors_tip: "Нажмите R, чтобы вернуть стандартную часть настроек ноты."
+note_colors_hold_tip: "Нажмите {1} + R чтобы вернуть стандартные настройки ноты."
+note_colors_lb: "Левая Верхняя Кнопка"
+
+// Adjust Delay and Combo Menu
+delay_current_offset: "Текущий оффсет: {1} мс";
+combo_rating_offset: "Положение рейтинга:"
+combo_numbers_offset: "Положение цифр:"
+combo_offset: "Положение комбо";
+note_delay: "Оффсет нот";
+switch_on_accept: "(Нажмите ACCEPT, чтобы сменить)"
+switch_on_start: "(Нажмите ACCEPT, чтобы сменить)"
+
+// Graphics Settings
+description_low_quality: "Если включено, выключает всякие детали с фона,\nускоряя загрузку и повышает скорость игры."
+description_anti-aliasing: "Если отключено, то убирает сглаживание в пользу скорости игры, но более угловатых текстур. "
+description_shaders: "Если отключено, то убирает шейдеры.\nШейдеры используются для визульных эффектов, замедляя игру на слабых ПК."
+description_gpu_caching: "Если включено, позволяет граф. процессору хранить текстуры, уменьшая использование ОЗУ\nНЕ ВКЛЮЧАТЬ С ПЛОХОЙ ГРАФ. КАРТОЙ."
+description_framerate: "Довольно полезно, не так ли?"
+
+// Visuals Settings
+description_note_skins: "Выбирай свой любимый скин нот."
+description_note_skins: "Выбирай свой любимый скин ноты."
+description_note_splash_opacity: "Прозрачность сплеша ноты."
+description_hide_hud: "Если включено, то прячет многие элементы HUD-а."
+description_time_bar: "Что должна показывать полоска со временем?"
+description_flashing_lights: "Выключи, если плохо от внезапных мигающих цветов!"
+description_camera_zooms: "Если выключено, то приближения камеры будут отключены."
+description_score_text_grow_on_hit: "Если отключено, то текст не будет увеличиватся при нажатии ноты."
+description_health_bar_opacity: "Меняет прозрачность полоски со здоровьем."
+description_fps_counter: "Если отключено, то ФПС не будет показываться."
+description_check_for_updates: "При выходе новых версий Psych Engine, будет показываться сообщение о выходе обновления."
+description_discord_rich_presence: "Если отключено, то в Дискорде не будет показываться в какой мод играешь ты. Отключи, если не хочешь спойлерить мод, который ты разрабатываешь :)"
+description_combo_stacking: "Если отключено, то комбо и рейтинг не будут накладываться друг на друга, упрощая их чтение."
+
+// Gameplay Settings
+description_downscroll: "Если включено, то ноты будут приходить сверху, вместо низа, довольно просто."
+description_middlescroll: "Если включено, то ноты будут в центре."
+description_opponent_notes: "Если отключено, то ноты противника не будут показываться."
+description_ghost_tapping: "Если включено, то ты не будешь получать промахи, пока нот нет на экране."
+description_auto_pause: "Если включено, то игра будет автоматически ставится на паузу когда окно игры свёрнуто."
+description_disable_reset_button: "Если включено, нажатие Reset ничего не сделает."
+description_hitsound_volume: "При попадании на ноту будет проигрыватся забавный "тик""
+description_rating_offset: "Меняет насколько поздно/рано можно нажать, чтобы получить "Sick!". Чем больше число, тем позже нужно будет нажать."
+description_sick_hit_window: "Меняет сколько максимум времени есть для получения "Sick!" в миллисекундах."
+description_good_hit_window: "Меняет сколько максимум времени есть для получения "Good" в миллисекундах."
+description_bad_hit_window: "Меняет сколько максимум времени есть для получения "Bad" в миллисекундах."
+description_safe_frames: "Меняет сколько максимум фреймов есть для нажатия ноты позже или раньше."
+description_sustains_as_one_note: "Если включено, то длинные ноты не могут быть нажаты если вы промазали, и считаются за одно попадание/промах."
+
+// Loading Screen
+now_loading: "Загрузка {1}"
+
+// Difficulties
+difficulty_easy: "Лёгкая"
+difficulty_normal: "Нормальная"
+difficulty_hard: "Высокая"
+
+images/menudifficulties/easy: "images/ru-RU/menudifficulties/easy"
+images/menudifficulties/normal: "images/ru-RU/menudifficulties/normal"
+images/menudifficulties/hard: "images/ru-RU/menudifficulties/hard"
+images/go: "images/ru-RU/go"
+images/ready: "images/ru-RU/ready"
+images/set: "images/ru-RU/set"
+images/get: "images/ru-RU/get"
