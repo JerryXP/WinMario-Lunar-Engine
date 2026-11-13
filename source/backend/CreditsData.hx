@@ -123,8 +123,7 @@ class CreditsData {
 						label: 'Blue Sky', 
 						url: 'https://bsky.app/profile/winmario.bsky.social'
 					}
-				],	'934bb3'),
-				person("Timeless",		  "timeless",		      "Use their Code and Helped me adding new stuff to the Engine",			"https://discord.com/users/1347569284947382272",	"200040"),
+				],	'934bb3')
 			]),
 			
 			section('Special Thanks', [
@@ -204,6 +203,7 @@ class CreditsData {
 			section('Code', [
 				person("MrpoloOfficial",		        "polo",		        "Intro & Outro Video States (edit by me)",			"https://gamebanana.com/members/2307558",	"663333"),
 				person("Lenin Anonimo",		        "len",		        "For Using Several of their Code",			"https://gamebanana.com/members/3509758",	"03FC88"),
+				person("Timeless",		  "timeless",		      "Use the Code for Note Events (in title state) & Custom Crash Handler",			"https://discord.com/users/1347569284947382272",	"200040"),
 				person("Lucas-Sanches",		        "lucas",		        "For using the code for Converters State\n(& Legacy Converters State)",			"https://gamebanana.com/members/2088040",	"FF8000"),
 				person("TBar09",		  "tbar",		      "For hxWindowColorMode Libary",			"https://github.com/TBar09",	"0077CC"),
 				person('MeguminBOT', 'lulu', 'made the Custom Credits State', 'https://github.com/MeguminBOT', '8A6FB0'),
