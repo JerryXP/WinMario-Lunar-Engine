@@ -120,35 +120,66 @@ class MainMenuState extends MusicBeatState
 		winVer.scrollFactor.set();
 		add(winVer);
 
-		#if mobile
-		var psychVer:FlxText = new FlxText(0, FlxG.height - 720, FlxG.width, "Psych Based: " + psychEngineVersion, 12);
-		psychVer.setFormat(Paths.font("ModernDOS8x16.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		//////////////////////////////////////////////////////////
+
+		var username:String = Sys.getEnv("USERNAME");
+
+		if (username == null) {
+    		username = Sys.getEnv("USER");
+		}
+
+		var userDisplay:FlxText = new FlxText(0, FlxG.height - 720, FlxG.width, "Welcome, " + username + "!", 12);
+		userDisplay.setFormat(Paths.font("ArialCEItalic.ttf"), 16, 0xC080FF, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		userDisplay.scrollFactor.set();
+		add(userDisplay);
+
+		var psychVer:FlxText = new FlxText(0, FlxG.height - 702, FlxG.width, "Psych: " + psychEngineVersion, 12);
+		psychVer.setFormat(Paths.font("ArialCEItalic.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		psychVer.scrollFactor.set();
 		add(psychVer);
 
-		var psliceVer:FlxText = new FlxText(0, FlxG.height - 702, FlxG.width, "P-Slice Based: " + pSliceVersion, 12);
-		psliceVer.setFormat(Paths.font("ModernDOS8x16.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		var psliceVer:FlxText = new FlxText(0, FlxG.height - 684, FlxG.width, "P-Slice: " + pSliceVersion, 12);
+		psliceVer.setFormat(Paths.font("ArialCEItalic.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		psliceVer.scrollFactor.set();
 		add(psliceVer);
 
-		var fnfVer:FlxText = new FlxText(0, FlxG.height - 684, FlxG.width, "FNF Based: " + funkinVersion, 12);
-		fnfVer.setFormat(Paths.font("ModernDOS8x16.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		var fnfVer:FlxText = new FlxText(0, FlxG.height - 666, FlxG.width, "FNF Emulator: " + funkinVersion, 12);
+		fnfVer.setFormat(Paths.font("ArialCEItalic.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		fnfVer.scrollFactor.set();
 		add(fnfVer);
 
-		#if android
-		var androidTxt:FlxText = new FlxText(0, FlxG.height - 666, FlxG.width, "OS: Android", 12);
-		androidTxt.setFormat(Paths.font("ModernDOS8x16.ttf"), 16, FlxColor.GREEN, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		androidTxt.scrollFactor.set();
-		add(androidTxt);
+		/*#if mobile
+			var psychVer:FlxText = new FlxText(0, FlxG.height - 720, FlxG.width, "Psych Based: " + psychEngineVersion, 12);
+			psychVer.setFormat(Paths.font("ModernDOS8x16.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			psychVer.scrollFactor.set();
+			add(psychVer);
+
+			var psliceVer:FlxText = new FlxText(0, FlxG.height - 702, FlxG.width, "P-Slice Based: " + pSliceVersion, 12);
+			psliceVer.setFormat(Paths.font("ModernDOS8x16.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			psliceVer.scrollFactor.set();
+			add(psliceVer);
+
+			var fnfVer:FlxText = new FlxText(0, FlxG.height - 684, FlxG.width, "FNF Based: " + funkinVersion, 12);
+			fnfVer.setFormat(Paths.font("ModernDOS8x16.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			fnfVer.scrollFactor.set();
+			add(fnfVer);
+
+			#if android
+				var androidTxt:FlxText = new FlxText(0, FlxG.height - 666, FlxG.width, "OS: Android", 12);
+				androidTxt.setFormat(Paths.font("ModernDOS8x16.ttf"), 16, FlxColor.GREEN, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				androidTxt.scrollFactor.set();
+				add(androidTxt);
+			#end
+
+			#if ios
+				var iphoneTxt:FlxText = new FlxText(0, FlxG.height - 666, FlxG.width, "OS: iOS", 12);
+				iphoneTxt.setFormat(Paths.font("ModernDOS8x16.ttf"), 16, 0xFF00FFFF, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				iphoneTxt.scrollFactor.set();
+				add(iphoneTxt);
+			#end
 		#end
-		#if ios
-		var iphoneTxt:FlxText = new FlxText(0, FlxG.height - 666, FlxG.width, "OS: iOS", 12);
-		iphoneTxt.setFormat(Paths.font("ModernDOS8x16.ttf"), 16, 0xFF00FFFF, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		iphoneTxt.scrollFactor.set();
-		add(iphoneTxt);
-		#end
-		#end
+		*/
+		
 
 		/**
 		 * In case if you're confused, then I am going to tell you this.
@@ -198,41 +229,141 @@ class MainMenuState extends MusicBeatState
 		**/
 
 		if (Date.now().getMonth() == 0 && Date.now().getDate() == 1) { //Happy New Year!
-		var winVerSP:FlxText = new FlxText(0, FlxG.height - 54, FlxG.width, "Happy New Year!", 12);
-		winVerSP.setFormat(Paths.font("score.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		winVerSP.scrollFactor.set();
-		add(winVerSP);
+			var winVerSP:FlxText = new FlxText(0, FlxG.height - 630, FlxG.width, "Happy New Year!", 12);
+			winVerSP.setFormat(Paths.font("ArialCEItalic.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			winVerSP.scrollFactor.set();
+			add(winVerSP);
+		} else if (Date.now().getMonth() == 1 && Date.now().getDate() == 15) { //SHE SLAYED THAT
+			var winVerSP:FlxText = new FlxText(0, FlxG.height - 630, FlxG.width, "Happy Birthday, Paula! (PxJx/Paxton)", 12);
+			winVerSP.setFormat(Paths.font("ArialCEItalic.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			winVerSP.scrollFactor.set();
+			add(winVerSP);
 		} else if (Date.now().getMonth() == 1 && Date.now().getDate() == 14) { //Valentine's Day
-		var winVerSP:FlxText = new FlxText(0, FlxG.height - 54, FlxG.width, "Happy Valentine's Day!", 12);
-		winVerSP.setFormat(Paths.font("score.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		winVerSP.scrollFactor.set();
-		add(winVerSP);
+			var winVerSP:FlxText = new FlxText(0, FlxG.height - 630, FlxG.width, "Happy Valentine's Day!", 12);
+			winVerSP.setFormat(Paths.font("ArialCEItalic.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			winVerSP.scrollFactor.set();
+			add(winVerSP);
+			if (FlxG.random.bool(50)) {
+				winVerSP.text += 'I\'ve been working on FNF Mods since 2025!';
+			}
+		} /*else if (Date.now().getMonth() == 2 && Date.now().getDate() == 1) {
+			var winVerSP:FlxText = new FlxText(0, FlxG.height - 32, FlxG.width, "Happy Birthday, Oliver Gaming!", 12);
+			winVerSP.setFormat(Paths.font("score.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			winVerSP.scrollFactor.set();
+			add(winVerSP);
+		}*/ else if (Date.now().getMonth() == 2 && Date.now().getDate() == 10) { //MAR10 DAY
+			var winVerSP:FlxText = new FlxText(0, FlxG.height - 630, FlxG.width, "Happy Mar10 Day!", 12);
+			winVerSP.setFormat(Paths.font("ArialCEItalic.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			winVerSP.scrollFactor.set();
+			add(winVerSP);
 		} else if (Date.now().getMonth() == 2 && Date.now().getDate() == 17) { //Saint Patrick's Day
-		var winVerSP:FlxText = new FlxText(0, FlxG.height - 54, FlxG.width, "Happy St. Patrick's Day!", 12);
-		winVerSP.setFormat(Paths.font("score.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		winVerSP.scrollFactor.set();
-		add(winVerSP);
+			var winVerSP:FlxText = new FlxText(0, FlxG.height - 630, FlxG.width, "Happy St. Patrick's Day!", 12);
+			winVerSP.setFormat(Paths.font("ArialCEItalic.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			winVerSP.scrollFactor.set();
+			add(winVerSP);
 		} else if (Date.now().getMonth() == 4 && Date.now().getDate() == 5) { //Cinco de Mayo
-		var winVerSP:FlxText = new FlxText(0, FlxG.height - 54, FlxG.width, "Happy Cinco de Mayo!", 12);
-		winVerSP.setFormat(Paths.font("score.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		winVerSP.scrollFactor.set();
-		add(winVerSP);
+			var winVerSP:FlxText = new FlxText(0, FlxG.height - 630, FlxG.width, "Happy Cinco de Mayo!", 12);
+			winVerSP.setFormat(Paths.font("ArialCEItalic.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			winVerSP.scrollFactor.set();
+			add(winVerSP);
+		} else if (Date.now().getMonth() == 4 && Date.now().getDate() == 28) { //DinoEvan's Birthday
+			var winVerSP:FlxText = new FlxText(0, FlxG.height - 630, FlxG.width, "Happy Birthday, DinoEvan.21!", 12);
+			winVerSP.setFormat(Paths.font("ArialCEItalic.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			winVerSP.scrollFactor.set();
+			add(winVerSP);
+		}
+		else if (Date.now().getMonth() == 7 && Date.now().getDate() == 19) { //Vs. WinMario Release on August 19, 2025.
+			var winVerSP:FlxText = new FlxText(0, FlxG.height - 630, FlxG.width, "Today is the Anniversary of Vs. WinMario's Release!!", 12);
+			winVerSP.setFormat(Paths.font("ArialCEItalic.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			winVerSP.scrollFactor.set();
+			add(winVerSP);
 		} else if (Date.now().getMonth() == 7 && Date.now().getDate() == 28) { //Happy Birthday to Me!!
-		var winVerSP:FlxText = new FlxText(0, FlxG.height - 54, FlxG.width, "Happy Birthday, WM/LXP!!", 12);
-		winVerSP.setFormat(Paths.font("score.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		winVerSP.scrollFactor.set();
-		add(winVerSP);
+			var winVerSP:FlxText = new FlxText(0, FlxG.height - 630, FlxG.width, "Happy Birthday, WM/LXP!!", 12);
+			winVerSP.setFormat(Paths.font("ArialCEItalic.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			winVerSP.scrollFactor.set();
+			add(winVerSP);
+		}
+		else if (Date.now().getMonth() == 8 && Date.now().getDate() == 13) { // Happy Anniversary Mario and ... yeah.
+			var winVerSP:FlxText = new FlxText(0, FlxG.height - 630, FlxG.width, "Happy Anniversary, Mario!", 12);
+			winVerSP.setFormat(Paths.font("ArialCEItalic.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			winVerSP.scrollFactor.set();
+			add(winVerSP);
 		}
 		else if (Date.now().getMonth() == 9 && Date.now().getDate() == 31) { //mario's tunnel of the doom. (Happy Halloween)
-		var winVerSP:FlxText = new FlxText(0, FlxG.height - 54, FlxG.width, "Happy Halloween!! (very scary)", 12);
-		winVerSP.setFormat(Paths.font("score.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		winVerSP.scrollFactor.set();
-		add(winVerSP);
-		} else if (Date.now().getMonth() == 11 && Date.now().getDate() == 25) { //We love Christmas
-		var winVerSP:FlxText = new FlxText(0, FlxG.height - 54, FlxG.width, "Merry Christmas!!", 12);
-		winVerSP.setFormat(Paths.font("score.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		winVerSP.scrollFactor.set();
-		add(winVerSP);
+			var winVerSP:FlxText = new FlxText(0, FlxG.height - 630, FlxG.width, "Happy Halloween!! (very scary)", 12);
+			winVerSP.setFormat(Paths.font("ArialCEItalic.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			winVerSP.scrollFactor.set();
+			add(winVerSP);
+		} else if (Date.now().getMonth() == 10 && Date.now().getDate() == 15) { //Lunar Engine Release on November 15, 2025.
+			var winVerSP:FlxText = new FlxText(0, FlxG.height - 630, FlxG.width, "Today is the Anniversary of LE's Release!!", 12);
+			winVerSP.setFormat(Paths.font("ArialCEItalic.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			winVerSP.scrollFactor.set();
+			add(winVerSP);
+		}
+		else if (Date.now().getMonth() == 11 && Date.now().getDate() == 25) { //We love Christmas
+			var winVerSP:FlxText = new FlxText(0, FlxG.height - 630, FlxG.width, "Merry Christmas!!", 12);
+			winVerSP.setFormat(Paths.font("ArialCEItalic.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			winVerSP.scrollFactor.set();
+			add(winVerSP);
+		} else {
+			var winVerSPtexts:Array<String> = [
+    			'I love Mario\n(yes including Sonic)',
+    			'Baldi please don\'t hit a student',
+    			'An cool engine :D',
+    			'Collect all the progress!',
+    			'Red is so sus...\n(i know. it\'s a outdated joke >:/)',
+    			'Minecraft Forever!!',
+    			'If Lua, use "luaScript" folder\nIf Haxe, use "haxeScript" folder!\nUsing just "scripts" folder will NOT work!',
+    			'We have winning Icons! (it\'s optional)\nBut it\'s not optional for Freeplay State!',
+    			'Vibin\' Forever',
+				'Starry Night (of winter lmao)',
+				'Line up for the Ruins!',
+				'Engine based of my own Mod...\nVs. WinMario!',
+				'Game Jolt is better than Gamebanana btw',
+				'Don\'t put Pineapple on a Pizza...\nIn Italy!',
+				'Roblox is not good but ok.',
+				'I\'m not paying Hundreds of dollars\nfor FL Studio. - WM/LXP',
+				'Green? No! Purple? Yes!',
+				'temuless engune',
+				'Play B-Sides on FPS+\n(who is still using FPS+?)',
+				'Modding on V-Slice is BS.\n(How on hell did they do it without problems?)',
+				'Modding on CNE is ok.\n(but there is no Lua Supprt)',
+				'Thank god we don\'t have to make\nour Mods on Sourced like Kade.',
+				'Suponji Bobu',
+				'Nightmare has a Vision?',
+				'There is No FNF that can be played\non Xbox... right?',
+				'Psych Engine is... Flawless!',
+				'Lucas Sanches\nmade Pico Engine, enjoy your day',
+				'Not for Mobile. PC only.\ndon\'t port LE to mobile. it\'s useless.',
+				'1.0.4 Psych is better than Legacy Psych\n(it\'s my opinion)',
+
+
+				#if windows
+				'When you close LE, the window will do a fade out transition!',
+				'If you\'re on Windows 11...\nThe Pop-Up Color has changed for LE!',
+				'To access Mods Menu or Master Editor\nPress 7 on Main Menu.\nTo access Converters State, Press 8.'
+				#end
+
+				#if mac
+				'Wow. Apple\'s Security is really strict about you\nwith the applications... right?',
+				'I know it\'s very sad to see nobody makes\ngames or mods for MacOS people.',
+				'To access Mods Menu or Master Editor\nPress 7 on Main Menu.'
+				#end
+
+				#if linux
+				'Wow! You on Linux!\nis it worth it..?',
+				'Possibly No one makes games for Linux\nBut small people do.',
+				'You know you need LibVLC to see\nthe videos... right?',
+				'To access Mods Menu or Master Editor\nPress 7 on Main Menu.\nTo access Converters State, Press 8.'
+				#end
+  			];
+
+			var randomSPtext:String = FlxG.random.getObject(winVerSPtexts);
+
+			var winVerSP:FlxText = new FlxText(0, FlxG.height - 630, FlxG.width, randomSPtext, 12);
+			winVerSP.setFormat(Paths.font("ArialCEItalic.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			winVerSP.scrollFactor.set();
+			add(winVerSP);
 		}
 
 
