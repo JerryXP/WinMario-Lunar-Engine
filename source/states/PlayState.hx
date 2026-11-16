@@ -1108,7 +1108,7 @@ class PlayState extends MusicBeatState
 		if (ClientPrefs.data.vsliceLegacyBar2 == 'Vanilla')
 			healthBar.setColors(FlxColor.RED, FlxColor.LIME);
 		else if (ClientPrefs.data.vsliceLegacyBar2 == 'RvB')
-			healthBar.setColors(FlxColor.RED, 0xFF000080);
+			healthBar.setColors(0xFF800000, 0xFF000080);
 		else
 			healthBar.setColors(FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]),
 				FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
