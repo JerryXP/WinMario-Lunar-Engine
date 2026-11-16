@@ -84,9 +84,6 @@
 	<!-- Do we want to use ATSC compression?-->
 	<define name="ATSC_SUPPORT" unless="web"/>
 
-	<!-- Enables special crash handler in case you don't trust your players to report issues properly-->
-	<define name="FIREBASE_CRASH_HANDLER" if="mobile"/>
-
 	<!-- Displays a "Touch here to play" screen-->
 	<define name="TOUCH_HERE_TO_PLAY" if="TOUCH_CONTROLS_ALLOWED debug" />
 
@@ -280,6 +277,13 @@
 	<haxedef name="DISCORD_DISABLE_IO_THREAD" if="hxdiscord_rpc" />
 	<haxedef name="NO_PRECOMPILED_HEADERS" if="linux" />
 
+	<!-- Suppress warnings for Android compilation -->
+	<haxedef name="HXCPP_CFLAGS" value="-Wno-all -w" if="android" />
+
+	<haxedef name="HXCPP_CFLAGS" value="-std=c99 -Wno-error=deprecated-non-prototype -Wno-deprecated-declarations -Wno-unused-command-line-argument -Wno-macro-redefined" if="macos || ios" />
+	<haxeflag name="-D" value="no-deprecation-warnings"/>
+	<haxedef name="HXCPP_CFLAGS" value="-Wnull-arithmetic -Wtautological-pointer-compare -Wtrigraphs"/>
+
 	<section if="debug">
 		<!--These
 		defines are mostly for testing (aren't required to be used)-->
@@ -331,6 +335,9 @@
 	<!-- Let user access P-Slice files-->
 	<haxedef name="SHARE_MOBILE_FILES" if="mobile" />
 
+	<!-- iOS Deployment Target -->
+	<ios deployment="13.6" />
+
 	<!--Disable
 	the Flixel core debugger. Automatically gets set whenever you compile in release mode!-->
 	<haxedef name="FLX_NO_DEBUG" unless="PROFILE_BUILD || debug" />
@@ -374,7 +381,7 @@
 	<haxedef name="message.reporting" value="pretty" />
 
 	<!-- Do whatever you want I'm tired uninstall and install everytime -->
-	<certificate path="key.keystore" password="pslice" alias="lunar" alias-password="pslice"
+	<certificate path="key.keystore" password="pslice" alias="pslice" alias-password="pslice"
 		if="android" unless="debug" />
 
 	<!--Macro
