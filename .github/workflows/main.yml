@@ -21,7 +21,7 @@ jobs:
     with:
       os: ubuntu-24.04
       setupScript: sh ./setup/unix.sh
-      CACHE_NAME: LunarEngine.desktop-cache
+      CACHE_NAME: LunarEngine.1.0.desktop-cache
   BuildMacos:
     name: macos
     needs: BuildMobileCache
@@ -29,7 +29,7 @@ jobs:
     uses: ./.github/workflows/mac-universal.yml
     with:
       exportPath: macos
-      cachePath: P-Slice.1.0.build-macos
+      cachePath: LunarEngine.build-mac
       cacheLibrariesPath: LunarEngine.mobile-cache
       artifactName: LunarEngine-mac
       artifactPath: export/release/macos/bin/*
@@ -45,16 +45,16 @@ jobs:
             buildArgs: "windows -final"
             exportPath: windows
             artifactName: LunarEngine-windows
-            cacheLibrariesPath: LunarEngine.desktop-cache
-            cachePath: P-Slice.1.0.build-windows
+            cacheLibrariesPath: LunarEngine.1.0.desktop-cache
+            cachePath: LunarEngine.build-windows
             artifactPath: export\release\windows\bin\*
           - name: Linux
             os: ubuntu-22.04
             buildArgs: "linux -final"
             exportPath: linux
             artifactName: LunarEngine-linux
-            cachePath: P-Slice.1.0.build-linux
-            cacheLibrariesPath: LunarEngine.desktop-cache
+            cachePath: LunarEngine.build-linux
+            cacheLibrariesPath: LunarEngine.1.0.desktop-cache
             artifactPath: export/release/linux/bin/*
 
     uses: ./.github/workflows/build.yml
@@ -81,7 +81,7 @@ jobs:
             buildArgs: "android"
             cacheLibrariesPath: LunarEngine.mobile-cache
             artifactName: LunarEngine-android
-            cachePath: P-Slice.1.0.build-android
+            cachePath: LunarEngine.build-android
             artifactPath: "export/release/android/bin/app/build/outputs/apk/release/*.apk"
           - name: iOS
             os: macos-15
@@ -90,7 +90,7 @@ jobs:
             cacheLibrariesPath: LunarEngine.mobile-cache
             artifactName: LunarEngine-ios
             artifactPath: "export/release/ios/build/Release-iphoneos/*.ipa"
-            cachePath: P-Slice.1.0.build-ios
+            cachePath: LunarEngine.build-ios
     uses: ./.github/workflows/build.yml
     secrets: inherit
     with:
