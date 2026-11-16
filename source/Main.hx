@@ -119,6 +119,14 @@ class Main extends Sprite
 		backend.CrashHandler.init();
 		trace("Crash handler is up!");
 
+		#if (cpp && windows)
+		backend.Native.fixScaling();
+		// Initialize window transparency support
+		WindowsAPI.setWindowLayered();
+		// Set window border color to purple (128, 41, 182)
+		WindowsAPI.setWindowBorderColor(128, 41, 182);
+		#end
+
 		// This initialises mods
 		try
 		{
@@ -163,14 +171,6 @@ class Main extends Sprite
 		// Add window focus handlers
 		Application.current.window.onFocusIn.add(onWindowFocusIn);
 		Application.current.window.onFocusOut.add(onWindowFocusOut);
-		#end
-
-		#if (cpp && windows)
-		backend.Native.fixScaling();
-		// Initialize window transparency support
-		WindowsAPI.setWindowLayered();
-		// Set window border color to purple (128, 41, 182)
-		WindowsAPI.setWindowBorderColor(128, 0, 0);
 		#end
 
 		trace("Main done it's code");

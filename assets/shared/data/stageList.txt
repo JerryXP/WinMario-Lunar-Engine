@@ -7,3 +7,9 @@ mallEvil
 school
 schoolEvil
 tank
+phillyStreets
+phillyStreetsErect
+phillyBlazin
+lilStage
+lilStageErect
+lilStagePico

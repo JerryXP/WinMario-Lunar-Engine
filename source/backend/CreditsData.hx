@@ -209,6 +209,15 @@ class CreditsData {
 				person('MeguminBOT', 'lulu', 'made the Custom Credits State', 'https://github.com/MeguminBOT', '8A6FB0'),
 			]),
 
+			section('Fake Out Spaghetti', [
+				person("Xyy",		        "",		        "Made D-Sides Remix of Spaghetti",					  "https://x.com/dasxyyy",		"808080"),
+				person("Wrathstetic",		        "",		        "Possibly help Xyy with the Remix",					  "https://x.com/wrathstetic",		"808080"),
+				person("Byt",		        "",		        "Made a FLP Recreation for it",					  "https://www.youtube.com/@Byt37",		"808080"),
+				person("Ghost1773951",		        "",		        "Made Mario Assets",					  "https://gamebanana.com/members/1773951",		"808080"),
+				person("LuanPG21092011",		        "",		        "Particully use Spaghetti Port",					  "https://gamebanana.com/members/3930714",		"808080"),
+				person("0s_scar96",		        "",		        "BF 2024 Remaster skin",					  "https://gamebanana.com/members/4090257",		"808080"),
+			]),
+
 			section('P-Slice Engine Team', [
 				person('Mikolka9144',	'mikolka',	'The lead for the mod',	'https://gamebanana.com/members/3329541',	'2ebcfa'),
 			]),

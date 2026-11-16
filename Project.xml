@@ -8,17 +8,17 @@
 	<!-- Normal Version -->	
 	<app unless="PROFILE_BUILD || mobile" title="Lunar Engine"
 		file="LunarEngine" packageName="com.winmario.LunarEngine" package="com.winmario.LunarEngine"
-		main="Main" version="1.0.0" company="Lunar (Lunar Engine)" />
+		main="Main" version="1.4.0" company="Lunar (Lunar Engine)" />
 
 	<!-- Testing Version -->	
 	<app if="PROFILE_BUILD" title="Lunar Engine (TEST BUILD)" file="LunarEngine"
 		packageName="com.winmario.testLunarEngine" package="com.winmario.testLunarEngine" main="Main"
-		version="1.0.0" company="WinMario (Lunar Engine)" />
+		version="1.4.0" company="WinMario (Lunar Engine)" />
 
 	<!-- Mobile/Phone Version -->	
 	<app if="mobile" unless="PROFILE_BUILD" title="Lunar Engine" file="FNF Lunar Engine"
 		packageName="com.winmario.LunarEngine" package="com.winmario.LunarEngine" main="Main"
-		version="1.0.0" company="WinMario (Lunar Engine)" />
+		version="1.4.0" company="WinMario (Lunar Engine)" />
 
 	<!--Switch
 	Export with Unique ApplicationID and Icon-->
@@ -215,27 +215,22 @@
 	<assets path="assets/atsc_shared" rename="assets/shared" />
 
 	<section if="BASE_GAME_FILES">
+	<!-- Do I care about th Web version? No! That's Piracy! (kind of.)-->
 		<section if="web">
-			<assets path="assets/base_game/week_data" rename="assets" include="*.png|*.ogg|*.mp4"
-				embed="false" />
-			<assets path="assets/base_game/week_data" rename="assets" include="*.xml|*.json"
-				embed="true" />
-			<assets path="assets/base_game/characters" rename="assets/shared/images/characters"
-				include="*.xml|*.json" embed="true" />
-			<assets path="assets/base_game/characters" rename="assets/shared/images/characters"
-				include="*.png" embed="false" />
-			<assets path="assets/base_game/characters_pixel" rename="assets/shared/images/characters"
-				include="*.xml|*.json" embed="true" />
-			<assets path="assets/base_game/characters_pixel" rename="assets/shared/images/characters"
-				include="*.png" embed="false" />
+			<assets path="assets/base_game/week_data" rename="assets" include="*.png|*.ogg|*.mp4" embed="false" />
+			<assets path="assets/base_game/week_data" rename="assets" include="*.xml|*.json" embed="true" />
+			<assets path="assets/base_game/characters" rename="assets/shared/images/characters" include="*.xml|*.json" embed="true" />
+			<assets path="assets/base_game/characters" rename="assets/shared/images/characters" include="*.png" embed="false" />
+			<assets path="assets/base_game/characters_pixel" rename="assets/shared/images/characters" include="*.xml|*.json" embed="true" />
+			<assets path="assets/base_game/characters_pixel" rename="assets/shared/images/characters" include="*.png" embed="false" />
 			<assets path="assets/base_game/shared" rename="assets/shared" embed="true" />
 		</section>
+
 		<assets path="assets/base_game/week_data" rename="assets" unless="web" />
-		<assets path="assets/base_game/characters" rename="assets/shared/images/characters"
-			unless="web" />
-		<assets path="assets/base_game/characters_pixel" rename="assets/shared/images/characters"
-			unless="web" />
+		<assets path="assets/base_game/characters" rename="assets/shared/images/characters" unless="web" />
+		<assets path="assets/base_game/characters_pixel" rename="assets/shared/images/characters" unless="web" />
 		<assets path="assets/base_game/shared" rename="assets/shared" unless="web" />
+		<assets path="assets/base_game/le_sserafim-anti-copyright" rename="" unless="web" />
 	</section>
 
 	<section if="MODS_ALLOWED">

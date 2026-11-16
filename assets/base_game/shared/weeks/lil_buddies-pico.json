@@ -1,0 +1,27 @@
+{
+	"songs": [
+		[
+			"Lil' Buddies (Pico Mix)",
+			"pico",
+			[
+				128,
+				128,
+				128
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "",
+	"difficulties": "Hard",
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"storyName": "",
+	"weekName": "Little Buddies :D (pico ver)",
+	"hideStoryMode": true,
+	"weekBefore": "",
+	"startUnlocked": true
+}

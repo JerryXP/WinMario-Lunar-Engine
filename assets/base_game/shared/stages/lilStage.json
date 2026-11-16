@@ -1,7 +1,7 @@
 {
 	"camera_boyfriend": [
 		95,
-		90
+		110
 	],
 	"_editorMeta": {
 		"boyfriend": "lilBF",
@@ -20,12 +20,52 @@
 		-13,
 		3
 	],
-	"camera_girlfriend": [
-		145,
-		125
-	],
 	"defaultZoom": 1.85,
 	"objects": [
+		{
+			"x": -358,
+			"y": -191,
+			"scale": [
+				0.75,
+				1.1
+			],
+			"image": "settingsMenu",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 30,
+			"name": "bg2",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 0.2,
+			"type": "sprite"
+		},
+		{
+			"x": -507,
+			"y": -316,
+			"scale": [
+				1,
+				1
+			],
+			"image": "chartEditor/song/bg",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "bg",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
 		{
 			"x": 0,
 			"y": 1,
@@ -58,6 +98,10 @@
 			"type": "boyfriend"
 		}
 	],
+	"camera_girlfriend": [
+		130,
+		150
+	],
 	"camera_speed": 10,
 	"directory": "",
 	"opponent": [
@@ -66,7 +110,7 @@
 	],
 	"camera_opponent": [
 		-185,
-		95
+		110
 	],
 	"hide_girlfriend": true
 }

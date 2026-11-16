@@ -80,7 +80,7 @@ class PauseSubState extends MusicBeatSubstate
 			FlxTween.tween(grid, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
 			add(grid);
 		}
-		FlxG.sound.play(Paths.sound('pause_sfx'), 0.7);
+
 		controls.isInSubstate = true;
 		if (Difficulty.list.length < 2)
 			menuItemsOG.remove('Change Difficulty'); // No need to change difficulty if there is only one!
@@ -103,11 +103,13 @@ class PauseSubState extends MusicBeatSubstate
 			menuItemsOG.insert(3, 'Skip Time');
 		if (inVid)
 		{
+			FlxG.sound.play(Paths.sound('pause_sfx'), 0.7);
 			menuItems = ['Resume', cutscene_resetTxt, cutscene_skipTxt, 'Options', 'Exit to menu'];
 			if (!cutscene_allowSkipping)
 				menuItems.remove(cutscene_skipTxt);
 		}
 		else
+			FlxG.sound.play(Paths.sound('pause_sfx'), 0.7);
 			menuItems = menuItemsOG;
 
 		for (i in 0...Difficulty.list.length)

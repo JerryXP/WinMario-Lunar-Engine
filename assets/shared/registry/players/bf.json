@@ -12,9 +12,9 @@
 	"freeplayStyle": "bf",
 	"freeplayDJ": {
 		"assetPath": "freeplay/freeplay-boyfriend",
-		"text1": "WINDOWS MARIO ",
-		"text2": "HEY IF YOU ENJOY THIS MOD WHY NOT FOLLOW ME ON YOUTUBE TIKTOK AND ALSO MAKE SURE TO JOIN MY DISCORD",
-		"text3": "DEVLOPING FNF MODS SINCE FEBRUARY 2025 ",
+		"text1": "BOYFRIEND",
+    	"text2": "HOT BLOODED IN MORE WAYS THAN ONE",
+    	"text3": "PROTECT YO NUTS",
 		"animations": [
 			{
 				"prefix": "boyfriend dj intro",

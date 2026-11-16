@@ -1,26 +1,93 @@
 {
 	"camera_boyfriend": [
-		60,
+		55,
 		90
 	],
+	"_editorMeta": {
+		"boyfriend": "lilPico",
+		"gf": "gf",
+		"dad": "lilGuy"
+	},
 	"preload": {
 		"images/chartEditor/lilStage": 3
 	},
-	"_editorMeta": {
-		"boyfriend": "lilPico",
-		"dad": "lilGuy",
-		"gf": "gf"
-	},
-	"boyfriend": [
-		130,
-		99
-	],
-	"stageUI": "",
 	"girlfriend": [
 		400,
 		130
 	],
+	"stageUI": "",
+	"boyfriend": [
+		130,
+		99
+	],
+	"defaultZoom": 1.85,
 	"objects": [
+		{
+			"x": -508,
+			"y": -244,
+			"scale": [
+				1,
+				1
+			],
+			"image": "optionsCenter",
+			"flipX": true,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 10,
+			"name": "bg3",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 0.1,
+			"type": "sprite"
+		},
+		{
+			"x": -400,
+			"y": -150,
+			"scale": [
+				0.8,
+				0.8
+			],
+			"image": "optionsCenter",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 350,
+			"name": "bg2",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 0.1,
+			"type": "sprite"
+		},
+		{
+			"x": -487,
+			"y": -262,
+			"scale": [
+				1,
+				1
+			],
+			"image": "chartEditor/song/bg",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "bg",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
 		{
 			"x": 0,
 			"y": 1,
@@ -54,19 +121,18 @@
 		}
 	],
 	"camera_girlfriend": [
-		145,
-		125
+		130,
+		145
 	],
-	"defaultZoom": 1.85,
+	"camera_speed": 10,
+	"directory": "",
 	"opponent": [
 		25,
 		4
 	],
-	"directory": "",
-	"camera_speed": 10,
-	"hide_girlfriend": true,
 	"camera_opponent": [
-		-190,
+		-200,
 		110
-	]
+	],
+	"hide_girlfriend": true
 }

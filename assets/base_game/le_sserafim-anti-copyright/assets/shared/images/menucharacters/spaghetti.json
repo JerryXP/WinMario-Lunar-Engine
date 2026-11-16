@@ -1,0 +1,11 @@
+{
+	
+	"image": "spaghetti",
+	"position": [
+		50,
+		-50
+	],
+	"scale": 1,
+	"idle_anim": "SPL_0",
+	"confirm_anim": "SPL_0"
+}

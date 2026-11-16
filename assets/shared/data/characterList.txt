@@ -24,3 +24,11 @@ pico-speaker
 bf-holding-gf
 pico-player
 tankman-player
+lilBF
+lilBF-dead
+lilBF-erect
+lilBF-erect-dead
+lilGuy
+lilGuy-erect
+lilPico
+lilPico-dead
