@@ -31,7 +31,7 @@ jobs:
       exportPath: macos
       cachePath: P-Slice.1.0.build-macos
       cacheLibrariesPath: LunarEngine.mobile-cache
-      artifactName: P-Slice.1.0.macos
+      artifactName: LunarEngine-mac
       artifactPath: export/release/macos/bin/*
   BuildDesktop:
     name: Build Desktop
@@ -44,17 +44,17 @@ jobs:
             os: windows-2022
             buildArgs: "windows -final"
             exportPath: windows
-            artifactName: P-Slice.1.0.windows
-            cacheLibrariesPath: P-Slice.1.0.desktop-cache
+            artifactName: LunarEngine-windows
+            cacheLibrariesPath: LunarEngine.desktop-cache
             cachePath: P-Slice.1.0.build-windows
             artifactPath: export\release\windows\bin\*
           - name: Linux
             os: ubuntu-22.04
             buildArgs: "linux -final"
             exportPath: linux
-            artifactName: P-Slice.1.0.linux
+            artifactName: LunarEngine-linux
             cachePath: P-Slice.1.0.build-linux
-            cacheLibrariesPath: P-Slice.1.0.desktop-cache
+            cacheLibrariesPath: LunarEngine.desktop-cache
             artifactPath: export/release/linux/bin/*
 
     uses: ./.github/workflows/build.yml
@@ -80,7 +80,7 @@ jobs:
             exportPath: android
             buildArgs: "android"
             cacheLibrariesPath: LunarEngine.mobile-cache
-            artifactName: P-Slice.1.0.android
+            artifactName: LunarEngine-android
             cachePath: P-Slice.1.0.build-android
             artifactPath: "export/release/android/bin/app/build/outputs/apk/release/*.apk"
           - name: iOS
@@ -88,7 +88,7 @@ jobs:
             buildArgs: "ios -nosign -final"
             exportPath: ios/FNF Lunar Engine/haxe/build/Release-iphoneos-64/
             cacheLibrariesPath: LunarEngine.mobile-cache
-            artifactName: P-Slice.1.0.ios
+            artifactName: LunarEngine-ios
             artifactPath: "export/release/ios/build/Release-iphoneos/*.ipa"
             cachePath: P-Slice.1.0.build-ios
     uses: ./.github/workflows/build.yml
