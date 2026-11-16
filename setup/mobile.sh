@@ -20,7 +20,6 @@ haxelib install flixel-tools 1.5.1 --quiet --skip-dependencies
 haxelib install hscript-iris 1.1.3 --quiet
 haxelib git hscript-improved https://github.com/CodenameCrew/hscript-improved.git --quiet --skip-dependencies
 haxelib install tjson 1.4.0 --quiet
-haxelib install hxWindowColorMode 0.2.1  --always --quiet --skip-dependencies
 
 #Specific
 haxelib git hxdiscord_rpc https://github.com/MAJigsaw77/hxdiscord_rpc f9353b9edce10f4605d125dd1bda24ac36898bfb --quiet --skip-dependencies
@@ -30,4 +29,5 @@ haxelib install extension-haptics 1.0.4 --quiet --skip-dependencies
 haxelib git extension-firebase-crashlytics https://github.com/mikolka9144/extension-firebase-crashlytics.git d9e783f83e0c2b15b6ef0770672f677f00e98153 --quiet --skip-dependencies
 haxelib install extension-androidtools 2.2.2 --quiet --skip-dependencies
 haxelib git linc_luajit https://github.com/Psych-Slice/linc_luajit-mobile.git --quiet
+haxelib git hxWindowColorMode https://github.com/TBar09/hxWindowColorMode-main.git --quiet --skip-dependencies
 echo Finished!
