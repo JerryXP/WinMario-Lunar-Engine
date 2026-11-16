@@ -19,7 +19,7 @@ on:
 
 env:
   HAXE_VERSION: 4.3.6
-  PROJECT_NAME: PSliceEngine
+  PROJECT_NAME: LunarEngine
 
 jobs:
   build:

@@ -48,7 +48,7 @@ jobs:
 
       - name: Restore Libraries for compilation
         id: load-lib-cache
-        uses: actions/cache@v3
+        uses: actions/cache@v6
         with:
           # not caching the bin folder to prevent asset duplication and stuff like that
           key: ${{ inputs.cacheLibrariesPath }}
@@ -60,7 +60,7 @@ jobs:
             ${{ inputs.cacheLibrariesPath }}
       - name: Restore existing build cache for faster compilation
         id: load-cache
-        uses: actions/cache@v3
+        uses: actions/cache@v6
         with:
           # not caching the bin folder to prevent asset duplication and stuff like that
           key: ${{ inputs.cachePath }}
@@ -75,8 +75,65 @@ jobs:
         if: inputs.exportPath == 'linux'
         run: sudo apt install libvlc-dev libvlccore-dev
 
+      - name: Configure Android
+        if: inputs.exportPath == 'android'
+        env:
+          PLAYSTORE_FIREBASE: ${{ secrets.PLAYSTORE_FIREBASE }}
+        run: |
+          haxelib run lime config ANDROID_SDK $ANDROID_HOME
+          haxelib run lime config ANDROID_NDK_ROOT $ANDROID_NDK_HOME
+          haxelib run lime config JAVA_HOME $JAVA_HOME_17_X64
+          haxelib run lime config ANDROID_SETUP true
+          mkdir -p ./templates/android/template/app
+          printf '%s' "$PLAYSTORE_FIREBASE" > ./templates/android/template/app/google-services.json
+
+      - name: Configure iOS
+        if: inputs.name == 'iOS'
+        env:
+          PLAYSTORE_FIREBASE_IOS: ${{ secrets.PLAYSTORE_FIREBASE_IOS }}
+        run: |
+          mkdir -p ./templates/ios/template/{{app.file}}
+          printf '%s' "$PLAYSTORE_FIREBASE_IOS" > ./templates/ios/template/GoogleService-Info.plist
+          printf '%s' "$PLAYSTORE_FIREBASE_IOS" > ./setup/GoogleService-Info.plist
+          printf '%s' "$PLAYSTORE_FIREBASE_IOS" > ./templates/ios/template/{{app.file}}/GoogleService-Info.plist
+
       - name: Compile
         run: haxelib run lime build ${{ inputs.buildArgs }}
+          # setup/google-services.json
+
+      - name: Upload debugging symbols (Android)
+        if: inputs.exportPath == 'android' 
+        run: sh ./setup/firebase_spell.sh
+
+      - name: Upload debugging symbols (iOS)
+        if: inputs.name == 'iOS'
+        run: sh ./setup/firebase_ios.sh
+
+      - name: Sign APK with the proper key
+        if: inputs.exportPath == 'android'
+        env:
+          OUT_DIR: ./export/release/android/bin/app/build/outputs/apk/release/
+          SIGNING_KEY: ${{ secrets.MIKOLKA_PASSWORD }}
+          SIGNING_ALIAS: lunar
+          SIGNING_FILE: ${{ secrets.MIKOLKA_KEYSTORE }}
+        run: |
+          rm -f ./key.keystore;
+          echo $SIGNING_FILE | base64 -d > ./key.keystore;
+          sha256sum ./key.keystore;
+
+          mv '${{env.OUT_DIR}}LunarEngine-release.apk' '${{env.OUT_DIR}}LunarEngine-unsigned.apk';
+          $ANDROID_HOME/build-tools/35.0.1/zipalign -P 16 -f -v 4 '${{env.OUT_DIR}}LunarEngine-unsigned.apk' '${{env.OUT_DIR}}LunarEngine-release.apk' > /dev/null;
+
+          $ANDROID_HOME/build-tools/35.0.1/apksigner sign --ks key.keystore --ks-key-alias $SIGNING_ALIAS --ks-pass "env:SIGNING_KEY" --key-pass "env:SIGNING_KEY" '${{env.OUT_DIR}}LunarEngine-release.apk';
+          rm '${{env.OUT_DIR}}LunarEngine-unsigned.apk';
+
+      - name: Make IPA
+        if: inputs.name == 'iOS'
+        run: |
+          cd export/release/ios/build/Release-iphoneos
+          mkdir Payload
+          mv *.app Payload
+          zip -r ${{ env.PROJECT_NAME }}.ipa Payload
 
       - name: Upload Artifact
         uses: actions/upload-artifact@main

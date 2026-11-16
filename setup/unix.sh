@@ -19,6 +19,7 @@ haxelib install flixel-tools 1.5.1 --quiet --skip-dependencies
 haxelib install hscript-iris 1.1.3 --quiet --skip-dependencies
 haxelib git hscript-improved https://github.com/CodenameCrew/hscript-improved.git --quiet --skip-dependencies
 haxelib install tjson 1.4.0 --quiet --skip-dependencies
+haxelib install hxWindowColorMode
 
 #Specific
 haxelib install hxdiscord_rpc 1.2.4 --quiet --skip-dependencies
