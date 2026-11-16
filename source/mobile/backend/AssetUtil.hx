@@ -1,6 +1,7 @@
 package mobile.backend;
 
 import openfl.utils.Assets;
+import StringTools;
 
 /**
  * Android-safe file access. On Android the base game assets are bundled INSIDE the APK
