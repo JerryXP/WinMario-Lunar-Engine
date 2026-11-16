@@ -14,15 +14,14 @@ import haxe.io.Path;
 #end
 
 class InitState extends MusicBeatState
-{
+{	
     public static var muteKeys:Array<FlxKey> = [FlxKey.ZERO];
 	public static var volumeDownKeys:Array<FlxKey> = [FlxKey.NUMPADMINUS, FlxKey.MINUS];
 	public static var volumeUpKeys:Array<FlxKey> = [FlxKey.NUMPADPLUS, FlxKey.PLUS];
 
-    var mustUpdate:Bool = false;
+    //var mustUpdate:Bool = false;
 	public static var updateAlreadyShown:Bool = false;
 	public static var updateVersion:String = '';
-
 
 	override function create()
 	{
@@ -38,9 +37,9 @@ class InitState extends MusicBeatState
 		backend.Native.fixScaling();
 		#end
 
-		#if CHECK_FOR_UPDATES
+		/*#if CHECK_FOR_UPDATES
 		fetchUpdateData();
-		#end
+		#end*/
 
 		trace("checking asset list cache");
 		if(NativeFileSystem.openFlAssets?.length == 0){
@@ -100,10 +99,10 @@ class InitState extends MusicBeatState
 			FlxTransitionableState.skipNextTransOut = true;
 			MusicBeatState.switchState(new FlashingState(new StopandThink()));
 		}
-		else if (mustUpdate && !updateAlreadyShown){
-				updateAlreadyShown = true;
-            	MusicBeatState.switchState(new OutdatedState(updateVersion,new StopandThink()));
-        }
+        /*else if (mustUpdate && !updateAlreadyShown) {
+			updateAlreadyShown = true;
+            MusicBeatState.switchState(new OutdatedState(updateVersion,new StopandThink()));
+        }*/
 		else
 		{
 			new FlxTimer().start(0.05, function(tmr:FlxTimer)
@@ -119,7 +118,7 @@ class InitState extends MusicBeatState
 		}
 	}
 
-	#if CHECK_FOR_UPDATES
+	/*#if CHECK_FOR_UPDATES
 	function fetchUpdateData()
 	{
 		if (ClientPrefs.data.checkForUpdates)
@@ -148,4 +147,5 @@ class InitState extends MusicBeatState
 		}
 	}
 	#end
+	*/
 }

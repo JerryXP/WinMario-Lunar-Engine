@@ -1,4 +1,4 @@
-name: Bug report
+name: Bug Report
 description: Report bugs with the engine here
 labels: ["Type: Bug","Awaits labels"]
 body:

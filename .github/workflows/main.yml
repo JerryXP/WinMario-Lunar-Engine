@@ -4,16 +4,8 @@ on:
   push:
     branches: [dev]
   workflow_dispatch:
+
 jobs:
-  
-  BuildMobileCache:
-    name: Build Caches
-    permissions: write-all
-    uses: ./.github/workflows/dependencies.yml
-    with:
-      os: macos-15
-      CACHE_NAME: LunarEngine.mobile-cache
-      setupScript: sh ./setup/mobile.sh
   BuildDesktopCache:
     name: Build Caches
     permissions: write-all
@@ -22,17 +14,19 @@ jobs:
       os: ubuntu-24.04
       setupScript: sh ./setup/unix.sh
       CACHE_NAME: LunarEngine.1.0.desktop-cache
+
   BuildMacos:
     name: macos
-    needs: BuildMobileCache
+    needs: BuildDesktopCache
     permissions: write-all
     uses: ./.github/workflows/mac-universal.yml
     with:
       exportPath: macos
       cachePath: LunarEngine.build-mac
-      cacheLibrariesPath: LunarEngine.mobile-cache
+      cacheLibrariesPath: LunarEngine.1.0.desktop-cache
       artifactName: LunarEngine-mac
       artifactPath: export/release/macos/bin/*
+
   BuildDesktop:
     name: Build Desktop
     needs: BuildDesktopCache
@@ -66,39 +60,4 @@ jobs:
       exportPath: ${{ matrix.exportPath }}
       artifactName: ${{ matrix.artifactName }}
       artifactPath: ${{ matrix.artifactPath }}
-      cachePath: ${{matrix.cachePath}}
-
-  BuildMobile:
-    permissions: write-all
-    needs: BuildMobileCache
-    name: Build mobile
-    strategy:
-      matrix:
-        include:
-          - name: Android
-            os: ubuntu-24.04
-            exportPath: android
-            buildArgs: "android"
-            cacheLibrariesPath: LunarEngine.mobile-cache
-            artifactName: LunarEngine-android
-            cachePath: LunarEngine.build-android
-            artifactPath: "export/release/android/bin/app/build/outputs/apk/release/*.apk"
-          - name: iOS
-            os: macos-15
-            buildArgs: "ios -nosign -final"
-            exportPath: ios/FNF Lunar Engine/haxe/build/Release-iphoneos-64/
-            cacheLibrariesPath: LunarEngine.mobile-cache
-            artifactName: LunarEngine-ios
-            artifactPath: "export/release/ios/build/Release-iphoneos/*.ipa"
-            cachePath: LunarEngine.build-ios
-    uses: ./.github/workflows/build.yml
-    secrets: inherit
-    with:
-      name: ${{ matrix.name }}
-      os: ${{ matrix.os }}
-      buildArgs: ${{ matrix.buildArgs }}
-      exportPath: ${{ matrix.exportPath }}
-      artifactName: ${{ matrix.artifactName }}
-      cacheLibrariesPath: ${{ matrix.cacheLibrariesPath }}
-      artifactPath: ${{ matrix.artifactPath }}
-      cachePath: ${{matrix.cachePath}}
+      cachePath: ${{ matrix.cachePath }}

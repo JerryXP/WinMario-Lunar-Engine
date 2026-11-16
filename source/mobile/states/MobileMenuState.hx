@@ -22,7 +22,7 @@ import editors.MasterEditorMenu;
 @:access(mikolka.vslice.ui.MainMenuState)
 class MobileMenuState extends FlxBasic {
     var selectedSomethin:Bool = false;
-    
+    static var showOutdatedWarning:Bool = true;
 	
     var host:MainMenuState;
 	var grid:GridButtons;
@@ -93,6 +93,15 @@ class MobileMenuState extends FlxBasic {
 		});
 		grid.addButton(optionsBtn,0);
 		optionsBtn.setPosition((MobileScaleMode.gameCutoutSize.x/4)+35, FlxG.height - 200);
+
+		#if CHECK_FOR_UPDATES
+		if (showOutdatedWarning && ClientPrefs.data.checkForUpdates && substates.OutdatedSubState.updateVersion != mikolka.vslice.ui.MainMenuState.lunarVersion)
+		{
+			host.persistentUpdate = false;
+			showOutdatedWarning = false;
+			host.openSubState(new substates.OutdatedSubState());
+		}
+		#end
 
         #if TOUCH_CONTROLS_ALLOWED
 		host.addTouchPad('NONE', 'A_B_C');

@@ -11,6 +11,7 @@ class LanguageSubState extends MusicBeatSubstate
 	var curSelected:Int = 0;
 	public function new()
 	{
+		controls.isInSubstate = true;
 		super();
 
 		var bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));

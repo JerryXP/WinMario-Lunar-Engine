@@ -35,6 +35,8 @@ class DesktopMenuState extends FlxBasic
     var selectedSomethin:Bool = false;
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	var camFollow:FlxObject;
+
+	static var showOutdatedWarning:Bool = true;
     
     var host:MainMenuState;
     public function new(host:MainMenuState) {
@@ -74,6 +76,15 @@ class DesktopMenuState extends FlxBasic
 			menuItem.updateHitbox();
 			menuItem.screenCenter(X);
 		}
+
+		#if CHECK_FOR_UPDATES
+		if (showOutdatedWarning && ClientPrefs.data.checkForUpdates && substates.OutdatedSubState.updateVersion != mikolka.vslice.ui.MainMenuState.lunarVersion)
+		{
+			host.persistentUpdate = false;
+			showOutdatedWarning = false;
+			host.openSubState(new substates.OutdatedSubState());
+		}
+		#end
 
 		FlxG.camera.follow(camFollow, null, 0.06);
         changeItem();

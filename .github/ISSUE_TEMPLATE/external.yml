@@ -1,5 +1,5 @@
-name: Issue in a Vs. Winmario fork
-description: If you experience an issue in your Vs. WinMario that could be caused by the mainline code, you can try reporting it here 
+name: Issue in a Lunar Engine Fork
+description: If you experience an issue in your Lunar Engine Fork that could be caused by the mainline code, you can try reporting it here 
 labels: [external]
 body:
   - type: textarea
@@ -7,6 +7,7 @@ body:
       label: What is your issue?
     validations:
       required: true
+
   - type: textarea
     id: terminal
     attributes:
@@ -15,20 +16,21 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: pslice-version
+  - type: dropdown
+    id: le-or-wm
     attributes:
-      label: "Which \"P-Slice\" version of WinMario this occurs in"
-      placeholder: "3.2.1"
+      label: "Are you using Lunar Engine or Vs. WinMario?"
+      options:
+        - "Lunar Engine"
+        - "Vs. WinMario"
     validations:
       required: true
 
   - type: input
-    id: psych
+    id: versionType
     attributes:
-      label: "Which \"Psych Engine\" version of WinMario this occurs in"
-      options:
-        placeholder: "3.2.1"
+      label: "In which version does this occurs in? (if it's the build from the Actions tab, then also include the commit hash of the build)"
+      placeholder: "3.2.1"
     validations:
       required: true
 
