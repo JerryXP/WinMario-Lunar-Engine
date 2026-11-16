@@ -12,7 +12,7 @@ jobs:
     uses: ./.github/workflows/dependencies.yml
     with:
       os: macos-15
-      CACHE_NAME: P-Slice.1.0.mobile-cache
+      CACHE_NAME: LunarEngine.mobile-cache
       setupScript: sh ./setup/mobile.sh
   BuildDesktopCache:
     name: Build Caches
@@ -21,7 +21,7 @@ jobs:
     with:
       os: ubuntu-24.04
       setupScript: sh ./setup/unix.sh
-      CACHE_NAME: P-Slice.1.0.desktop-cache
+      CACHE_NAME: LunarEngine.desktop-cache
   BuildMacos:
     name: macos
     needs: BuildMobileCache
@@ -30,8 +30,8 @@ jobs:
     with:
       exportPath: macos
       cachePath: P-Slice.1.0.build-macos
-      cacheLibrariesPath: P-Slice.1.0.mobile-cache
-      artifactName: LunarEngine-mac
+      cacheLibrariesPath: LunarEngine.mobile-cache
+      artifactName: P-Slice.1.0.macos
       artifactPath: export/release/macos/bin/*
   BuildDesktop:
     name: Build Desktop
@@ -41,18 +41,18 @@ jobs:
       matrix:
         include:
           - name: Windows
-            os: windows-2025
-            buildArgs: "windows -final -DEXPERIMENT_O3_OPTIM"
+            os: windows-2022
+            buildArgs: "windows -final"
             exportPath: windows
-            artifactName: LunarEngine-windows
+            artifactName: P-Slice.1.0.windows
             cacheLibrariesPath: P-Slice.1.0.desktop-cache
             cachePath: P-Slice.1.0.build-windows
             artifactPath: export\release\windows\bin\*
           - name: Linux
-            os: ubuntu-24.04
-            buildArgs: "linux -final -DEXPERIMENT_O3_OPTIM"
+            os: ubuntu-22.04
+            buildArgs: "linux -final"
             exportPath: linux
-            artifactName: LunarEngine-linux
+            artifactName: P-Slice.1.0.linux
             cachePath: P-Slice.1.0.build-linux
             cacheLibrariesPath: P-Slice.1.0.desktop-cache
             artifactPath: export/release/linux/bin/*
@@ -78,17 +78,17 @@ jobs:
           - name: Android
             os: ubuntu-24.04
             exportPath: android
-            buildArgs: "android -DEXPERIMENT_COMPRESSED_TEXTURES -DEXPERIMENT_O3_OPTIM"
-            cacheLibrariesPath: P-Slice.1.0.mobile-cache
-            artifactName: LunarEngine-android
+            buildArgs: "android"
+            cacheLibrariesPath: LunarEngine.mobile-cache
+            artifactName: P-Slice.1.0.android
             cachePath: P-Slice.1.0.build-android
             artifactPath: "export/release/android/bin/app/build/outputs/apk/release/*.apk"
           - name: iOS
             os: macos-15
             buildArgs: "ios -nosign -final"
-            exportPath: ios/PSliceEngine/haxe/build/Release-iphoneos-64/
-            cacheLibrariesPath: P-Slice.1.0.mobile-cache
-            artifactName: LunarEngine-ios
+            exportPath: ios/FNF Lunar Engine/haxe/build/Release-iphoneos-64/
+            cacheLibrariesPath: LunarEngine.mobile-cache
+            artifactName: P-Slice.1.0.ios
             artifactPath: "export/release/ios/build/Release-iphoneos/*.ipa"
             cachePath: P-Slice.1.0.build-ios
     uses: ./.github/workflows/build.yml

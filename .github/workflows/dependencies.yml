@@ -53,6 +53,10 @@ jobs:
       - name: Install hxvlc for windows
         run: haxelib install hxvlc 2.2.2 --quiet
         if: inputs.os == 'ubuntu-24.04' && steps.load-lib-cache.outputs.cache-hit != 'true'
+
+      - name: Install Windowed Color for windows
+        run: haxelib install hxWindowColorMode 0.2.1
+        if: inputs.os == 'ubuntu-24.04' && steps.load-lib-cache.outputs.cache-hit != 'true'
    
       - name: Uploading new cache
         if: steps.load-lib-cache.outputs.cache-hit != 'true'
