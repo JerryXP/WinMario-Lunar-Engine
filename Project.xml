@@ -16,7 +16,7 @@
 		version="1.4.0" company="WinMario (Lunar Engine)" />
 
 	<!-- Mobile/Phone Version -->	
-	<app if="mobile" unless="PROFILE_BUILD" title="Lunar Engine" file="FNF Lunar Engine"
+	<app if="mobile" unless="PROFILE_BUILD" title="Lunar Engine" file="LunarEngine"
 		packageName="com.winmario.LunarEngine" package="com.winmario.LunarEngine" main="Main"
 		version="1.4.0" company="WinMario (Lunar Engine)" />
 
