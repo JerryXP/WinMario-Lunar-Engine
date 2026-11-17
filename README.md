@@ -20,7 +20,8 @@ You are allowed to use my Engine but if you use it to make a modified version or
 > [!WARNING]
 **Number 1:** You may take several codes from this engine but some are mine and some are not mine. So be careful when you are trying to use it. <br><br>
 > **Number 2:** Yes, Lunar Engine currently supports [Psych](https://github.com/ShadowMario/FNF-PsychEngine) and [P-Slice](https://github.com/Psych-Slice/P-Slice) Mods but always remember the “`scripts`” folder is now separated. So that's why I want you to check inside the “`scripts`” folder to check if there are Lua or Haxe codes inside. If the code file type is `.lua`, please put it under the “`luaScript`” folder because that's a Lua Code, but if it's `.hx` put it under “`haxeScript`” folder because that's Haxe Code. But again... “`scripts`” folder will NOT WORK. <br><br>
-> **Number 3:** While you use the Converters, it can get the information wrong so... always check if it's correct or not. :)))))
+> **Number 3:** While you use the Converters, it can get the information wrong so... always check if it's correct or not. :)))))<br><br>
+> **Number 4:** For Languages file,  same thing for the different file system between `scripts`, Languages has its own File. please put it under the `languages` folder which is outside of the `data` folder. Otherwise it will not load the Languages File. (_more language text data will come soon if I feel like it_)
 
 > [!NOTE]
 Just like what everyone says, I am not making this Engine to be better than others or use it to fight against the other stuff. <br><br>
@@ -29,7 +30,8 @@ And yes... I really hope I can find someone to help me with the Mobile builds (_
 > [!TIP]
 _Need to know how to access the other builds? You got it!_<br><br>
 **To access the Legacy/Older builds:** If it's Lunar Engine then look through the Release Tags to look for it. But if it's before it was named “_Lunar Engine_” (which is _WinEngine_) go to the Gamebanana page to download the older versions (by clicking Archived Files). For Source Code, it's either through Gamebanana or GitHub branches (legacy or legacy-alpha)<br><br>
-**To access Beta or Dev builds:** You need to have a GitHub account because all you need to do is go to Actions Tab, select the latest Development Version and scroll down to Artifacts and download the latest development version!
+**To access Beta or Dev builds:** You need to have a GitHub account because all you need to do is go to Actions Tab, select the latest Development Version and scroll down to Artifacts and download the latest development version!<br><br>
+> I've finally add new Haxe Script File types! `.hscript`, `.hxc`, & `.hxs`!
 
 ### -☆- What's the Difference? -☆-
 1. It has Winning Icons. Which is where if you had 80% or more... It will load! yeah yeah. It's optional. (it needs to be 450x150)(please thank [DaPootisBirdYT](https://gamebanana.com/members/2031145)) <br>
