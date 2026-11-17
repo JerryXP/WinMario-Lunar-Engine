@@ -17,6 +17,7 @@ class OutdatedSubState extends MusicBeatSubstate
 
 	override function create()
 	{
+		controls.isInSubstate = true;
 		super.create();
 
 		bg = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
@@ -29,15 +30,15 @@ class OutdatedSubState extends MusicBeatSubstate
 		final enter:String = (controls.mobileC) ? '(A)' : '[ENTER]';
 
 		warnText = new FlxText(0, 0, FlxG.width,
-			'Hey $bro, Unfortunately, you are using a\n
-			Outdated Version of Lunar Engine (${MainMenuState.lunarVersion})\n
-			Meanwhile, the Current Version is ($updateVersion). (Update Now!)\n
-			-----------------------------------------------\n
-			Press $enter to update to the latest version\n
-			Press $escape to proceed anyway.\n
+			'Hey $bro, Unfortunately, you are using a
+			Outdated Version of Lunar Engine (${MainMenuState.lunarVersion})
+			Meanwhile, the Current Version is ($updateVersion). (Update Now!)
+			-----------------------------------------------
+			Press $enter to update to the latest version
+			Press $escape to proceed anyway.
 			You can disable this warning by unchecking the
-			"Check for Updates" setting in the Options Menu\n
-			-----------------------------------------------\n
+			"Check for Updates" setting in the Options Menu
+			-----------------------------------------------
 			Thank you for using the Engine!',
 			32);
 		warnText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER);
