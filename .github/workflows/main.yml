@@ -16,15 +16,28 @@ jobs:
       CACHE_NAME: LunarEngine.1.0.desktop-cache
 
   BuildMacos:
-    name: macos
+    name: macOS (${{ matrix.archName }})
     needs: BuildDesktopCache
     permissions: write-all
-    uses: ./.github/workflows/mac-universal.yml
+    strategy:
+      matrix:
+        include:
+          - archName: ARM64
+            buildArgs: "mac -final -D HXCPP_ARM64"
+            cachePath: LunarEngine.build-mac-arm64
+            artifactName: LunarEngine-mac-arm64
+          - archName: Intel
+            buildArgs: "mac -final -64 -D HXCPP_M64"
+            cachePath: LunarEngine.build-mac-intel
+            artifactName: LunarEngine-mac-intel
+    uses: ./.github/workflows/mac-universal.yml 
     with:
+      archName: ${{ matrix.archName }}
+      buildArgs: ${{ matrix.buildArgs }}
       exportPath: macos
-      cachePath: LunarEngine.build-mac
+      cachePath: ${{ matrix.cachePath }}
       cacheLibrariesPath: LunarEngine.1.0.desktop-cache
-      artifactName: LunarEngine-mac
+      artifactName: ${{ matrix.artifactName }}
       artifactPath: export/release/macos/bin/*
 
   BuildDesktop:

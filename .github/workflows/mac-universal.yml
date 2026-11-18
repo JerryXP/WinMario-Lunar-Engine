@@ -1,6 +1,12 @@
 on:
   workflow_call:
     inputs:
+      archName:
+        required: true
+        type: string
+      buildArgs:
+        required: true
+        type: string
       artifactName:
         required: true
         type: string
@@ -23,7 +29,7 @@ env:
 
 jobs:
   build:
-    name: Build
+    name: Build (${{ inputs.archName }})
     runs-on: macos-15
     steps:
       - name: Checkout
@@ -33,15 +39,14 @@ jobs:
         uses: krdlab/setup-haxe@master
         with:
           haxe-version: ${{ env.HAXE_VERSION }}
+
       - name: Set XCode app
-        if: inputs.os == 'macos-15'
         run: sudo xcode-select -s /Applications/Xcode_16.4.app
 
       - name: Restore Libraries for compilation
         id: load-lib-cache
         uses: actions/cache@v3
         with:
-          # not caching the bin folder to prevent asset duplication and stuff like that
           key: ${{ inputs.cacheLibrariesPath }}
           fail-on-cache-miss: true
           enableCrossOsArchive: true
@@ -49,11 +54,11 @@ jobs:
             .haxelib/
           restore-keys: |
             ${{ inputs.cacheLibrariesPath }}
+
       - name: Restore existing build cache for faster compilation
         id: load-cache
         uses: actions/cache@v3
         with:
-          # not caching the bin folder to prevent asset duplication and stuff like that
           key: ${{ inputs.cachePath }}
           path: |
             export/release/${{ inputs.exportPath }}/haxe/
@@ -61,28 +66,16 @@ jobs:
           restore-keys: |
             cache-build-${{ inputs.exportPath }}
 
-      - name: Compile (ARM64)
-        run: |
-          haxelib run lime build mac -final -D HXCPP_ARM64 
-          mv ./export/release/macos/bin/LunarEngine.app/Contents/MacOS/LunarEngine ./pslice-arm
-          mv ./export/release/macos/bin/LunarEngine.app/Contents/MacOS/lime.ndll ./lime-arm.ndll
+      - name: Compile (${{ inputs.archName }})
+        run: haxelib run lime build ${{ inputs.buildArgs }}
 
-      - name: Compile (x86_64)
-        run: |
-          haxelib run lime build mac -final -64  -D HXCPP_M64 
-          mv ./export/release/macos/bin/LunarEngine.app/Contents/MacOS/LunarEngine ./pslice-x86
-          mv ./export/release/macos/bin/LunarEngine.app/Contents/MacOS/lime.ndll ./lime-x86.ndll
-      - name: Reflux because yes
-        run: |
-          lipo -create -output ./export/release/macos/bin/LunarEngine.app/Contents/MacOS/LunarEngine ./pslice-x86 ./pslice-arm
-          lipo -create -output ./export/release/macos/bin/LunarEngine.app/Contents/MacOS/lime.ndll ./lime-x86.ndll ./lime-arm.ndll
-          
       - name: Upload Artifact
         uses: actions/upload-artifact@main
         with:
           name: ${{ inputs.artifactName }}
           path: ${{ inputs.artifactPath }}
-          if-no-files-found: error      
+          if-no-files-found: error
+
       - name: Clearing already existing cache
         uses: actions/github-script@v6
         with:
@@ -102,6 +95,7 @@ jobs:
                 console.log("Cache cleared.")
               }
             }
+
       - name: Uploading new cache
         uses: actions/cache@v3
         with:
