@@ -25,6 +25,7 @@ class DialogueEditorState extends MusicBeatState implements PsychUIEventHandler.
 	var unsavedProgress:Bool = false;
 
 	override function create() {
+		FlxG.sound.playMusic(Paths.music('editors/dialogue'));
 		persistentUpdate = persistentDraw = true;
 		FlxG.camera.bgColor = FlxColor.fromHSL(0, 0, 0.5);
 

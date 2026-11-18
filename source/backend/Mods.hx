@@ -36,6 +36,7 @@ class Mods
 		'fonts',
 		'luaScript',
 		'haxeScript',
+		'languages',
 		'achievements'
 	];
 

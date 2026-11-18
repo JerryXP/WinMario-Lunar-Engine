@@ -1,0 +1,116 @@
+{
+	"camera_boyfriend": [
+		70,
+		80
+	],
+	"preload": {
+		"images/chartEditor/lilStage": 3
+	},
+	"_editorMeta": {
+		"boyfriend": "lilBF-erect",
+		"dad": "lilGuy-erect",
+		"gf": "gf"
+	},
+	"boyfriend": [
+		116,
+		108
+	],
+	"stageUI": "",
+	"girlfriend": [
+		400,
+		130
+	],
+	"objects": [
+		{
+			"x": -508,
+			"y": -219,
+			"scale": [
+				1,
+				1
+			],
+			"image": "chartEditor/song/bg",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "bg",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"x": -390,
+			"y": -139,
+			"scale": [
+				0.7,
+				0.7
+			],
+			"image": "optionsSide",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "bg2",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 0.1,
+			"type": "sprite"
+		},
+		{
+			"x": 0,
+			"y": 1,
+			"scale": [
+				1,
+				1
+			],
+			"image": "chartEditor/song/stageE",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "lilGround",
+			"antialiasing": false,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"type": "gf"
+		},
+		{
+			"type": "dad"
+		},
+		{
+			"type": "boyfriend"
+		}
+	],
+	"camera_girlfriend": [
+		130,
+		145
+	],
+	"defaultZoom": 1.85,
+	"opponent": [
+		60,
+		103
+	],
+	"directory": "",
+	"camera_speed": 10,
+	"hide_girlfriend": true,
+	"camera_opponent": [
+		-110,
+		85
+	]
+}

@@ -1,0 +1,31 @@
+{
+	"storyName": "LE SSERAFIM (anti-copyright)",
+	"difficulties": "Easy, Normal, Hard",
+	"hideFreeplay": false,
+	"weekBackground": "collab1",
+	"weekBefore": "",
+	"freeplayColor": [
+		255,
+		234,
+		154
+	],
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"spaghetti",
+		"bf_spag",
+		"gf_spag"
+	],
+	"songs": [
+		[
+			"Spaghetti (D-Sides) (Mario Cover)",
+			"sserafim-kazuha",
+			[
+				255,
+				234,
+				154
+			]
+		]
+	],
+	"weekName": "Collab1"
+}

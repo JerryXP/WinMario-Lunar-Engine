@@ -1,0 +1,154 @@
+Arabic
+
+fonts/Neon Rave Italic.ttf: "shared/languages/fonts/arabic_font.ttf"
+fonts/score.ttf: "shared/languages/fonts/arabic_font.ttf"
+fonts/bot.ttf: "shared/languages/fonts/arabic_font.ttf"
+fonts/week.ttf: "shared/languages/fonts/arabic_font.ttf"
+fonts/track.ttf: "shared/languages/fonts/arabic_font.ttf"
+fonts/vcr.ttf: "shared/languages/fonts/arabic_font.ttf"
+fonts/pixel-latin.ttf: "shared/languages/fonts/arabic_font.ttf"
+fonts/cool.ttf: "shared/languages/fonts/arabic_font.ttf"
+
+// Gameplay
+score_text_psych: "النتيجة: {1} | الأخطاء: {2} | التقييم: {3}"
+score_text_psych_instakill: "النتيجة: {1} | التقييم: {2}"
+bot_mode: "بوتبلاي"
+
+rating_you_suck: "أنت تمتص!"
+rating_shit: "القرف"
+rating_bad: "سيء"
+rating_bruh: "يا رجل"
+rating_meh: "مه"
+rating_nice: "لطيف - جيد"
+rating_good: "جيد"
+rating_great: "عظيم"
+rating_sick: "مريض!"
+rating_perfect: "ممتاز!!"
+
+// Dialogues
+dialogue_skip: "اضغط على زر الرجوع للتخطي"
+
+// Pause Menu
+practice_mode: "وضع الممارسة"
+charting_mode: "وضع الرسم البياني"
+blueballed: "الوفيات: {1}"
+
+// Story Mode
+week_score: "النتيجة: {1}"
+
+storyname_tutorial: "وقت التدريس"
+storyname_week1: "بابا عزيز"
+storyname_week2: "شهر مخيف"
+storyname_week3: "بيكو"
+storyname_week4: "يجب على الأم أن تقتل"
+storyname_week5: "الثلج الأحمر"
+storyname_week6: "محاكاة الكراهية مع ماولينغ"
+storyname_week7: "تانكمان بمشاركة جوني يوتا"
+storyname_weekend1: "الديون المستحقة"
+
+// Freeplay
+personal_best: "أفضل رقم شخصي: {1} ({2}%)"
+freeplay_tip: "اضغط على مفتاح المسافة للاستماع إلى المقطع الصوتي / اضغط على مفتاح التحكم لفتح قائمة التعديلات / اضغط على مفتاح إعادة الضبط لمسح النتيجة."
+
+musicplayer_playing: "المسار: {1}"
+musicplayer_paused: "المسار: {1} (متوقف مؤقتًا)"
+musicplayer_tip: "اضغط على مفتاح المسافة للإيقاف المؤقت / اضغط على مفتاح الهروب للخروج / اضغط على مفتاح R لإعادة تشغيل المقطع"
+
+// Mods Menu
+no_mods_installed: "لا توجد تعديلات مثبتة\nاضغط على زر الرجوع للخروج أو لإضافة تعديل"
+no_mods_found: "لم يتم العثور على أي تعديلات."
+mod_restart: "* سيؤدي تحريك أو تبديل التعديل إلى إعادة تشغيل اللعبة."
+
+// Achievements
+achievement_friday_night_play: "ليلة جمعة غريبة"
+description_friday_night_play: "العب ليلة الجمعة."
+achievement_week1_nomiss: "هي تناديني أبي أيضاً"
+description_week1_nomiss: "أكمل الأسبوع الأول على مستوى الصعوبة "صعب" دون أن تفوتك أي نوتة موسيقية."
+achievement_week2_nomiss: "لا مزيد من الخدع"
+description_week2_nomiss: "أكمل الأسبوع الثاني على مستوى الصعوبة "صعب" دون أن تفوتك أي نوتة موسيقية."
+achievement_week3_nomiss: "تم تحييد الهدف"
+description_week3_nomiss: "أكمل الأسبوع الثالث على مستوى الصعوبة "صعب" دون أن تفوتك أي نوتة موسيقية."
+achievement_week4_nomiss: "سيدة القاتل"
+description_week4_nomiss: "أكمل الأسبوع الرابع على مستوى الصعوبة "صعب" دون أن تفوتك أي نوتة موسيقية."
+achievement_week5_nomiss: "عيد الميلاد بلا عيب"
+description_week5_nomiss: "أكمل الأسبوع الخامس على مستوى الصعوبة "صعب" دون أن تفوتك أي نوتة موسيقية."
+achievement_week6_nomiss: "أعلى الدرجات!!"
+description_week6_nomiss: "أكمل الأسبوع السادس على مستوى الصعوبة "صعب" دون أن تفوتك أي نوتة موسيقية."
+achievement_week7_nomiss: "ابن ..."
+description_week7_nomiss: "أكمل الأسبوع السابع على مستوى الصعوبة "صعب" دون أن تفوتك أي نوتة موسيقية."
+achievement_weekend1_nomiss: "لا ضغائن"
+description_weekend1_nomiss: "أكمل عطلة نهاية الأسبوع الأولى على مستوى الصعوبة "صعب" دون أن تفوتك أي نوتة موسيقية."
+achievement_ur_bad: "نتيجة كارثية!"
+description_ur_bad: "أكمل أغنية بدقة تقل عن 20%."
+achievement_ur_good: "الكمال"
+description_ur_good: "أكمل أغنية بدقة 100%."
+achievement_roadkill_enthusiast: "مُحبّ الحيوانات النافقة على الطرق"
+description_roadkill_enthusiast: "شاهد الأتباع يموتون 50 مرة."
+achievement_oversinging: "هل تبالغ في الغناء كثيراً؟"
+description_oversinging: "غنِّ لمدة 10 ثوانٍ أو أكثر."
+achievement_hype: "مفرط النشاط"
+description_hype: "أكمل أغنية دون أن تتوقف عن الحركة."
+achievement_two_keys: "نحن الاثنان فقط"
+description_two_keys: "أكمل أغنية بالضغط على مفتاحين فقط."
+achievement_toastie: "جهاز كمبيوتر محمصة"
+description_toastie: "أنت تلعب على جهاز كمبيوتر بطيء، أليس كذلك؟"
+achievement_debugger: "وضع التصحيح"
+description_debugger: "أكمل أغنية "Test" من خلال محرر المخططات."
+
+// Note Colors Menu
+note_colors_tip: "اضغط على زر إعادة الضبط لإعادة ضبط الجهاز المحدد."
+note_colors_hold_tip: "اضغط باستمرار على {1} ثم اضغط على زر إعادة الضبط لإعادة ضبط النوتة المحددة بالكامل."
+note_colors_lb: "زر الكتف الأيسر"
+
+// Adjust Delay and Combo Menu
+delay_current_offset: "الإزاحة: {1} مللي ثانية";
+combo_rating_offset: "تعويض التقييم:"
+combo_numbers_offset: "إزاحة الأرقام:"
+combo_offset: "إزاحة التحرير والسرد";
+note_delay: "ملاحظة تأخير";
+switch_on_accept: "(اضغط على موافق للتبديل)"
+switch_on_start: "(اضغط على زر البدء للتبديل)"
+
+// Graphics Settings
+description_low_quality: "في حال تم تحديده، فإنه يعطل بعض عناصر الخلفية، ويقلل أوقات التحميل، ويحسن الأداء."
+description_anti_aliasing: "في حال عدم تحديد هذا الخيار، يتم تعطيل خاصية منع التعرجات، مما يحسن الأداء ولكنه يجعل الرسومات أقل وضوحًا."
+description_shaders: "إذا لم يتم تحديده، فإنه يعطل التظليل.\nيتم استخدام التظليل للمؤثرات الخاصة وهو يستهلك موارد المعالج بشكل كبير."
+description_gpu_caching: "في حال تفعيل هذا الخيار، فإنه يسمح لوحدة معالجة الرسومات بتخزين الصور مؤقتًا، مما يقلل من استخدام ذاكرة الوصول العشوائي.\nلا تقم بتفعيل هذا الخيار إذا كانت لديك بطاقة رسومات ضعيفة."
+description_framerate: "يُعرف أيضًا باسم "معدل الإطارات"، هل يجب عليّ حقًا شرح هذا؟"
+
+// Visuals Settings
+description_note_skins: "اختر غلاف النوتة المفضل لديك."
+description_note_splashes: "اختر نوتتك الموسيقية المفضلة."
+description_note_splash_opacity: "اضبط مدى شفافية بقع النوتات الموسيقية."
+description_hide_hud: "في حال تم تحديد هذا الخيار، سيتم إخفاء معظم عناصر واجهة المستخدم."
+description_time_bar: "ماذا يجب أن يُظهر شريط الوقت؟"
+description_flashing_lights: "قم بإلغاء تحديد هذا الخيار إذا كنت حساسًا للأضواء الوامضة!"
+description_camera_zooms: "إذا لم يتم تحديد هذا الخيار، فلن تقوم الكاميرا بالتقريب على الإيقاعات."
+description_score_text_grow_on_hit: "في حال عدم تحديد هذا الخيار، يتم تعطيل ارتداد نص النتيجة عند الضغط على نوتة موسيقية."
+description_health_bar_opacity: "اضبط مدى شفافية شريط الصحة والأيقونات."
+description_fps_counter: "إذا لم يتم تحديده، فإنه يخفي عداد الإطارات في الثانية في الزاوية العلوية اليسرى من الشاشة."
+description_pause_music: "ما هي الأغنية التي تفضلها لشاشة الإيقاف المؤقت؟"
+description_check_for_updates: "في الإصدارات الرسمية من محرك Lunar Engine، حدد هذا المربع لتلقي إشعارات بالتحديثات عند بدء تشغيل اللعبة."
+description_discord_rich_presence: "قم بإلغاء تحديد هذا المربع لمنع التسريبات العرضية لتعديلك، سيؤدي هذا إلى إخفاء ما تلعبه عن الآخرين."
+description_combo_stacking: "إذا لم يتم تحديد هذا الخيار، فلن تتراكم أرقام المجموعات عند الضغط على نغمة، مما يجعل اللعبة أسهل في القراءة."
+
+// Gameplay Settings
+description_downscroll: "في حال تم تحديد هذا الخيار، سيتم تمرير الملاحظات من أعلى إلى أسفل، بدلاً من الوضع الافتراضي."
+description_middlescroll: "في حال تم تحديد هذا الخيار، سيتم توسيط ملاحظاتك وملاحظات الخصم."
+description_opponent_notes: "إذا لم يتم التحقق من ذلك، فسيتم إخفاء ملاحظات الخصم."
+description_ghost_tapping: "إذا تم تحديد هذا الخيار، فلن يتم معاقبتك على الضغط على المفاتيح عندما لا توجد نوتات موسيقية."
+description_auto_pause: "في حال تم تحديد هذا الخيار، تتوقف اللعبة تلقائيًا عندما تكون النافذة خارج نطاق التركيز."
+description_disable_reset_button: "إذا تم تحديد هذا الخيار، فإن الضغط على زر إعادة الضبط لن يؤدي إلى موت اللاعب."
+description_hitsound_volume: "تصدر النوتات الموسيقية صوت "تيك!" عند الضغط عليها."
+description_rating_offset: "اضبط توقيت الضغط على النوتات مبكراً أو متأخراً. القيم الأعلى ستجعلك تضغط مبكراً/متأخراً."
+description_good_hit_window: "اضبط الحد الأقصى للوقت المسموح به للوصول إلى تقييم "جيد" بالمللي ثانية."
+description_safe_frames: "اضبط مقدار الوقت الإضافي المتاح لك لعزف النوتة مبكراً أو متأخراً."
+description_sustains_as_one_note: "في حال تم تحديد هذا الخيار، فإن فقدان النوتة الرئيسية سيؤدي إلى فقدان نوتة التثبيت أيضًا، ويتم احتسابها كفقدان واحد."
+
+// Loading Screen
+now_loading: "جارٍ التحميل {1}"
+
+// Difficulties
+difficulty_easy: "سهل"
+difficulty_normal: "عادي"
+difficulty_hard: "قاس"

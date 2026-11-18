@@ -1,0 +1,49 @@
+{
+	"style": "decay",
+	"dialogue": [
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "dead",
+			"text": "정말 오랜 세월동안 여기에 갇혀 지내다가 마침내 진짜 인간들과 직접 만나게 되었군..."
+		},	{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "dead",
+			"text": "그리고 그게 하필이면 그 여자라니."
+		},	{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "dead",
+			"text": "그녀의 애비에게 나와 다른 사람들에게 한 짓을 되갚아 주겠어...."
+		},	{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "dead",
+			"text": "널 쓰러뜨리고 네가 내 자리를 대신하게 해주지."
+		},	{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "dead",
+			"text": "너희 몸을 빌려도 상관없겠지? 이건 공평할 뿐이라고..."
+		},
+		{
+			"sound": "pixelText",
+			"speed": 0.045,
+			"portrait": "bf-pixel",
+			"boxState": "normal",
+			"expression": "shaking",
+			"text": "..."
+		}
+	]
+}

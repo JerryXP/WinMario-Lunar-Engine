@@ -1,0 +1,29 @@
+{
+	"style": "pixel",
+	"dialogue": [
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "angry",
+			"text": "흉측한 벌레 새끼 치곤 제법이군."
+		},				
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "angry",
+			"text": "하지만 이번에는 네 여자친구가 내 걸 빨게 한 다음 바로 네 불알들을 뜯어버리겠어."
+		},
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "bf-pixel",
+			"boxState": "normal",
+			"expression": "idle",
+			"text": "빱 삡 삐 삐 스크두 삡"
+		}
+	]
+}

@@ -6,6 +6,32 @@ package backend;
 #end
 class CoolUtil
 {
+public static function checkForUpdates(url:String = null):String {
+		if (url == null || url.length == 0)
+			url = "https://raw.githubusercontent.com/JerryXP/WinMario-Lunar-Engine/main/gitVersion.txt";
+		var version:String = mikolka.vslice.ui.MainMenuState.lunarVersion.trim();
+		if(ClientPrefs.data.checkForUpdates) {
+			trace('checking for updates...');
+			var http = new haxe.Http(url);
+			http.onData = function (data:String)
+			{
+				var newVersion:String = data.split('\n')[0].trim();
+				trace('version online: $newVersion, your version: $version');
+				if(newVersion != version) {
+					trace('versions arent matching! please update');
+					version = newVersion;
+					http.onData = null;
+					http.onError = null;
+					http = null;
+				}
+			}
+			http.onError = function (error) {
+				trace('error: $error');
+			}
+			http.request();
+		}
+		return version;
+	}
 
 	/**
 	 * Cover-fits a full-screen background sprite: uniformly scales it so it always fills the whole

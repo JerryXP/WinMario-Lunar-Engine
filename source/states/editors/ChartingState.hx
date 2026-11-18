@@ -780,7 +780,7 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 				var dataToSave:String = haxe.Json.stringify(songCopy);
 				//trace(chartName, dataToSave);
 				#if sys
-				if(!FileSystem.isDirectory('backups')) NativeFileSystem.createDirectory('backups');
+				if(!FileSystem.isDirectory('backups')) FileSystem.createDirectory('backups');
 				try{
 
 					File.saveContent('backups/$chartName.$BACKUP_EXT', dataToSave);
@@ -792,7 +792,7 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 
 				if(backupLimit > 0)
 				{
-					var files:Array<String> = NativeFileSystem.readDirectory('backups/').filter((file:String) -> file.endsWith('.$BACKUP_EXT'));
+					var files:Array<String> = FileSystem.readDirectory('backups/').filter((file:String) -> file.endsWith('.$BACKUP_EXT'));
 					if(files.length > backupLimit)
 					{
 						var incorrect:Array<String> = [];
@@ -829,7 +829,7 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 							//trace('removed $file');
 							try
 							{
-								NativeFileSystem.deleteFile('backups/$file');
+								FileSystem.deleteFile('backups/$file');
 							}
 							catch(e:Exception) {}
 						}
@@ -3891,13 +3891,13 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 			upperBox.isMinimized = true;
 			upperBox.bg.visible = false;
 
-			if(!NativeFileSystem.exists('backups/'))
+			if(!FileSystem.exists('backups/'))
 			{
 				showOutput('The "backups" folder does not exist.', true);
 				return;
 			}
 			
-			var fileList:Array<String> = NativeFileSystem.readDirectory('backups/').filter((file:String) -> file.endsWith('.$BACKUP_EXT'));
+			var fileList:Array<String> = FileSystem.readDirectory('backups/').filter((file:String) -> file.endsWith('.$BACKUP_EXT'));
 			if(fileList.length < 1)
 			{
 				showOutput('No autosave files found.', true);

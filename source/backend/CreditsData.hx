@@ -123,7 +123,7 @@ class CreditsData {
 						label: 'Blue Sky', 
 						url: 'https://bsky.app/profile/winmario.bsky.social'
 					}
-				],	'934bb3'),
+				],	'934bb3')
 			]),
 			
 			section('Special Thanks', [
@@ -137,7 +137,7 @@ class CreditsData {
 				person("Rodney~ An Imaginative Furball",		    "rodner",		  "Stage Changer",	"https://gamebanana.com/members/1729833",				"b778ff"),
 				person("vCherry.kAI.16",		 "",	   "Combo break = gf cry",	 "https://gamebanana.com/members/1921624",							"ab2e51"),
 				person("SadSami",		 "",	   "Break Time/Note Timer Script",	 			"https://gamebanana.com/members/3418239",				"808080"),
-				person("MCO7",		 "mco7",	   "Psych Engine 1.0 Skin Selector\n, Beta BF Winning Icon",	 		"https://www.youtube.com/@MC0777",		"FF0000"),
+				person("MCO7",		 "mco7",	   "Beta BF Winning Icon",	 		"https://www.youtube.com/@MC0777",		"FF0000"),
 				person("Super_Hugo",	 "",		 "Blammed Lights & Philly Glow Recreation",		"https://gamebanana.com/members/2151945",			"8080FF"),
 				person("BlixerTheGamebananer",	"",	 "Combo Break Sound Script",			"https://gamebanana.com/members/2179280",			"FF0020"),
 				person("RamenDominoes",		        "ramen",		        "Cinematics",					  "https://gamebanana.com/members/2135195",		"CE9600"),
@@ -178,7 +178,7 @@ class CreditsData {
 				person("Hope Engine",		"",			"Note Splashes (hope engine ver)\nThere is a Download link but the mod is private :(",		"",	"808080"),
 				person("Leather Engine",		"LeatherEngine",			"Note Splashes (leather engine ver)",		"https://gamebanana.com/mods/334945",	"0000FF"),
 				person("Super Funkin' Galaxy",		"SuperFunkinGalaxy",			"Use their Soundbox Sounds & Assets",		"https://gamebanana.com/mods/444759",	"000080"),
-				person("Rozebud",		"rozebud",			"FPS+ Winning Icons\nFPS+ Title Screen Reference",		"https://gamebanana.com/members/1767623",	"6000FF"),
+				person("Rozebud",		"rozebud",			"FPS+ Winning Icons\nFPS+ Title Screen Reference\nLil Buddies Song and Chart Editor",		"https://gamebanana.com/members/1767623",	"6000FF"),
 				person("canUbeU",		"canUbeU",			"Pixel Pico, Senpai, & Spirit Winning Icons",		"https://gamebanana.com/members/4540535",	"808080"),
 				person("B-Sides",		"bsides",			"Character Select (game over), Crazy & Cool Pixel Sprite (edit by me)",		"https://gamebanana.com/mods/42724",	"FF00FF"),
 				person("YinaNoka",		"",			"Ok Pixel Sprite (edit by me)",		"https://gamebanana.com/members/1942955",	"79d6e0"),
@@ -203,11 +203,19 @@ class CreditsData {
 			section('Code', [
 				person("MrpoloOfficial",		        "polo",		        "Intro & Outro Video States (edit by me)",			"https://gamebanana.com/members/2307558",	"663333"),
 				person("Lenin Anonimo",		        "len",		        "For Using Several of their Code",			"https://gamebanana.com/members/3509758",	"03FC88"),
+				person("Timeless",		  "timeless",		      "Use the Code for Note Events (in title state) & Custom Crash Handler.\nFixed Russian Translation",			"https://discord.com/users/1347569284947382272",	"200040"),
 				person("Lucas-Sanches",		        "lucas",		        "For using the code for Converters State\n(& Legacy Converters State)",			"https://gamebanana.com/members/2088040",	"FF8000"),
-				person("Timeless",		  "timeless",		      "The Note Event Animation in Title State when you enter the game.",			"https://discord.com/users/1347569284947382272",	"200040"),
 				person("TBar09",		  "tbar",		      "For hxWindowColorMode Libary",			"https://github.com/TBar09",	"0077CC"),
 				person('MeguminBOT', 'lulu', 'made the Custom Credits State', 'https://github.com/MeguminBOT', '8A6FB0'),
-				person("SquidBowl",		    "tinkatonk",		"GalleryState (edit by me)",			"https://gamebanana.com/members/2041479",	"804000"),
+			]),
+
+			section('Fake Out Spaghetti', [
+				person("Xyy",		        "",		        "Made D-Sides Remix of Spaghetti",					  "https://x.com/dasxyyy",		"808080"),
+				person("Wrathstetic",		        "",		        "Possibly help Xyy with the Remix",					  "https://x.com/wrathstetic",		"808080"),
+				person("Byt",		        "",		        "Made a FLP Recreation for it",					  "https://www.youtube.com/@Byt37",		"808080"),
+				person("Ghost1773951",		        "",		        "Made Mario Assets",					  "https://gamebanana.com/members/1773951",		"808080"),
+				person("LuanPG21092011",		        "",		        "Particully use Spaghetti Port",					  "https://gamebanana.com/members/3930714",		"808080"),
+				person("0s_scar96",		        "",		        "BF 2024 Remaster skin",					  "https://gamebanana.com/members/4090257",		"808080"),
 			]),
 
 			section('P-Slice Engine Team', [

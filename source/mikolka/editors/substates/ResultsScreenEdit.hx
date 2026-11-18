@@ -40,6 +40,7 @@ class ResultsScreenEdit extends VsliceSubState
 	override function create()
 	{
 		// Reset the camera zoom on the results screen.
+		FlxG.sound.music.pause(); // THIS IS UNUSED. I can't find the button to remove it.
 		FlxG.camera.zoom = 1.0;
 
 		var bg:FlxSprite = FlxGradient.createGradientFlxSprite(FlxG.width, FlxG.height, [0xFFFECC5C, 0xFFFDC05C], 90);

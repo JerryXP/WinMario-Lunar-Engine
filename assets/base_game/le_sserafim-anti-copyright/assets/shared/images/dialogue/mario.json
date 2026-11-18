@@ -1,0 +1,63 @@
+{
+	"dialogue_pos": "left",
+	"position": [
+		-110,
+		50
+	],
+	"scale": 1.15,
+	"animations": [
+		{
+			"anim": "talk",
+			"loop_offsets": [
+				-212,
+				25
+			],
+			"idle_offsets": [
+				-212,
+				18
+			],
+			"loop_name": "mariotalkloop",
+			"idle_name": "mariotalkidle"
+		},
+		{
+			"loop_offsets": [
+				-204,
+				20
+			],
+			"anim": "shocked",
+			"idle_offsets": [
+				-206,
+				19
+			],
+			"loop_name": "marioshocked",
+			"idle_name": "marioshocked0"
+		},
+		{
+			"idle_offsets": [
+				-220,
+				20
+			],
+			"anim": "sad",
+			"loop_offsets": [
+				-221,
+				22
+			],
+			"idle_name": "mariosadidle",
+			"loop_name": "mariosad"
+		},
+		{
+			"loop_offsets": [
+				-221,
+				20
+			],
+			"anim": "confused",
+			"idle_offsets": [
+				-220,
+				20
+			],
+			"loop_name": "marioconfused",
+			"idle_name": "marioconfusedidle"
+		}
+	],
+	"image": "Mario_Dialogue"
+}

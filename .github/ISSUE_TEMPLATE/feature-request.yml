@@ -1,9 +1,9 @@
 name: Feature Request
-description: Request something to be added to Vs. WinMario
+description: Request something to be added to Lunar Engine
 labels: ["Type: request","Awaits labeling"]
 body:
   - type: textarea
     attributes:
-      label: What feature do you want to get added on the **Vs. WinMario** engine?
+      label: What feature do you want to get added on the **Lunar Engine** engine?
     validations:
       required: true

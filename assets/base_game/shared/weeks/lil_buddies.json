@@ -1,0 +1,27 @@
+{
+	"songs": [
+		[
+			"Lil' Buddies",
+			"bf",
+			[
+				128,
+				128,
+				128
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "",
+	"difficulties": "Hard, Erect",
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"storyName": "",
+	"weekName": "Little Buddies :D",
+	"hideStoryMode": true,
+	"weekBefore": "",
+	"startUnlocked": true
+}

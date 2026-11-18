@@ -1,0 +1,1 @@
+setPropertyFromClass("mikolka.vslice.StickerSubState", "STICKER_SET", "stickers-set-2")

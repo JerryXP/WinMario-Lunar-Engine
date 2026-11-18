@@ -1,4 +1,0 @@
-Instructions
-=====
-To add your custom character, Just edit both Lua script & another one in data folder & luaScript folder
-"the lua script in "skins.lua"

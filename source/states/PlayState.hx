@@ -57,7 +57,7 @@ import openfl.geom.Rectangle;
  *
  * here's some useful tips if you are making a mod in source:
  *
- * If you want to add your stage to the game, copy states/stages/Template.hx,
+ * If you want to add your stage to the game, copy mikolka/stages/standard/Template.hx,
  * and put your stage code there, then, on PlayState, search for
  * "switch (curStage)", and add your stage to that list.
  *
@@ -723,7 +723,10 @@ class PlayState extends MusicBeatState
        
         {
             #if HSCRIPT_ALLOWED
-            if (file.toLowerCase().endsWith('.hx'))
+            if (file.toLowerCase().endsWith('.hx')
+				|| file.toLowerCase().endsWith('.hxc')
+				|| file.toLowerCase().endsWith('.hscript')
+				|| file.toLowerCase().endsWith('.hxs'))
                 initHScript(folder + file);
             #end
         }
@@ -1105,7 +1108,7 @@ class PlayState extends MusicBeatState
 		if (ClientPrefs.data.vsliceLegacyBar2 == 'Vanilla')
 			healthBar.setColors(FlxColor.RED, FlxColor.LIME);
 		else if (ClientPrefs.data.vsliceLegacyBar2 == 'RvB')
-			healthBar.setColors(FlxColor.RED, 0xFF000080);
+			healthBar.setColors(0xFF800000, 0xFF000080);
 		else
 			healthBar.setColors(FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]),
 				FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));

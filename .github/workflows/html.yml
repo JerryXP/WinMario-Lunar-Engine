@@ -3,8 +3,8 @@ on:
 
 env:
   HAXE_VERSION: 4.3.6
-  PROJECT_NAME: Lunar Engine
-  cacheLibrariesPath: Winmario.Lunar.desktop-cache
+  PROJECT_NAME: LunarEngine
+  cacheLibrariesPath: LunarEngine.desktop-cache
 
 jobs:
   build:

@@ -53,6 +53,7 @@ class FreeplayEditSubstate extends MusicBeatSubstate
 
 	override function create()
 	{
+		FlxG.sound.playMusic(Paths.music('editors/player-freeplay_dj'));
 		final CUTOUT_WIDTH:Float = MobileScaleMode.gameCutoutSize.x / 1.5;
 		FreeplayState.CUTOUT_WIDTH = CUTOUT_WIDTH;
 		backingCard = new BoyfriendCard(data);
@@ -204,6 +205,7 @@ class FreeplayEditSubstate extends MusicBeatSubstate
 			{
 				dj_anim.saveAnimations();
 				FlxG.sound.play(Paths.sound('cancelMenu'));
+				FlxG.sound.playMusic(Paths.music('editors/player-char_select'));
 				close();
 				controls.isInSubstate = false;
 			}

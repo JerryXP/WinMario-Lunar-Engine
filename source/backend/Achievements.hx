@@ -32,7 +32,7 @@ enum abstract AchievementOp(String)
 class Achievements {
 	public static function init()
 	{
-		createAchievement('birthday',					{name: "Happy Birthday, WM/LXP!", description: "Play this Mod on August 28", hidden: true});
+		createAchievement('birthday',				{name: "Happy Birthday, WM/LXP!", description: "Play this Mod on August 28", hidden: true});
 		createAchievement('friday_night_play',		{name: "Just like the game!", description: "Play on a Friday... Night.", hidden: true});
 		#if BASE_GAME_FILES
 		createAchievement('week1_nomiss',			{name: "More Like Daddy Queerest", description: "Beat Week 1 on Hard with no Misses."});
@@ -43,6 +43,7 @@ class Achievements {
 		createAchievement('week6_nomiss',			{name: "A Visual Novelty", description: "Beat Week 6 on Hard with no Misses."});
 		createAchievement('week7_nomiss',			{name: "I <3 JohnnyUtah", description: "Beat Week 7 on Hard with no Misses."});
 		createAchievement('weekend1_nomiss',		{name: "Yo, Really Think So?", description: "Beat Weekend 1 on Hard with no Misses."});
+		createAchievement('collab1_nomiss',			{name: "Eat It Up! (kind of?)", description: "Beat Collab 1 on Hard with no Misses."});
 		createAchievement('roadkill_enthusiast',	{name: "Roadkill Enthusiast", description: "Watch the Henchmen die 50 times.", maxScore: 50, maxDecimals: 0});
 		createAchievement('debugger',				{name: "Debugger", description: "Beat the \"Test\" Stage from the Chart Editor.", hidden: true});
 		#end

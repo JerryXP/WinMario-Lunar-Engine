@@ -13,7 +13,7 @@ on:
 # PE10-Desktop_Cache
 env:
   HAXE_VERSION: 4.3.6
-  PROJECT_NAME: PSliceEngine
+  PROJECT_NAME: LunarEngine
 
 jobs:
   build:
@@ -53,6 +53,10 @@ jobs:
       - name: Install hxvlc for windows
         run: haxelib install hxvlc 2.2.2 --quiet
         if: inputs.os == 'ubuntu-24.04' && steps.load-lib-cache.outputs.cache-hit != 'true'
+
+      - name: Install Windowed Color for windows
+        if: (inputs.os == 'windows-2022' || inputs.os == 'windows-2025' || inputs.os == 'windows-latest') && steps.load-lib-cache.outputs.cache-hit != 'true'
+        run: haxelib install hxWindowColorMode 0.2.1 --quiet
    
       - name: Uploading new cache
         if: steps.load-lib-cache.outputs.cache-hit != 'true'

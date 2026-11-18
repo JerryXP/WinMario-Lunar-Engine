@@ -1,0 +1,176 @@
+{
+	"events": [
+		[
+			16285.7142857143,
+			[
+				["Camera Set Target", "dad", ""]
+			]
+		],
+		[
+			30857.1428571429,
+			[
+				["CenterCameraEvent", "on", "600, 450"],
+				["sserafimShow", "dark", "-50"],
+				["Bopping HUD", "1", ""],
+				["sserafimShow", "light", "-25"]
+			]
+		],
+		[
+			44571.4285714286,
+			[
+				["Bopping HUD", "1", ""],
+				["sserafimShow", "light", "50"]
+			]
+		],
+		[
+			58285.7142857143,
+			[
+				["Bopping HUD", "", ""],
+				["CenterCameraEvent", "off", ""],
+				["sserafimShow", "dark", "-65"],
+				["sserafimShow", "light", "-15"]
+			]
+		],
+		[
+			65142.8571428572,
+			[
+				["Bopping HUD", "", ""],
+				["sserafimShow", "light", "-20"]
+			]
+		],
+		[
+			72000,
+			[
+				["Bopping HUD", "1", ""],
+				["sserafimShow", "light", "-35"]
+			]
+		],
+		[
+			76714.2857142858,
+			[
+				["Camera Set Target", "gf", ""]
+			]
+		],
+		[
+			84357.1428571429,
+			[
+				["Camera Set Target", "gf", ""]
+			]
+		],
+		[
+			85178.5714285714,
+			[
+				["Camera Set Target", "bf", ""]
+			]
+		],
+		[
+			85714.2857142857,
+			[
+				["Bopping HUD", "", ""],
+				["Cinematics (With HUD)", "0.2", "90"],
+				["sserafimShow", "light", "-10"],
+				["sserafimShow", "dark", "-50"]
+			]
+		],
+		[
+			87428.5714285714,
+			[
+				["Cinematics (With HUD)", "0.2", "60"]
+			]
+		],
+		[
+			89142.8571428571,
+			[
+				["Cinematics (With HUD)", "0.2", "90"]
+			]
+		],
+		[
+			90642.8571428571,
+			[
+				["Cinematics (With HUD)", "0.2", "60"]
+			]
+		],
+		[
+			92571.4285714286,
+			[
+				["Cinematics (With HUD)", "0.2", "0"]
+			]
+		],
+		[
+			99428.5714285714,
+			[
+				["sserafimShow", "dark", "-60"],
+				["Bopping HUD", "", ""],
+				["sserafimShow", "light", "-20"]
+			]
+		],
+		[
+			113142.857142857,
+			[
+				["sserafimShow", "light", "-25"],
+				["sserafimShow", "dark", "-75"],
+				["Bopping HUD", "", ""],
+				["Cinematics (With HUD)", "0.2", "90"]
+			]
+		],
+		[
+			125142.857142857,
+			[
+				["Cinematics (With HUD)", "0.2", "0"],
+				["Camera Set Target", "gf", ""]
+			]
+		],
+		[
+			126214.285714286,
+			[
+				["Camera Set Target", "bf", ""]
+			]
+		],
+		[
+			126857.142857143,
+			[
+				["Bopping HUD", "1", ""],
+				["CenterCameraEvent", "on", "650,450"],
+				["sserafimShow", "light", "-65"]
+			]
+		],
+		[
+			137142.857142857,
+			[
+				["Bopping HUD", "", ""]
+			]
+		],
+		[
+			138857.142857143,
+			[
+				["Cinematics (With HUD)", "0.2", "90"]
+			]
+		],
+		[
+			140142.857142857,
+			[
+				["Cinematics (With HUD)", "0.2", "0"]
+			]
+		],
+		[
+			140571.428571428,
+			[
+				["sserafimShow", "light", "-75"],
+				["Bopping HUD", "1", ""]
+			]
+		],
+		[
+			152571.428571428,
+			[
+				["Bopping HUD", "", ""]
+			]
+		],
+		[
+			154285.714285714,
+			[
+				["Bopping HUD", "", ""]
+			]
+		]
+	],
+	"format": "psych_v1"
+}

@@ -90,12 +90,21 @@ class StoryMenuState extends MusicBeatState
 		WeekData.reloadWeekFiles(true);
 
 		if(!VsliceOptions.LOW_QUALITY) {
-		var grid:FlxBackdrop = new FlxBackdrop(FlxGridOverlay.createGrid(80, 80, 160, 160, true, 0x33AA00FF, 0x0));
-		grid.velocity.set(40, 40);
-		grid.alpha = 0;
-		FlxTween.tween(grid, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
-		add(grid);
+			var grid:FlxBackdrop = new FlxBackdrop(FlxGridOverlay.createGrid(80, 80, 160, 160, true, 0x33AA00FF, 0x0));
+			grid.velocity.set(40, 40);
+			grid.alpha = 0;
+			FlxTween.tween(grid, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
+			add(grid);
 		}
+
+		var bgOverlay:FlxSprite = new FlxSprite(0).loadGraphic(Paths.image('Week_Bottom'));
+		bgOverlay.scrollFactor.x = 0;
+		bgOverlay.scrollFactor.y = 0;
+		bgOverlay.antialiasing = VsliceOptions.ANTIALIASING;
+		bgOverlay.screenCenter();
+		add(bgOverlay);
+		bgOverlay.y = FlxG.height + bgOverlay.height;
+		FlxTween.tween(bgOverlay, {y: FlxG.height - bgOverlay.height}, 0.8, {ease: FlxEase.quartInOut});
 
 		#if DISCORD_ALLOWED
 		// Updating Discord Rich Presence

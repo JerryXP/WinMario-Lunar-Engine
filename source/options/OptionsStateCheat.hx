@@ -9,8 +9,8 @@ class OptionsStateCheat extends MusicBeatState
 {
 	var options:Array<String> = [
 		"Master Editor",
-		"Mods",
-		"Help"
+		"Mods" //,
+		//"Help"
 	];
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private static var curSelected:Int = 0;
@@ -34,8 +34,8 @@ class OptionsStateCheat extends MusicBeatState
 				MusicBeatState.switchState(new states.editors.MasterEditorMenu());
 			case 'Mods':
 				MusicBeatState.switchState(new states.ModsMenuState());
-			case 'Help':
-				CoolUtil.browserLoad('https://docs.google.com/document/d/1pL5ClWa2OanUlSk256NWrxfG-wz3O_0eooyMPiBpjhg/edit?usp=sharing');
+			//case 'Help':
+				//CoolUtil.browserLoad('https://docs.google.com/document/d/1pL5ClWa2OanUlSk256NWrxfG-wz3O_0eooyMPiBpjhg/edit?usp=sharing');
 		}
 	}
 

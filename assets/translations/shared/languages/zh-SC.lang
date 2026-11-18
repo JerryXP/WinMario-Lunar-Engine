@@ -1,0 +1,161 @@
+Chinese (Simplified)
+
+fonts/Neon Rave Italic.ttf: "shared/languages/fonts/NotoSansSC-Medium.ttf"
+fonts/score.ttf: "shared/languages/fonts/NotoSansSC-Medium.ttf"
+fonts/bot.ttf: "shared/languages/fonts/NotoSansSC-Medium.ttf"
+fonts/week.ttf: "shared/languages/fonts/NotoSansSC-Medium.ttf"
+fonts/track.ttf: "shared/languages/fonts/NotoSansSC-Medium.ttf"
+fonts/vcr.ttf: "shared/languages/fonts/NotoSansSC-Medium.ttf"
+fonts/pixel-latin.ttf: "shared/languages/fonts/pixel-latin.ttf"
+fonts/cool.ttf: "shared/languages/fonts/NotoSansSC-Medium.ttf"
+
+// Gameplay
+score_text_psych: "得分: {1} | 失误: {2} | 评价: {3}"
+score_text_psych_instakill: "得分: {1} | 评价: {2}"
+bot_mode: "自动模式"
+
+rating_you_suck:"你太菜了！"
+rating_shit: "糟糕"
+rating_bad: "差"
+rating_bruh: "额"
+rating_meh: "一般"
+rating_nice: "不错"
+rating_good: "好"
+rating_great: "很棒"
+rating_sick: "超棒！"
+rating_perfect: "完美！！！"
+
+// Dialogues
+dialogue_skip: "按返回键跳过"
+
+// Pause Menu
+practice_mode: "练习模式"
+charting_mode: "谱面编辑模式"
+blueballed: "失败次数: {1}"
+
+// Story Mode
+images/Menu_Tracks: "images/zh-SC/Menu_Tracks"
+week_score: "得分: {1}"
+
+storyname_tutorial: "教程"
+storyname_week1: "亲爱的爸爸"
+storyname_week2: "恐怖月"
+storyname_week3: "皮科"
+storyname_week4: "妈妈必须杀戮"
+storyname_week5: "红雪"
+storyname_week6: "仇恨模拟器 ft. 喵灵"
+storyname_week7: "坦克手"
+storyname_weekend1: "到期债务"
+
+// Freeplay
+personal_best: "个人最佳记录: {1} ({2}%)"
+freeplay_tip: "按空格键试听曲目/按Ctrl打开修改菜单/按R清除分数"
+
+musicplayer_playing: "曲目: {1}"
+musicplayer_paused: "曲目: {1} (暂停)"
+musicplayer_tip: "按空格键暂停/按ESC退出/按R重新播放曲目"
+
+// Mods Menu
+no_mods_installed: "未安装模组\n按返回键退出或安装模组"
+no_mods_found: "未找到模组。"
+mod_restart: "* 移动或切换模组将会重启游戏。"
+
+// Achievements
+achievement_friday_night_play: "周五夜放克"
+description_friday_night_play: "在周五晚上进行游戏。"
+achievement_week1_nomiss: "她也叫我爸爸"
+description_week1_nomiss: "在困难难度下无失误完成第1周。"
+achievement_week2_nomiss: "不再恶作剧"
+description_week2_nomiss: "在困难难度下无失误完成第2周。"
+achievement_week3_nomiss: "叫我杀手"
+description_week3_nomiss: "在困难难度下无失误完成第3周。"
+achievement_week4_nomiss: "女性杀手"
+description_week4_nomiss: "在困难难度下无失误完成第4周。"
+achievement_week5_nomiss: "无失误圣诞节"
+description_week5_nomiss: "在困难难度下无失误完成第5周。"
+achievement_week6_nomiss: "高分！！"
+description_week6_nomiss: "在困难难度下无失误完成第6周。"
+achievement_week7_nomiss: "该死的"
+description_week7_nomiss: "在困难难度下无失误完成第7周。"
+description_weekend1_nomiss: "在困难难度下无失误完成周末1。"
+achievement_ur_bad: "真是个放克灾难！"
+description_ur_bad: "以低于20%的准确率完成一首歌。"
+achievement_ur_good: "完美主义者"
+description_ur_good: "以100%的准确率完成一首歌。"
+achievement_roadkill_enthusiast: "路杀爱好者"
+description_roadkill_enthusiast: "观看跟班死亡50次。"
+achievement_oversinging: "过度演唱...？"
+description_oversinging: "唱歌持续10秒或更长时间。"
+achievement_hype: "过度活跃"
+description_hype: "完成一首歌而不停下来。"
+achievement_two_keys: "只有我们两个"
+description_two_keys: "仅用两个按键完成一首歌。"
+achievement_toastie: "烤面包机玩家"
+description_toastie: "你的电脑运行速度很慢，对吧？"
+achievement_debugger: "调试者"
+description_debugger: "通过谱面编辑器完成歌曲'Test'。"
+
+// Note Colors Menu
+note_colors_tip: "按R重置选中的音符颜色。"
+note_colors_hold_tip: "按住 {1} 并按R完全重置选中的音符颜色。"
+note_colors_lb: "左肩按钮"
+
+// Adjust Delay and Combo Menu
+delay_beat_hit: "Beat!"
+delay_current_offset: "延迟: {1} ms";
+combo_rating_offset: "评价偏移:"
+combo_numbers_offset: "连击数字偏移:"
+combo_offset: "连击偏移";
+note_delay: "音符延迟";
+switch_on_accept: "(按确认键切换)"
+switch_on_start: "(按开始键切换)"
+
+// Graphics Settings
+description_low_quality: "若启用，将禁用部分背景，\n减少加载时间并提升性能。"
+description_anti-aliasing: "若禁用，将关闭抗锯齿，提高性能但会使图形更粗糙。"
+description_shaders: "若禁用，将关闭着色器。\n着色器用于特殊效果且占用CPU资源较多。"
+description_gpu_caching: "若启用，允许显卡缓存纹理，减少内存使用量。\n如果你的显卡较弱，请不要启用此选项。"
+description_framerate: "也就是'帧率'，需要我解释吗？"
+
+// Visuals Settings
+description_note_skins: "选择你喜欢的音符皮肤。"
+description_note_splashes: "选择你喜欢的命中特效。"
+description_note_splash_opacity: "调整音符命中特效的透明程度。"
+description_hide_hud: "若启用，大部分界面将被隐藏。"
+description_time_bar: "时间条应该显示什么？"
+description_flashing_lights: "如果你对闪烁灯光敏感，请禁用！"
+description_camera_zooms: "若禁用，镜头将不会在节拍上缩放。"
+description_score_text_grow_on_hit: "若禁用，命中音符时得分文字不会放大。"
+description_health_bar_opacity: "调整生命值和图标的透明度。"
+description_fps_counter: "若禁用，将隐藏屏幕左上角的帧率计数器。"
+description_pause_music: "你更喜欢在暂停界面播放哪首歌曲？"
+description_check_for_updates: "在官方Lunar Engine版本中，启用此项将在游戏启动时收到更新通知。"
+description_discord_rich_presence: "禁用此项可防止意外泄露你的模组信息，\n这将向他人隐藏你正在玩的内容。"
+description_combo_stacking: "若禁用，连击数字在击中音符时将不会堆叠，使游戏更易读。"
+
+// Gameplay Settings
+description_downscroll: "若启用，音符将从上向下滚动，而非默认设置。"
+description_middlescroll: "若启用，你的音符和对手的音符将居中显示。"
+description_opponent_notes: "若禁用，将隐藏对手的音符。"
+description_ghost_tapping: "若启用，按键时没有音符不会扣除生命值。"
+description_auto_pause: "若启用，窗口失去焦点时游戏将自动暂停"
+description_disable_reset_button: "若启用，按重置键不会导致玩家死亡。"
+description_hitsound_volume: "命中音符时会发出'Tick!'音效。"
+description_rating_offset: "调整击中音符的时机（早或晚）。数值越高，命中越早/越晚。"
+description_sick_hit_window: "调整获得'Sick!'评价的最大允许时间（毫秒）。"
+description_good_hit_window: "调整获得'Good'评价的最大允许时间（毫秒）。"
+description_bad_hit_window: "调整获得'Bad'评价的最大允许时间（毫秒）。"
+description_safe_frames: "调整你击中一个音符（过早或过晚）的额外时间容差。"
+description_sustains_as_one_note: "若启用，错过一个长按音符的主音符将会\n导致整个长按音符都判定为失误，只计为一次失误。"
+
+// Loading Screen
+now_loading: "加载中{1}"
+
+// Difficulties
+difficulty_easy: "简单"
+difficulty_normal: "普通"
+difficulty_hard: "困难"
+
+images/menudifficulties/easy: "images/zh-SC/menudifficulties/easy"
+images/menudifficulties/normal: "images/zh-SC/menudifficulties/normal"
+images/menudifficulties/hard: "images/zh-SC/menudifficulties/hard"

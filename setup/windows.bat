@@ -17,6 +17,7 @@ haxelib install flixel-ui 2.6.5  --quiet --skip-dependencies
 haxelib install flixel-addons 3.3.2 --quiet --skip-dependencies
 haxelib install flixel-tools 1.5.1 --quiet --skip-dependencies
 haxelib install hscript-iris 1.1.3 --quiet --skip-dependencies
+haxelib git hscript-improved https://github.com/CodenameCrew/hscript-improved.git --quiet --skip-dependencies
 haxelib install tjson 1.4.0 --quiet --skip-dependencies
 haxelib install hxWindowColorMode
 

@@ -1,0 +1,5 @@
+Value 1: "dark" or "light"
+Value 2: Brightness (must be negative or less than 0)
+
+IT ONLY WORKS ON LE SSERAFIM STAGE.
+ANYTHING ELSE MAY NOT WORK!

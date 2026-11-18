@@ -66,6 +66,7 @@ class StageEditorState extends MusicBeatState implements PsychUIEventHandler.Psy
 	{
 		CacheSystem.clearStoredMemory();
 		CacheSystem.clearUnusedMemory();
+		FlxG.sound.playMusic(Paths.music('editors/stage'));
 
 		camGame = initPsychCamera();
 		camHUD = new FlxCamera();

@@ -1,0 +1,29 @@
+{
+	"style": "pixel",
+	"dialogue": [
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "idle",
+			"text": "ああ、新たなうつくしいオトメがしんじつのあいを求めてやってきた！"
+		},				
+		{
+			"sound": "pixelText",
+			"speed": 0.05,
+			"portrait": "senpai-pixel",
+			"boxState": "normal",
+			"expression": "idle",
+			"text": "しんしたちのセレナーデが、Girlfriendのうつくしいハートのありかを決めるよ！"
+		},
+		{
+			"sound": "pixelText",
+			"speed": 0.045,
+			"portrait": "bf-pixel",
+			"boxState": "normal",
+			"expression": "idle",
+			"text": "Beep bo bop(なにいってん　ころすぞ)"
+		}
+	]
+}

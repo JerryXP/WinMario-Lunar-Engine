@@ -20,6 +20,8 @@ class MenuCharacterEditorState extends MusicBeatState implements PsychUIEventHan
 	var unsavedProgress:Bool = false;
 
 	override function create() {
+		FlxG.sound.playMusic(Paths.music('editors/story-n-ost'));
+
 		characterFile =
 		{
 			image: 'Menu_Dad',

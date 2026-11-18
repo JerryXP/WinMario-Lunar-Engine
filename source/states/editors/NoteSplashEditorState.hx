@@ -36,6 +36,7 @@ class NoteSplashEditorState extends MusicBeatState
             imageSkin =  NoteSplash.defaultNoteSplash + NoteSplash.getSplashSkinPostfix();
 
         FlxG.mouse.visible = true;
+        FlxG.sound.playMusic(Paths.music('editors/note_splash'));
 
         FlxG.sound.volumeUpKeys = [];
         FlxG.sound.volumeDownKeys = [];
@@ -590,10 +591,14 @@ class NoteSplashEditorState extends MusicBeatState
 
         if (!blockInput)
         {
-            if (controls.BACK)
+            if (controls.BACK) {
                 MusicBeatState.switchState(new MasterEditorMenu());
-            if (FlxG.keys.justPressed.F1)
+                FlxG.sound.playMusic(Paths.music('freakyMenu'));
+            }
+
+            if (FlxG.keys.justPressed.F1) {
                 openSubState(new NoteSplashEditorHelpSubState());
+            }
         }
 
         if (FlxG.mouse.overlaps(strums))
