@@ -5,6 +5,17 @@
 <h4 align="center">Made With</h4>
 <p align="center"> <img src="https://img.shields.io/badge/-HAXE-262626.svg?logo=haxe&style=for-the-badge"> <img src="https://img.shields.io/badge/-LUA-262626.svg?logo=lua&style=for-the-badge"> </p>
 
+<h4 align="center">Only available for</h4>
+
+<div align="center">
+    
+[![Windows](https://forthebadge.com/api/badges/generate?panels=2&primaryLabel=+&secondaryLabel=Windows&primaryBGColor=%23005fa8&primaryTextColor=%23FFFFFF&secondaryBGColor=%230078d4&secondaryTextColor=%23FFFFFF&primaryFontSize=12&primaryFontWeight=700&primaryLetterSpacing=2.5&primaryFontFamily=Arial&primaryTextTransform=none&secondaryFontSize=12&secondaryFontWeight=700&secondaryLetterSpacing=2&secondaryFontFamily=Arial&secondaryTextTransform=none&scale=0.7&borderRadius=10)](https://www.microsoft.com/windows)
+[![Mac](https://forthebadge.com/api/badges/generate?panels=2&primaryLabel=+&secondaryLabel=Mac&primaryBGColor=%231c1c1c&primaryTextColor=%23FFFFFF&secondaryBGColor=%23000000&secondaryTextColor=%23FFFFFF&primaryFontSize=12&primaryFontWeight=700&primaryLetterSpacing=2.5&primaryFontFamily=Arial&primaryTextTransform=none&secondaryFontSize=12&secondaryFontWeight=700&secondaryLetterSpacing=2&secondaryFontFamily=Arial&secondaryTextTransform=none&secondaryIcon=macos&secondaryIconColor=%23FFFFFF&secondaryIconSize=16&secondaryIconPosition=left&scale=0.7&borderRadius=10)](https://www.apple.com/macos/)
+[![Linux](https://forthebadge.com/api/badges/generate?panels=2&primaryLabel=+&secondaryLabel=Linux&primaryBGColor=%23dba80f&primaryTextColor=%23FFFFFF&secondaryBGColor=%23ffc107&secondaryTextColor=%23FFFFFF&primaryFontSize=12&primaryFontWeight=700&primaryLetterSpacing=2.5&primaryFontFamily=Arial&primaryTextTransform=none&secondaryFontSize=12&secondaryFontWeight=700&secondaryLetterSpacing=2&secondaryFontFamily=Arial&secondaryTextTransform=none&secondaryIcon=linux&secondaryIconColor=%23FFFFFF&secondaryIconSize=16&secondaryIconPosition=left&scale=0.7&borderRadius=10)](https://www.linux.org/)
+</div>
+
+
+
 ### -☆- What's that? -☆-
 Lunar Engine is a Forked Engine of [P-Slice](https://github.com/Psych-Slice/P-Slice), where it shows or uses the Elements, Stuff, and Utils of [Vs. WinMario](https://github.com/JerryXP/Vs-WinMario). (_not to get confused with [Kirby's Lunar Engine](https://github.com/KirbyKid256/LunarEngine-Archive)_) Yes. This is also known as "*WinEngine*" where it is a [Modified Psych Engine](https://github.com/ShadowMario/FNF-PsychEngine) before [P-Slice](https://github.com/Psych-Slice/P-Slice). It's also known as *WinMario Engine*. But, I decided to make it called **Lunar Engine** because i'd like it better. But still... yes it's [modified psych 1.0.4](https://github.com/ShadowMario/FNF-PsychEngine) because it's easier for me to use.
 <br>
