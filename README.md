@@ -102,8 +102,8 @@ Your Computer needs to be 64-Bit<br>
 1. Install [Haxe](https://haxe.org) 4.3.6 or 4.3.7<br>
 2. Install [HaxeFlixel](https://haxeflixel.com/documentation/install-haxeflixel/)<br>
 3. Install [Git](https://git-scm.com/install/)<br>
-4. Install all libaries through the setup folder by left clicking it. (if Mac or Linux, open Terminal and type "chmod +x unix.sh" (replace +x with 755 if you have issues) and type "./unix.sh" and it will install.)<br>
-5. Compiled the Game. (by opening terminal and type "lime (test/build) (os) ; for "build", it's where you just compiled the Game and that's it. for "test" it's where you compiled the game and trying the game out for yourself. for (os), it depends on what os your using, if you're using Windows, then type, "windows", Mac? "mac", Linux? "linux".)<br>
+4. Install all libaries through the setup folder by left clicking it. (if Mac or Linux, open Terminal and type "`chmod +x unix.sh`" (replace `+x` with `755` if you have issues) and type "`./unix.sh`" and it will install.)<br>
+5. Compiled the Game. (by opening terminal and type "`lime` (`test`/`build`) (`os`) ; for "`build`", it's where you just compiled the Game and that's it. for "`test`" it's where you compiled the game and trying the game out for yourself. for (`os`), it depends on what os your using, if you're using Windows, then type, "`windows`", Mac? "`mac`", Linux? "`linux`".)<br>
 
 **-☆- Now with all that... ENJOY MY ENGINE!!! -☆-**
 > [!IMPORTANT]
